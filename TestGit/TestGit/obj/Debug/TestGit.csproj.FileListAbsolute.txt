@@ -1,0 +1,1 @@
+c:\users\pc\documents\visual studio 2012\Projects\TestGit\TestGit\bin\Debug\TestGit.exe.config
