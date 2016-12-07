@@ -80,6 +80,9 @@
     <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
     <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>gotoo32X32.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="GMap.NET.Core, Version=1.5.3.3, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -736,6 +739,7 @@
     <Folder Include="Controls\Map\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="gotoo32X32.ico" />
     <None Include="Resources\naruto.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
