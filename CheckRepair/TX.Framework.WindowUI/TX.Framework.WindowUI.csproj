@@ -736,7 +736,9 @@
     <Folder Include="Controls\Map\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\naruto.png" />
+    <None Include="Resources\naruto.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Resources\logos.png" />
     <None Include="Resources\load2 %284%29.gif" />
     <None Include="Resources\load2 %282%29.gif" />
