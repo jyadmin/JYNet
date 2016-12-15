@@ -268,13 +268,13 @@ namespace TX.Framework.WindowUI.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
+            this.CapitionLogo = null;
             this.ClientSize = new System.Drawing.Size(453, 266);
             this.Controls.Add(this.panelWorkArea);
             this.Controls.Add(this.panelControlArea);
             this.CornerRadius = 1;
             this.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Location = new System.Drawing.Point(0, 0);
-            this.LogoSize = new System.Drawing.Size(26, 26);
             this.MaximizeBox = false;
             this.Name = "frmSkinManager";
             this.Padding = new System.Windows.Forms.Padding(3, 3, 3, 0);

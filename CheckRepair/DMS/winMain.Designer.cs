@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            TX.Framework.WindowUI.Controls.RangeValueHeader rangeValueHeader1 = new TX.Framework.WindowUI.Controls.RangeValueHeader();
-            TX.Framework.WindowUI.Controls.Docking.DockPanelSkin dockPanelSkin1 = new TX.Framework.WindowUI.Controls.Docking.DockPanelSkin();
-            TX.Framework.WindowUI.Controls.Docking.AutoHideStripSkin autoHideStripSkin1 = new TX.Framework.WindowUI.Controls.Docking.AutoHideStripSkin();
-            TX.Framework.WindowUI.Controls.Docking.DockPanelGradient dockPanelGradient1 = new TX.Framework.WindowUI.Controls.Docking.DockPanelGradient();
-            TX.Framework.WindowUI.Controls.Docking.TabGradient tabGradient1 = new TX.Framework.WindowUI.Controls.Docking.TabGradient();
-            TX.Framework.WindowUI.Controls.Docking.DockPaneStripSkin dockPaneStripSkin1 = new TX.Framework.WindowUI.Controls.Docking.DockPaneStripSkin();
-            TX.Framework.WindowUI.Controls.Docking.DockPaneStripGradient dockPaneStripGradient1 = new TX.Framework.WindowUI.Controls.Docking.DockPaneStripGradient();
-            TX.Framework.WindowUI.Controls.Docking.TabGradient tabGradient2 = new TX.Framework.WindowUI.Controls.Docking.TabGradient();
-            TX.Framework.WindowUI.Controls.Docking.DockPanelGradient dockPanelGradient2 = new TX.Framework.WindowUI.Controls.Docking.DockPanelGradient();
-            TX.Framework.WindowUI.Controls.Docking.TabGradient tabGradient3 = new TX.Framework.WindowUI.Controls.Docking.TabGradient();
-            TX.Framework.WindowUI.Controls.Docking.DockPaneStripToolWindowGradient dockPaneStripToolWindowGradient1 = new TX.Framework.WindowUI.Controls.Docking.DockPaneStripToolWindowGradient();
-            TX.Framework.WindowUI.Controls.Docking.TabGradient tabGradient4 = new TX.Framework.WindowUI.Controls.Docking.TabGradient();
-            TX.Framework.WindowUI.Controls.Docking.TabGradient tabGradient5 = new TX.Framework.WindowUI.Controls.Docking.TabGradient();
-            TX.Framework.WindowUI.Controls.Docking.DockPanelGradient dockPanelGradient3 = new TX.Framework.WindowUI.Controls.Docking.DockPanelGradient();
-            TX.Framework.WindowUI.Controls.Docking.TabGradient tabGradient6 = new TX.Framework.WindowUI.Controls.Docking.TabGradient();
-            TX.Framework.WindowUI.Controls.Docking.TabGradient tabGradient7 = new TX.Framework.WindowUI.Controls.Docking.TabGradient();
-            TX.Framework.WindowUI.Controls.CheckBoxProperties checkBoxProperties1 = new TX.Framework.WindowUI.Controls.CheckBoxProperties();
-            TX.Framework.WindowUI.Controls.TreeListViewItemCollection.TreeListViewItemCollectionComparer treeListViewItemCollectionComparer1 = new TX.Framework.WindowUI.Controls.TreeListViewItemCollection.TreeListViewItemCollectionComparer();
+            TX.Framework.WindowUI.Controls.RangeValueHeader rangeValueHeader6 = new TX.Framework.WindowUI.Controls.RangeValueHeader();
+            TX.Framework.WindowUI.Controls.Docking.DockPanelSkin dockPanelSkin6 = new TX.Framework.WindowUI.Controls.Docking.DockPanelSkin();
+            TX.Framework.WindowUI.Controls.Docking.AutoHideStripSkin autoHideStripSkin6 = new TX.Framework.WindowUI.Controls.Docking.AutoHideStripSkin();
+            TX.Framework.WindowUI.Controls.Docking.DockPanelGradient dockPanelGradient16 = new TX.Framework.WindowUI.Controls.Docking.DockPanelGradient();
+            TX.Framework.WindowUI.Controls.Docking.TabGradient tabGradient36 = new TX.Framework.WindowUI.Controls.Docking.TabGradient();
+            TX.Framework.WindowUI.Controls.Docking.DockPaneStripSkin dockPaneStripSkin6 = new TX.Framework.WindowUI.Controls.Docking.DockPaneStripSkin();
+            TX.Framework.WindowUI.Controls.Docking.DockPaneStripGradient dockPaneStripGradient6 = new TX.Framework.WindowUI.Controls.Docking.DockPaneStripGradient();
+            TX.Framework.WindowUI.Controls.Docking.TabGradient tabGradient37 = new TX.Framework.WindowUI.Controls.Docking.TabGradient();
+            TX.Framework.WindowUI.Controls.Docking.DockPanelGradient dockPanelGradient17 = new TX.Framework.WindowUI.Controls.Docking.DockPanelGradient();
+            TX.Framework.WindowUI.Controls.Docking.TabGradient tabGradient38 = new TX.Framework.WindowUI.Controls.Docking.TabGradient();
+            TX.Framework.WindowUI.Controls.Docking.DockPaneStripToolWindowGradient dockPaneStripToolWindowGradient6 = new TX.Framework.WindowUI.Controls.Docking.DockPaneStripToolWindowGradient();
+            TX.Framework.WindowUI.Controls.Docking.TabGradient tabGradient39 = new TX.Framework.WindowUI.Controls.Docking.TabGradient();
+            TX.Framework.WindowUI.Controls.Docking.TabGradient tabGradient40 = new TX.Framework.WindowUI.Controls.Docking.TabGradient();
+            TX.Framework.WindowUI.Controls.Docking.DockPanelGradient dockPanelGradient18 = new TX.Framework.WindowUI.Controls.Docking.DockPanelGradient();
+            TX.Framework.WindowUI.Controls.Docking.TabGradient tabGradient41 = new TX.Framework.WindowUI.Controls.Docking.TabGradient();
+            TX.Framework.WindowUI.Controls.Docking.TabGradient tabGradient42 = new TX.Framework.WindowUI.Controls.Docking.TabGradient();
+            TX.Framework.WindowUI.Controls.CheckBoxProperties checkBoxProperties2 = new TX.Framework.WindowUI.Controls.CheckBoxProperties();
+            TX.Framework.WindowUI.Controls.TreeListViewItemCollection.TreeListViewItemCollectionComparer treeListViewItemCollectionComparer6 = new TX.Framework.WindowUI.Controls.TreeListViewItemCollection.TreeListViewItemCollectionComparer();
             this.panel1 = new System.Windows.Forms.Panel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.xPanderPanelList1 = new TX.Framework.WindowUI.Controls.XPanderPanelList();
@@ -59,6 +59,8 @@
             this.xPanderPanel4 = new TX.Framework.WindowUI.Controls.XPanderPanel();
             this.txTabControl1 = new TX.Framework.WindowUI.Controls.TXTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.txGroupBox2 = new TX.Framework.WindowUI.Controls.TXGroupBox();
+            this.txDateTimePicker2 = new TX.Framework.WindowUI.Controls.TXDateTimePicker();
             this.txHtmlEditor1 = new TX.Framework.WindowUI.Controls.TXHtmlEditor();
             this.txGroupBox1 = new TX.Framework.WindowUI.Controls.TXGroupBox();
             this.txDateTimePicker1 = new TX.Framework.WindowUI.Controls.TXDateTimePicker();
@@ -99,8 +101,6 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.monthCalendar1 = new TX.Framework.WindowUI.Controls.MonthCalendar();
-            this.txGroupBox2 = new TX.Framework.WindowUI.Controls.TXGroupBox();
-            this.txDateTimePicker2 = new TX.Framework.WindowUI.Controls.TXDateTimePicker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -110,6 +110,7 @@
             this.xPanderPanel1.SuspendLayout();
             this.txTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.txGroupBox2.SuspendLayout();
             this.txGroupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -117,7 +118,6 @@
             this.txMenuStrip2.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage5.SuspendLayout();
-            this.txGroupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -166,7 +166,7 @@
             // 
             // xPanderPanel1
             // 
-            this.xPanderPanel1.CaptionFont = new System.Drawing.Font("Microsoft YaHei UI", 10.25F, System.Drawing.FontStyle.Bold);
+            this.xPanderPanel1.CaptionFont = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold);
             this.xPanderPanel1.Controls.Add(this.txTreeComboBox2);
             this.xPanderPanel1.Controls.Add(this.txTextBox2);
             this.xPanderPanel1.Controls.Add(this.txButton10);
@@ -192,12 +192,11 @@
             this.xPanderPanel1.CustomColors.FlatCaptionGradientBegin = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(223)))));
             this.xPanderPanel1.CustomColors.FlatCaptionGradientEnd = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(223)))));
             this.xPanderPanel1.CustomColors.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(218)))), ((int)(((byte)(222)))));
-            this.xPanderPanel1.Expand = true;
             this.xPanderPanel1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.xPanderPanel1.Image = null;
             this.xPanderPanel1.Name = "xPanderPanel1";
             this.xPanderPanel1.PanelStyle = TX.Framework.WindowUI.Controls.PanelStyle.Office2007;
-            this.xPanderPanel1.Size = new System.Drawing.Size(237, 477);
+            this.xPanderPanel1.Size = new System.Drawing.Size(237, 25);
             this.xPanderPanel1.TabIndex = 0;
             this.xPanderPanel1.Text = "分组1";
             this.xPanderPanel1.ToolTipTextCloseIcon = null;
@@ -272,7 +271,7 @@
             // 
             // xPanderPanel2
             // 
-            this.xPanderPanel2.CaptionFont = new System.Drawing.Font("Microsoft YaHei UI", 10.25F, System.Drawing.FontStyle.Bold);
+            this.xPanderPanel2.CaptionFont = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold);
             this.xPanderPanel2.CustomColors.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(252)))));
             this.xPanderPanel2.CustomColors.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(168)))), ((int)(((byte)(192)))));
             this.xPanderPanel2.CustomColors.CaptionCheckedGradientBegin = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(67)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
@@ -307,7 +306,7 @@
             // 
             // xPanderPanel3
             // 
-            this.xPanderPanel3.CaptionFont = new System.Drawing.Font("Microsoft YaHei UI", 10.25F, System.Drawing.FontStyle.Bold);
+            this.xPanderPanel3.CaptionFont = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold);
             this.xPanderPanel3.CustomColors.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(252)))));
             this.xPanderPanel3.CustomColors.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(168)))), ((int)(((byte)(192)))));
             this.xPanderPanel3.CustomColors.CaptionCheckedGradientBegin = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(67)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
@@ -342,7 +341,7 @@
             // 
             // xPanderPanel4
             // 
-            this.xPanderPanel4.CaptionFont = new System.Drawing.Font("Microsoft YaHei UI", 10.25F, System.Drawing.FontStyle.Bold);
+            this.xPanderPanel4.CaptionFont = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold);
             this.xPanderPanel4.CustomColors.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(252)))));
             this.xPanderPanel4.CustomColors.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(168)))), ((int)(((byte)(192)))));
             this.xPanderPanel4.CustomColors.CaptionCheckedGradientBegin = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(67)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
@@ -421,6 +420,35 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "窗体组件测试";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // txGroupBox2
+            // 
+            this.txGroupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.txGroupBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txGroupBox2.CaptionColor = System.Drawing.Color.Black;
+            this.txGroupBox2.CaptionFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold);
+            this.txGroupBox2.Controls.Add(this.txDateTimePicker2);
+            this.txGroupBox2.CornerRadius = 0;
+            this.txGroupBox2.Location = new System.Drawing.Point(334, 240);
+            this.txGroupBox2.Name = "txGroupBox2";
+            this.txGroupBox2.Size = new System.Drawing.Size(270, 70);
+            this.txGroupBox2.TabIndex = 16;
+            this.txGroupBox2.TabStop = false;
+            this.txGroupBox2.Text = "分组1";
+            this.txGroupBox2.TextMargin = 6;
+            // 
+            // txDateTimePicker2
+            // 
+            this.txDateTimePicker2.CalendarForeColor = System.Drawing.Color.Blue;
+            this.txDateTimePicker2.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.txDateTimePicker2.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(74)))), ((int)(((byte)(181)))), ((int)(((byte)(237)))));
+            this.txDateTimePicker2.CalendarTrailingForeColor = System.Drawing.Color.CadetBlue;
+            this.txDateTimePicker2.Location = new System.Drawing.Point(7, 20);
+            this.txDateTimePicker2.Name = "txDateTimePicker2";
+            this.txDateTimePicker2.ShowCheckBox = true;
+            this.txDateTimePicker2.Size = new System.Drawing.Size(132, 21);
+            this.txDateTimePicker2.TabIndex = 0;
+            this.txDateTimePicker2.Value = new System.DateTime(2015, 8, 9, 16, 8, 2, 250);
             // 
             // txHtmlEditor1
             // 
@@ -674,10 +702,10 @@
             this.txRangeValue1.BackColor = System.Drawing.Color.Transparent;
             this.txRangeValue1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txRangeValue1.EditEnable = true;
-            rangeValueHeader1.LowerValueTitle = "范围下限";
-            rangeValueHeader1.UpperValueTitle = "范围上限";
-            rangeValueHeader1.ValueTitle = "金额数值";
-            this.txRangeValue1.Header = rangeValueHeader1;
+            rangeValueHeader6.LowerValueTitle = "范围下限";
+            rangeValueHeader6.UpperValueTitle = "范围上限";
+            rangeValueHeader6.ValueTitle = "金额数值";
+            this.txRangeValue1.Header = rangeValueHeader6;
             this.txRangeValue1.Location = new System.Drawing.Point(1, 23);
             this.txRangeValue1.Name = "txRangeValue1";
             this.txRangeValue1.RangeValues = null;
@@ -728,50 +756,50 @@
             this.dockPanel1.Location = new System.Drawing.Point(203, 3);
             this.dockPanel1.Name = "dockPanel1";
             this.dockPanel1.Size = new System.Drawing.Size(507, 513);
-            dockPanelGradient1.EndColor = System.Drawing.SystemColors.ControlLight;
-            dockPanelGradient1.StartColor = System.Drawing.SystemColors.ControlLight;
-            autoHideStripSkin1.DockStripGradient = dockPanelGradient1;
-            tabGradient1.EndColor = System.Drawing.SystemColors.Control;
-            tabGradient1.StartColor = System.Drawing.SystemColors.Control;
-            tabGradient1.TextColor = System.Drawing.SystemColors.ControlDarkDark;
-            autoHideStripSkin1.TabGradient = tabGradient1;
-            dockPanelSkin1.AutoHideStripSkin = autoHideStripSkin1;
-            tabGradient2.EndColor = System.Drawing.SystemColors.ControlLightLight;
-            tabGradient2.StartColor = System.Drawing.SystemColors.ControlLightLight;
-            tabGradient2.TextColor = System.Drawing.SystemColors.ControlText;
-            dockPaneStripGradient1.ActiveTabGradient = tabGradient2;
-            dockPanelGradient2.EndColor = System.Drawing.SystemColors.Control;
-            dockPanelGradient2.StartColor = System.Drawing.SystemColors.Control;
-            dockPaneStripGradient1.DockStripGradient = dockPanelGradient2;
-            tabGradient3.EndColor = System.Drawing.SystemColors.ControlLight;
-            tabGradient3.StartColor = System.Drawing.SystemColors.ControlLight;
-            tabGradient3.TextColor = System.Drawing.SystemColors.ControlText;
-            dockPaneStripGradient1.InactiveTabGradient = tabGradient3;
-            dockPaneStripSkin1.DocumentGradient = dockPaneStripGradient1;
-            tabGradient4.EndColor = System.Drawing.SystemColors.ActiveCaption;
-            tabGradient4.LinearGradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            tabGradient4.StartColor = System.Drawing.SystemColors.GradientActiveCaption;
-            tabGradient4.TextColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dockPaneStripToolWindowGradient1.ActiveCaptionGradient = tabGradient4;
-            tabGradient5.EndColor = System.Drawing.SystemColors.Control;
-            tabGradient5.StartColor = System.Drawing.SystemColors.Control;
-            tabGradient5.TextColor = System.Drawing.SystemColors.ControlText;
-            dockPaneStripToolWindowGradient1.ActiveTabGradient = tabGradient5;
-            dockPanelGradient3.EndColor = System.Drawing.SystemColors.ControlLight;
-            dockPanelGradient3.StartColor = System.Drawing.SystemColors.ControlLight;
-            dockPaneStripToolWindowGradient1.DockStripGradient = dockPanelGradient3;
-            tabGradient6.EndColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            tabGradient6.LinearGradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            tabGradient6.StartColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            tabGradient6.TextColor = System.Drawing.SystemColors.ControlText;
-            dockPaneStripToolWindowGradient1.InactiveCaptionGradient = tabGradient6;
-            tabGradient7.EndColor = System.Drawing.Color.Transparent;
-            tabGradient7.StartColor = System.Drawing.Color.Transparent;
-            tabGradient7.TextColor = System.Drawing.SystemColors.ControlDarkDark;
-            dockPaneStripToolWindowGradient1.InactiveTabGradient = tabGradient7;
-            dockPaneStripSkin1.ToolWindowGradient = dockPaneStripToolWindowGradient1;
-            dockPanelSkin1.DockPaneStripSkin = dockPaneStripSkin1;
-            this.dockPanel1.Skin = dockPanelSkin1;
+            dockPanelGradient16.EndColor = System.Drawing.SystemColors.ControlLight;
+            dockPanelGradient16.StartColor = System.Drawing.SystemColors.ControlLight;
+            autoHideStripSkin6.DockStripGradient = dockPanelGradient16;
+            tabGradient36.EndColor = System.Drawing.SystemColors.Control;
+            tabGradient36.StartColor = System.Drawing.SystemColors.Control;
+            tabGradient36.TextColor = System.Drawing.SystemColors.ControlDarkDark;
+            autoHideStripSkin6.TabGradient = tabGradient36;
+            dockPanelSkin6.AutoHideStripSkin = autoHideStripSkin6;
+            tabGradient37.EndColor = System.Drawing.SystemColors.ControlLightLight;
+            tabGradient37.StartColor = System.Drawing.SystemColors.ControlLightLight;
+            tabGradient37.TextColor = System.Drawing.SystemColors.ControlText;
+            dockPaneStripGradient6.ActiveTabGradient = tabGradient37;
+            dockPanelGradient17.EndColor = System.Drawing.SystemColors.Control;
+            dockPanelGradient17.StartColor = System.Drawing.SystemColors.Control;
+            dockPaneStripGradient6.DockStripGradient = dockPanelGradient17;
+            tabGradient38.EndColor = System.Drawing.SystemColors.ControlLight;
+            tabGradient38.StartColor = System.Drawing.SystemColors.ControlLight;
+            tabGradient38.TextColor = System.Drawing.SystemColors.ControlText;
+            dockPaneStripGradient6.InactiveTabGradient = tabGradient38;
+            dockPaneStripSkin6.DocumentGradient = dockPaneStripGradient6;
+            tabGradient39.EndColor = System.Drawing.SystemColors.ActiveCaption;
+            tabGradient39.LinearGradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            tabGradient39.StartColor = System.Drawing.SystemColors.GradientActiveCaption;
+            tabGradient39.TextColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dockPaneStripToolWindowGradient6.ActiveCaptionGradient = tabGradient39;
+            tabGradient40.EndColor = System.Drawing.SystemColors.Control;
+            tabGradient40.StartColor = System.Drawing.SystemColors.Control;
+            tabGradient40.TextColor = System.Drawing.SystemColors.ControlText;
+            dockPaneStripToolWindowGradient6.ActiveTabGradient = tabGradient40;
+            dockPanelGradient18.EndColor = System.Drawing.SystemColors.ControlLight;
+            dockPanelGradient18.StartColor = System.Drawing.SystemColors.ControlLight;
+            dockPaneStripToolWindowGradient6.DockStripGradient = dockPanelGradient18;
+            tabGradient41.EndColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            tabGradient41.LinearGradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            tabGradient41.StartColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            tabGradient41.TextColor = System.Drawing.SystemColors.ControlText;
+            dockPaneStripToolWindowGradient6.InactiveCaptionGradient = tabGradient41;
+            tabGradient42.EndColor = System.Drawing.Color.Transparent;
+            tabGradient42.StartColor = System.Drawing.Color.Transparent;
+            tabGradient42.TextColor = System.Drawing.SystemColors.ControlDarkDark;
+            dockPaneStripToolWindowGradient6.InactiveTabGradient = tabGradient42;
+            dockPaneStripSkin6.ToolWindowGradient = dockPaneStripToolWindowGradient6;
+            dockPanelSkin6.DockPaneStripSkin = dockPaneStripSkin6;
+            this.dockPanel1.Skin = dockPanelSkin6;
             this.dockPanel1.TabIndex = 1;
             // 
             // panel2
@@ -826,8 +854,8 @@
             // 
             // multiselectComboBox1
             // 
-            checkBoxProperties1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.multiselectComboBox1.CheckBoxProperties = checkBoxProperties1;
+            checkBoxProperties2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.multiselectComboBox1.CheckBoxProperties = checkBoxProperties2;
             this.multiselectComboBox1.DisplayMemberSingleItem = "";
             this.multiselectComboBox1.FormattingEnabled = true;
             this.multiselectComboBox1.Items.AddRange(new object[] {
@@ -946,9 +974,9 @@
             this.treeListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2});
-            treeListViewItemCollectionComparer1.Column = 0;
-            treeListViewItemCollectionComparer1.SortOrder = System.Windows.Forms.SortOrder.Ascending;
-            this.treeListView1.Comparer = treeListViewItemCollectionComparer1;
+            treeListViewItemCollectionComparer6.Column = 0;
+            treeListViewItemCollectionComparer6.SortOrder = System.Windows.Forms.SortOrder.Ascending;
+            this.treeListView1.Comparer = treeListViewItemCollectionComparer6;
             this.treeListView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeListView1.Font = new System.Drawing.Font("宋体", 9.6F);
             this.treeListView1.HeaderBeginColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
@@ -1022,35 +1050,6 @@
             this.monthCalendar1.Weekdays.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(65)))), ((int)(((byte)(0)))));
             this.monthCalendar1.Weeknumbers.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             // 
-            // txGroupBox2
-            // 
-            this.txGroupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.txGroupBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txGroupBox2.CaptionColor = System.Drawing.Color.Black;
-            this.txGroupBox2.CaptionFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold);
-            this.txGroupBox2.Controls.Add(this.txDateTimePicker2);
-            this.txGroupBox2.CornerRadius = 0;
-            this.txGroupBox2.Location = new System.Drawing.Point(334, 240);
-            this.txGroupBox2.Name = "txGroupBox2";
-            this.txGroupBox2.Size = new System.Drawing.Size(270, 70);
-            this.txGroupBox2.TabIndex = 16;
-            this.txGroupBox2.TabStop = false;
-            this.txGroupBox2.Text = "分组1";
-            this.txGroupBox2.TextMargin = 6;
-            // 
-            // txDateTimePicker2
-            // 
-            this.txDateTimePicker2.CalendarForeColor = System.Drawing.Color.Blue;
-            this.txDateTimePicker2.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
-            this.txDateTimePicker2.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(74)))), ((int)(((byte)(181)))), ((int)(((byte)(237)))));
-            this.txDateTimePicker2.CalendarTrailingForeColor = System.Drawing.Color.CadetBlue;
-            this.txDateTimePicker2.Location = new System.Drawing.Point(7, 20);
-            this.txDateTimePicker2.Name = "txDateTimePicker2";
-            this.txDateTimePicker2.ShowCheckBox = true;
-            this.txDateTimePicker2.Size = new System.Drawing.Size(132, 21);
-            this.txDateTimePicker2.TabIndex = 0;
-            this.txDateTimePicker2.Value = new System.DateTime(2015, 8, 9, 16, 8, 2, 250);
-            // 
             // winMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1075,6 +1074,7 @@
             this.txTabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.txGroupBox2.ResumeLayout(false);
             this.txGroupBox1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -1084,7 +1084,6 @@
             this.txMenuStrip2.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
-            this.txGroupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

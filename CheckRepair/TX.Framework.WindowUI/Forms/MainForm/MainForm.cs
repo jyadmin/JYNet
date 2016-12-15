@@ -254,7 +254,7 @@ namespace TX.Framework.WindowUI.Forms
             base.DrawCaption(g);
             if (this.CaptionHeight > 0)
             {
-                this.DrawRibbonBtn(g);
+                //this.DrawRibbonBtn(g);
             }
         }
         #endregion
@@ -391,5 +391,22 @@ namespace TX.Framework.WindowUI.Forms
             g.ResetClip();
         }
         #endregion
+
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            this.SuspendLayout();
+            // 
+            // MainForm
+            // 
+            this.CapitionLogo = null;
+            //((System.Drawing.Image)(resources.GetObject("$this.CapitionLogo")));
+            this.ClientSize = new System.Drawing.Size(500, 350);
+            this.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Location = new System.Drawing.Point(0, 0);
+            this.Name = "MainForm";
+            this.ResumeLayout(false);
+
+        }
     }
 }

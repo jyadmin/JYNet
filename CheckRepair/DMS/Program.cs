@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using DMS.UI.SystemManage;
 
 namespace WindowsTest
 {
@@ -15,7 +16,7 @@ namespace WindowsTest
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new winMain());
+            Application.Run(new LoginForm());
         }
     }
 }

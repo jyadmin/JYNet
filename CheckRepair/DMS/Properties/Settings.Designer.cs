@@ -22,5 +22,16 @@ namespace DMS.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MCY1HRRQKDHJSOX\\SQLEXPRESS;Initial Catalog=CheckRepairDB;Persist Secu" +
+            "rity Info=True;User ID=sa;Password=sa")]
+        public string CheckRepairDBConnectionString {
+            get {
+                return ((string)(this["CheckRepairDBConnectionString"]));
+            }
+        }
     }
 }

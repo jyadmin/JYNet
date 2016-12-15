@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.txButton1 = new TX.Framework.WindowUI.Controls.TXButton();
             this.txButton2 = new TX.Framework.WindowUI.Controls.TXButton();
             this.txTextBox1 = new TX.Framework.WindowUI.Controls.TXTextBox();
@@ -74,6 +75,7 @@
             this.txTextBox1.Required = false;
             this.txTextBox1.Size = new System.Drawing.Size(169, 22);
             this.txTextBox1.TabIndex = 2;
+            this.txTextBox1.Text = "admin";
             // 
             // txTextBox2
             // 
@@ -91,6 +93,7 @@
             this.txTextBox2.Required = false;
             this.txTextBox2.Size = new System.Drawing.Size(169, 22);
             this.txTextBox2.TabIndex = 3;
+            this.txTextBox2.Text = "111111";
             // 
             // label1
             // 
@@ -119,6 +122,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CapitionLogo = ((System.Drawing.Image)(resources.GetObject("$this.CapitionLogo")));
             this.ClientSize = new System.Drawing.Size(620, 337);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -127,10 +131,14 @@
             this.Controls.Add(this.txButton2);
             this.Controls.Add(this.txButton1);
             this.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Location = new System.Drawing.Point(300, 300);
+            this.Location = new System.Drawing.Point(500, 200);
+            this.MaximizeBox = false;
             this.Name = "Form1";
+            this.ResizeEnable = false;
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "用户登录";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txTextBox2_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

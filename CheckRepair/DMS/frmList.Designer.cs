@@ -46,10 +46,10 @@
             this.粘贴PToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.帮助LToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.txPager1 = new TX.Framework.WindowUI.Controls.TXPager();
-            this.templateListView1 = new TX.Framework.WindowUI.Controls.TemplateListView();
             this.templateColumnHeader1 = ((TX.Framework.WindowUI.Controls.TemplateColumnHeader)(new TX.Framework.WindowUI.Controls.TemplateColumnHeader()));
             this.templateColumnHeader2 = ((TX.Framework.WindowUI.Controls.TemplateColumnHeader)(new TX.Framework.WindowUI.Controls.TemplateColumnHeader()));
+            this.templateListView1 = new TX.Framework.WindowUI.Controls.TemplateListView();
+            this.txPager1 = new TX.Framework.WindowUI.Controls.TXPager();
             this.panelPager.SuspendLayout();
             this.panelSearchCondition.SuspendLayout();
             this.panelToolBar.SuspendLayout();
@@ -219,16 +219,19 @@
             this.帮助LToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.帮助LToolStripButton.Text = "帮助(&L)";
             // 
-            // txPager1
+            // templateColumnHeader1
             // 
-            this.txPager1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(252)))));
-            this.txPager1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txPager1.Location = new System.Drawing.Point(0, 0);
-            this.txPager1.Name = "txPager1";
-            this.txPager1.PageSize = 20;
-            this.txPager1.Size = new System.Drawing.Size(725, 30);
-            this.txPager1.TabIndex = 0;
-            this.txPager1.Total = 0D;
+            this.templateColumnHeader1.Column = 0;
+            this.templateColumnHeader1.Template = "$this.Name";
+            this.templateColumnHeader1.Text = "年龄";
+            this.templateColumnHeader1.Width = 180;
+            // 
+            // templateColumnHeader2
+            // 
+            this.templateColumnHeader2.Column = 0;
+            this.templateColumnHeader2.Template = "$this.Value";
+            this.templateColumnHeader2.Text = "年龄";
+            this.templateColumnHeader2.Width = 200;
             // 
             // templateListView1
             // 
@@ -266,19 +269,16 @@
             this.templateListView1.UseCompatibleStateImageBehavior = false;
             this.templateListView1.View = System.Windows.Forms.View.Details;
             // 
-            // templateColumnHeader1
+            // txPager1
             // 
-            this.templateColumnHeader1.Column = 0;
-            this.templateColumnHeader1.Template = "$this.Name";
-            this.templateColumnHeader1.Text = "年龄";
-            this.templateColumnHeader1.Width = 180;
-            // 
-            // templateColumnHeader2
-            // 
-            this.templateColumnHeader2.Column = 0;
-            this.templateColumnHeader2.Template = "$this.Value";
-            this.templateColumnHeader2.Text = "年龄";
-            this.templateColumnHeader2.Width = 200;
+            this.txPager1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(247)))), ((int)(((byte)(252)))));
+            this.txPager1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txPager1.Location = new System.Drawing.Point(0, 0);
+            this.txPager1.Name = "txPager1";
+            this.txPager1.PageSize = 20;
+            this.txPager1.Size = new System.Drawing.Size(725, 30);
+            this.txPager1.TabIndex = 0;
+            this.txPager1.Total = 0D;
             // 
             // frmList
             // 
@@ -319,10 +319,10 @@
         private System.Windows.Forms.ToolStripButton 粘贴PToolStripButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton 帮助LToolStripButton;
-        private TX.Framework.WindowUI.Controls.TXPager txPager1;
-        private TX.Framework.WindowUI.Controls.TemplateListView templateListView1;
         private TX.Framework.WindowUI.Controls.TemplateColumnHeader templateColumnHeader1;
         private TX.Framework.WindowUI.Controls.TemplateColumnHeader templateColumnHeader2;
+        private TX.Framework.WindowUI.Controls.TemplateListView templateListView1;
+        private TX.Framework.WindowUI.Controls.TXPager txPager1;
 
     }
 }
