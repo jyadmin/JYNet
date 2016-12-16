@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.txButton1 = new TX.Framework.WindowUI.Controls.TXButton();
             this.txButton2 = new TX.Framework.WindowUI.Controls.TXButton();
             this.txTextBox1 = new TX.Framework.WindowUI.Controls.TXTextBox();
@@ -122,7 +121,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CapitionLogo = ((System.Drawing.Image)(resources.GetObject("$this.CapitionLogo")));
             this.ClientSize = new System.Drawing.Size(620, 337);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -135,7 +133,6 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.ResizeEnable = false;
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "用户登录";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txTextBox2_KeyDown);

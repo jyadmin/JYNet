@@ -190,7 +190,6 @@ E:\work\JuKong\GitWork\JYNet\CheckRepair\TX.Framework.WindowUI\bin\Debug\Config\
 E:\work\JuKong\GitWork\JYNet\CheckRepair\TX.Framework.WindowUI\bin\Debug\Config\Skin\SunsetRed.config
 E:\work\JuKong\GitWork\JYNet\CheckRepair\TX.Framework.WindowUI\bin\Debug\Config\Skin\KissOfAngel.config
 E:\work\JuKong\GitWork\JYNet\CheckRepair\TX.Framework.WindowUI\bin\Debug\Config\Skin.ini
-E:\work\JuKong\GitWork\JYNet\CheckRepair\TX.Framework.WindowUI\bin\Debug\Resources\naruto.png
 E:\work\JuKong\GitWork\JYNet\CheckRepair\TX.Framework.WindowUI\bin\Debug\TX.Framework.WindowUI.dll
 E:\work\JuKong\GitWork\JYNet\CheckRepair\TX.Framework.WindowUI\bin\Debug\TX.Framework.WindowUI.pdb
 E:\work\JuKong\GitWork\JYNet\CheckRepair\TX.Framework.WindowUI\bin\Debug\TX.Framework.dll
@@ -277,3 +276,5 @@ E:\GitWork\JYNet\CheckRepair\TX.Framework.WindowUI\obj\Debug\TX.Framework.Window
 E:\GitWork\JYNet\CheckRepair\TX.Framework.WindowUI\obj\Debug\TX.Framework.WindowUI.csproj.GenerateResource.Cache
 E:\GitWork\JYNet\CheckRepair\TX.Framework.WindowUI\obj\Debug\TX.Framework.WindowUI.dll
 E:\GitWork\JYNet\CheckRepair\TX.Framework.WindowUI\obj\Debug\TX.Framework.WindowUI.pdb
+E:\work\JuKong\GitWork\JYNet\CheckRepair\TX.Framework.WindowUI\obj\Debug\TX.Framework.WindowUI.csproj.ResolveComReference.cache
+E:\work\JuKong\GitWork\JYNet\CheckRepair\TX.Framework.WindowUI\bin\Debug\Forms\MainForm\MainForm.cs

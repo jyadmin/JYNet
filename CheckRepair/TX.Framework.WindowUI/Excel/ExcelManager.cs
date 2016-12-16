@@ -24,7 +24,7 @@ namespace System.Office.Excel
     /// </summary>
     public class ExcelManager : IDisposable
     {
-        private ApplicationClass _ApplicationClass;
+        private Microsoft.Office.Interop.Excel.Application _ApplicationClass;
         private _Worksheet _Worksheet;
         private CultureInfo _OriginalCulture;
         private string _OpenFileName;
@@ -35,7 +35,7 @@ namespace System.Office.Excel
             _OriginalCulture = Thread.CurrentThread.CurrentCulture;
             Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
 
-            _ApplicationClass = new ApplicationClass();
+            _ApplicationClass = new Microsoft.Office.Interop.Excel.Application();
             _ApplicationClass.DisplayAlerts = false;
         }
 
