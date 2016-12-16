@@ -233,7 +233,6 @@ E:\GitWork\JYNet\CheckRepair\TX.Framework.WindowUI\bin\Debug\Config\Skin\bg\bg03
 E:\GitWork\JYNet\CheckRepair\TX.Framework.WindowUI\bin\Debug\Config\Skin\bg\bg04.jpg
 E:\GitWork\JYNet\CheckRepair\TX.Framework.WindowUI\bin\Debug\Config\Skin\bg\bg05.jpg
 E:\GitWork\JYNet\CheckRepair\TX.Framework.WindowUI\bin\Debug\Config\Skin\bg\bg06.jpg
-E:\GitWork\JYNet\CheckRepair\TX.Framework.WindowUI\bin\Debug\Forms\MainForm\MainForm.resx
 E:\GitWork\JYNet\CheckRepair\TX.Framework.WindowUI\bin\Debug\Forms\MainForm\MainForm.cs
 E:\GitWork\JYNet\CheckRepair\TX.Framework.WindowUI\bin\Debug\Config\Skin.config
 E:\GitWork\JYNet\CheckRepair\TX.Framework.WindowUI\bin\Debug\Config\Skin\NoFlower.config
@@ -251,7 +250,6 @@ E:\GitWork\JYNet\CheckRepair\TX.Framework.WindowUI\obj\Debug\TX.Framework.Window
 E:\GitWork\JYNet\CheckRepair\TX.Framework.WindowUI\obj\Debug\TX.Framework.WindowUI.Controls.MonthCalendar.resources
 E:\GitWork\JYNet\CheckRepair\TX.Framework.WindowUI\obj\Debug\TX.Framework.WindowUI.Controls.TXRangeValue.resources
 E:\GitWork\JYNet\CheckRepair\TX.Framework.WindowUI\obj\Debug\TX.Framework.WindowUI.Controls.TreeComboBox.resources
-E:\GitWork\JYNet\CheckRepair\TX.Framework.WindowUI\obj\Debug\TX.Framework.WindowUI.Forms.MainForm.resources
 E:\GitWork\JYNet\CheckRepair\TX.Framework.WindowUI\obj\Debug\TX.Framework.WindowUI.Forms.PopForm.resources
 E:\GitWork\JYNet\CheckRepair\TX.Framework.WindowUI\obj\Debug\TX.Framework.WindowUI.Controls.Docking.Resources.resources
 E:\GitWork\JYNet\CheckRepair\TX.Framework.WindowUI\obj\Debug\TX.Framework.WindowUI.Controls.Docking.Strings.resources
@@ -279,4 +277,3 @@ E:\GitWork\JYNet\CheckRepair\TX.Framework.WindowUI\obj\Debug\TX.Framework.Window
 E:\GitWork\JYNet\CheckRepair\TX.Framework.WindowUI\obj\Debug\TX.Framework.WindowUI.csproj.GenerateResource.Cache
 E:\GitWork\JYNet\CheckRepair\TX.Framework.WindowUI\obj\Debug\TX.Framework.WindowUI.dll
 E:\GitWork\JYNet\CheckRepair\TX.Framework.WindowUI\obj\Debug\TX.Framework.WindowUI.pdb
-E:\GitWork\JYNet\CheckRepair\TX.Framework.WindowUI\obj\Debug\TX.Framework.WindowUI.csprojResolveAssemblyReference.cache
