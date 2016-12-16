@@ -14,6 +14,21 @@
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -197,11 +212,23 @@
     <Compile Include="UI\CustomerControl\DMSTreeView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="UI\MainForm.cs">
+    <Compile Include="UI\SystemManage\Login\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\MainForm.designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <Compile Include="UI\SystemManage\Login\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SystemManage\Login\MainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SystemManage\Login\MainPage.Designer.cs">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SystemSetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SystemSetForm.designer.cs">
+      <DependentUpon>SystemSetForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\SystemManage\DictionaryManage\AddDictionaryForm.cs">
       <SubType>Form</SubType>
@@ -392,8 +419,14 @@
     <EmbeddedResource Include="UI\Common\ListForm.resx">
       <DependentUpon>ListForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <EmbeddedResource Include="UI\SystemManage\Login\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SystemManage\Login\MainPage.resx">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SystemSetForm.resx">
+      <DependentUpon>SystemSetForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\SystemManage\DictionaryManage\AddDictionaryForm.resx">
       <DependentUpon>AddDictionaryForm.cs</DependentUpon>
@@ -471,7 +504,7 @@
       <DependentUpon>winMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -480,7 +513,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="app.config" />
+    <None Include="App.config" />
     <None Include="CheckRepairDBDataSet.xsc">
       <DependentUpon>CheckRepairDBDataSet.xsd</DependentUpon>
     </None>
@@ -509,52 +542,137 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BaseORMappers\NewFolder1\" />
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="UI\Resources\2.gif" />
-    <Content Include="UI\Resources\background.jpg" />
-    <Content Include="UI\Resources\clearshuju.gif" />
-    <Content Include="UI\Resources\daochumoban.gif" />
-    <Content Include="UI\Resources\daorushuju.gif" />
-    <Content Include="UI\Resources\download.gif" />
-    <Content Include="UI\Resources\m01_0021.gif" />
-    <Content Include="UI\Resources\module.gif" />
-    <Content Include="UI\Resources\module_select.gif" />
-    <Content Include="UI\Resources\new_01.gif" />
-    <Content Include="UI\Resources\new_02.gif" />
-    <Content Include="UI\Resources\new_03.gif" />
-    <Content Include="UI\Resources\new_04.gif" />
-    <Content Include="UI\Resources\new_05.gif" />
-    <Content Include="UI\Resources\new_06.gif" />
-    <Content Include="UI\Resources\new_07.gif" />
-    <Content Include="UI\Resources\new_08.gif" />
-    <Content Include="UI\Resources\new_09.gif" />
-    <Content Include="UI\Resources\new_10.gif" />
-    <Content Include="UI\Resources\new_11.gif" />
-    <Content Include="UI\Resources\new_12.gif" />
-    <Content Include="UI\Resources\new_13.gif" />
-    <Content Include="UI\Resources\new_14.gif" />
-    <Content Include="UI\Resources\new_15.gif" />
-    <Content Include="UI\Resources\new_16.gif" />
-    <Content Include="UI\Resources\new_17.gif" />
-    <Content Include="UI\Resources\new_18.gif" />
-    <Content Include="UI\Resources\new_19.gif" />
-    <Content Include="UI\Resources\new_20.gif" />
-    <Content Include="UI\Resources\new_21a.gif" />
-    <Content Include="UI\Resources\new_22.gif" />
-    <Content Include="UI\Resources\new_23.gif" />
-    <Content Include="UI\Resources\new_24a.gif" />
-    <Content Include="UI\Resources\new_25.gif" />
-    <Content Include="UI\Resources\new_26.gif" />
-    <Content Include="UI\Resources\new_27.gif" />
-    <Content Include="UI\Resources\new_28.gif" />
-    <Content Include="UI\Resources\new_29.gif" />
-    <Content Include="UI\Resources\new_30.gif" />
-    <Content Include="UI\Resources\taskFormOne.bmp" />
-    <Content Include="UI\Resources\template.gif" />
-    <Content Include="UI\Resources\ToolButton_ExportExcel.bmp" />
-    <Content Include="UI\Resources\tubiao.gif" />
+    <Content Include="Resources\2.gif" />
+    <None Include="Resources\background.jpg" />
+    <None Include="Resources\background1.jpg" />
+    <None Include="Resources\21.gif" />
+    <None Include="Resources\background2.jpg" />
+    <None Include="Resources\22.gif" />
+    <Content Include="Resources\clearshuju.gif" />
+    <None Include="Resources\clearshuju1.gif" />
+    <None Include="Resources\clearshuju2.gif" />
+    <Content Include="Resources\daochumoban.gif" />
+    <None Include="Resources\daochumoban1.gif" />
+    <None Include="Resources\daochumoban2.gif" />
+    <Content Include="Resources\daorushuju.gif" />
+    <None Include="Resources\daorushuju1.gif" />
+    <None Include="Resources\daorushuju2.gif" />
+    <Content Include="Resources\download.gif" />
+    <None Include="Resources\Image1.jpg" />
+    <None Include="Resources\download1.gif" />
+    <None Include="Resources\download2.gif" />
+    <Content Include="Resources\m01_0021.gif" />
+    <None Include="Resources\module.gif" />
+    <None Include="Resources\module1.gif" />
+    <None Include="Resources\module2.gif" />
+    <Content Include="Resources\module_select.gif" />
+    <None Include="Resources\module_select1.gif" />
+    <None Include="Resources\module_select2.gif" />
+    <Content Include="Resources\new_01.gif" />
+    <None Include="Resources\new_011.gif" />
+    <None Include="Resources\new_012.gif" />
+    <Content Include="Resources\new_02.gif" />
+    <None Include="Resources\new_021.gif" />
+    <None Include="Resources\new_022.gif" />
+    <Content Include="Resources\new_03.gif" />
+    <None Include="Resources\new_031.gif" />
+    <None Include="Resources\new_032.gif" />
+    <Content Include="Resources\new_04.gif" />
+    <None Include="Resources\new_041.gif" />
+    <None Include="Resources\new_042.gif" />
+    <Content Include="Resources\new_05.gif" />
+    <None Include="Resources\new_051.gif" />
+    <None Include="Resources\new_052.gif" />
+    <Content Include="Resources\new_06.gif" />
+    <None Include="Resources\new_061.gif" />
+    <None Include="Resources\new_062.gif" />
+    <Content Include="Resources\new_07.gif" />
+    <None Include="Resources\new_071.gif" />
+    <None Include="Resources\new_072.gif" />
+    <Content Include="Resources\new_08.gif" />
+    <None Include="Resources\new_081.gif" />
+    <None Include="Resources\new_082.gif" />
+    <Content Include="Resources\new_09.gif" />
+    <Content Include="Resources\new_10.gif" />
+    <None Include="Resources\new_101.gif" />
+    <None Include="Resources\new_102.gif" />
+    <Content Include="Resources\new_11.gif" />
+    <Content Include="Resources\new_12.gif" />
+    <Content Include="Resources\new_13.gif" />
+    <None Include="Resources\new_131.gif" />
+    <None Include="Resources\new_132.gif" />
+    <Content Include="Resources\new_14.gif" />
+    <None Include="Resources\new_141.gif" />
+    <None Include="Resources\new_142.gif" />
+    <Content Include="Resources\new_15.gif" />
+    <None Include="Resources\new_151.gif" />
+    <None Include="Resources\new_152.gif" />
+    <Content Include="Resources\new_16.gif" />
+    <Content Include="Resources\new_17.gif" />
+    <None Include="Resources\new_171.gif" />
+    <None Include="Resources\new_172.gif" />
+    <Content Include="Resources\new_18.gif" />
+    <None Include="Resources\new_181.gif" />
+    <None Include="Resources\new_182.gif" />
+    <Content Include="Resources\new_19.gif" />
+    <None Include="Resources\new_191.gif" />
+    <None Include="Resources\new_192.gif" />
+    <Content Include="Resources\new_20.gif" />
+    <None Include="Resources\new_201.gif" />
+    <None Include="Resources\new_202.gif" />
+    <Content Include="Resources\new_21a.gif" />
+    <None Include="Resources\new_21a1.gif" />
+    <None Include="Resources\new_21a2.gif" />
+    <Content Include="Resources\new_22.gif" />
+    <None Include="Resources\new_221.gif" />
+    <None Include="Resources\new_222.gif" />
+    <Content Include="Resources\new_23.gif" />
+    <None Include="Resources\new_231.gif" />
+    <None Include="Resources\new_232.gif" />
+    <Content Include="Resources\new_24a.gif" />
+    <None Include="Resources\new_24a1.gif" />
+    <None Include="Resources\new_24a2.gif" />
+    <Content Include="Resources\new_25.gif" />
+    <Content Include="Resources\new_26.gif" />
+    <Content Include="Resources\new_27.gif" />
+    <None Include="Resources\new_271.gif" />
+    <None Include="Resources\new_272.gif" />
+    <Content Include="Resources\new_28.gif" />
+    <None Include="Resources\new_281.gif" />
+    <None Include="Resources\new_282.gif" />
+    <Content Include="Resources\new_29.gif" />
+    <None Include="Resources\new_291.gif" />
+    <None Include="Resources\new_292.gif" />
+    <Content Include="Resources\new_30.gif" />
+    <None Include="Resources\new_301.gif" />
+    <None Include="Resources\new_302.gif" />
+    <Content Include="Resources\taskFormOne.bmp" />
+    <Content Include="Resources\template.gif" />
+    <Content Include="Resources\ToolButton_ExportExcel.bmp" />
+    <Content Include="Resources\tubiao.gif" />
+    <Content Include="UI\SystemManage\Login\gotoo32X32.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

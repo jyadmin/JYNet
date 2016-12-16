@@ -34,8 +34,8 @@ namespace TX.Framework.WindowUI.Forms
             //this.ShowInTaskbar = false;
             this.ResizeEnable = false;
             this.TopMost = true;
-            this._CaptionText = "天下酒店网";
-            this._Message = "天天开心，身体健康！";
+            this._CaptionText = "消息提示";
+            this._Message = "消息提示";
             this._MessageMode = EnumMessageBox.Info;
             this.MaximumSize = new Size(this._MaxWidth, this._MaxHeight);
             ControlHelper.BindMouseMoveEvent(this.labMessage);

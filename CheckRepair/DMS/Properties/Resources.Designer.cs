@@ -22,7 +22,7 @@ namespace DMS.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace DMS.Properties {
         ///   返回此类使用的缓存的 ResourceManager 实例。
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("DMS.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace DMS.Properties {
         ///   重写当前线程的 CurrentUICulture 属性。
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -59,397 +59,322 @@ namespace DMS.Properties {
                 resourceCulture = value;
             }
         }
-
+        
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        public static System.Drawing.Bitmap background
-        {
-            get
-            {
+        public static System.Drawing.Bitmap background {
+            get {
                 object obj = ResourceManager.GetObject("background", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        public static System.Drawing.Bitmap module
-        {
-            get
-            {
+        public static System.Drawing.Bitmap module {
+            get {
                 object obj = ResourceManager.GetObject("module", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        public static System.Drawing.Bitmap module_select
-        {
-            get
-            {
+        public static System.Drawing.Bitmap module_select {
+            get {
                 object obj = ResourceManager.GetObject("module_select", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
-        /// <summary>
-        ///   查找类似 ToolButton_Search 的本地化字符串。
-        /// </summary>
-        public static string String
-        {
-            get
-            {
-                return ResourceManager.GetString("String", resourceCulture);
-            }
-        }
-
+        
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        public static System.Drawing.Bitmap ToolButton_Abolish
-        {
-            get
-            {
+        public static System.Drawing.Bitmap ToolButton_Abolish {
+            get {
                 object obj = ResourceManager.GetObject("ToolButton_Abolish", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        public static System.Drawing.Bitmap ToolButton_Audit
-        {
-            get
-            {
+        public static System.Drawing.Bitmap ToolButton_Audit {
+            get {
                 object obj = ResourceManager.GetObject("ToolButton_Audit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        public static System.Drawing.Bitmap ToolButton_Cancel
-        {
-            get
-            {
+        public static System.Drawing.Bitmap ToolButton_Cancel {
+            get {
                 object obj = ResourceManager.GetObject("ToolButton_Cancel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        public static System.Drawing.Bitmap ToolButton_Checkout
-        {
-            get
-            {
+        public static System.Drawing.Bitmap ToolButton_Checkout {
+            get {
                 object obj = ResourceManager.GetObject("ToolButton_Checkout", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        public static System.Drawing.Bitmap ToolButton_ClearData
-        {
-            get
-            {
+        public static System.Drawing.Bitmap ToolButton_ClearData {
+            get {
                 object obj = ResourceManager.GetObject("ToolButton_ClearData", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        public static System.Drawing.Bitmap ToolButton_Computer
-        {
-            get
-            {
+        public static System.Drawing.Bitmap ToolButton_Computer {
+            get {
                 object obj = ResourceManager.GetObject("ToolButton_Computer", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        public static System.Drawing.Bitmap ToolButton_Delete
-        {
-            get
-            {
+        public static System.Drawing.Bitmap ToolButton_Delete {
+            get {
                 object obj = ResourceManager.GetObject("ToolButton_Delete", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        public static System.Drawing.Bitmap ToolButton_Descend
-        {
-            get
-            {
+        public static System.Drawing.Bitmap ToolButton_Descend {
+            get {
                 object obj = ResourceManager.GetObject("ToolButton_Descend", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        public static System.Drawing.Bitmap ToolButton_Download
-        {
-            get
-            {
+        public static System.Drawing.Bitmap ToolButton_Download {
+            get {
                 object obj = ResourceManager.GetObject("ToolButton_Download", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        public static System.Drawing.Bitmap ToolButton_ErrorImage
-        {
-            get
-            {
+        public static System.Drawing.Bitmap ToolButton_ErrorImage {
+            get {
                 object obj = ResourceManager.GetObject("ToolButton_ErrorImage", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        public static System.Drawing.Bitmap ToolButton_ExportExcel
-        {
-            get
-            {
+        public static System.Drawing.Bitmap ToolButton_ExportExcel {
+            get {
                 object obj = ResourceManager.GetObject("ToolButton_ExportExcel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        public static System.Drawing.Bitmap ToolButton_ExportTemplate
-        {
-            get
-            {
+        public static System.Drawing.Bitmap ToolButton_ExportTemplate {
+            get {
                 object obj = ResourceManager.GetObject("ToolButton_ExportTemplate", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        public static System.Drawing.Bitmap ToolButton_ExportWord
-        {
-            get
-            {
+        public static System.Drawing.Bitmap ToolButton_ExportWord {
+            get {
                 object obj = ResourceManager.GetObject("ToolButton_ExportWord", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        public static System.Drawing.Bitmap ToolButton_Help
-        {
-            get
-            {
+        public static System.Drawing.Bitmap ToolButton_Help {
+            get {
                 object obj = ResourceManager.GetObject("ToolButton_Help", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        public static System.Drawing.Bitmap ToolButton_ImportData
-        {
-            get
-            {
+        public static System.Drawing.Bitmap ToolButton_ImportData {
+            get {
                 object obj = ResourceManager.GetObject("ToolButton_ImportData", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        public static System.Drawing.Bitmap ToolButton_Modify
-        {
-            get
-            {
+        public static System.Drawing.Bitmap ToolButton_Modify {
+            get {
                 object obj = ResourceManager.GetObject("ToolButton_Modify", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        public static System.Drawing.Bitmap ToolButton_New
-        {
-            get
-            {
+        public static System.Drawing.Bitmap ToolButton_New {
+            get {
                 object obj = ResourceManager.GetObject("ToolButton_New", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        public static System.Drawing.Bitmap ToolButton_Popup
-        {
-            get
-            {
+        public static System.Drawing.Bitmap ToolButton_Popup {
+            get {
                 object obj = ResourceManager.GetObject("ToolButton_Popup", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        public static System.Drawing.Bitmap ToolButton_Print
-        {
-            get
-            {
+        public static System.Drawing.Bitmap ToolButton_Print {
+            get {
                 object obj = ResourceManager.GetObject("ToolButton_Print", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        public static System.Drawing.Bitmap ToolButton_PrintPreview
-        {
-            get
-            {
+        public static System.Drawing.Bitmap ToolButton_PrintPreview {
+            get {
                 object obj = ResourceManager.GetObject("ToolButton_PrintPreview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        public static System.Drawing.Bitmap ToolButton_RAudit
-        {
-            get
-            {
+        public static System.Drawing.Bitmap ToolButton_RAudit {
+            get {
                 object obj = ResourceManager.GetObject("ToolButton_RAudit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        public static System.Drawing.Bitmap ToolButton_Save
-        {
-            get
-            {
+        public static System.Drawing.Bitmap ToolButton_Save {
+            get {
                 object obj = ResourceManager.GetObject("ToolButton_Save", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        public static System.Drawing.Bitmap ToolButton_Signin
-        {
-            get
-            {
+        public static System.Drawing.Bitmap ToolButton_Signin {
+            get {
                 object obj = ResourceManager.GetObject("ToolButton_Signin", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        public static System.Drawing.Bitmap ToolButton_Start
-        {
-            get
-            {
+        public static System.Drawing.Bitmap ToolButton_Start {
+            get {
                 object obj = ResourceManager.GetObject("ToolButton_Start", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        public static System.Drawing.Bitmap ToolButton_Stat
-        {
-            get
-            {
+        public static System.Drawing.Bitmap ToolButton_Stat {
+            get {
                 object obj = ResourceManager.GetObject("ToolButton_Stat", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        public static System.Drawing.Bitmap ToolButton_Stop
-        {
-            get
-            {
+        public static System.Drawing.Bitmap ToolButton_Stop {
+            get {
                 object obj = ResourceManager.GetObject("ToolButton_Stop", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        public static System.Drawing.Bitmap ToolButton_Submit
-        {
-            get
-            {
+        public static System.Drawing.Bitmap ToolButton_Submit {
+            get {
                 object obj = ResourceManager.GetObject("ToolButton_Submit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        public static System.Drawing.Bitmap ToolButton_Update
-        {
-            get
-            {
+        public static System.Drawing.Bitmap ToolButton_Update {
+            get {
                 object obj = ResourceManager.GetObject("ToolButton_Update", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        public static System.Drawing.Bitmap ToolButton_View
-        {
-            get
-            {
+        public static System.Drawing.Bitmap ToolButton_View {
+            get {
                 object obj = ResourceManager.GetObject("ToolButton_View", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }

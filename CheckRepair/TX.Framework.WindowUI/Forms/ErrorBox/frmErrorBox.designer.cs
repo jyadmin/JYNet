@@ -42,22 +42,22 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(303, 1);
+            this.btnCancel.Location = new System.Drawing.Point(327, 1);
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(183, 1);
+            this.btnOK.Location = new System.Drawing.Point(207, 1);
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click_1);
             // 
             // panelWorkArea
             // 
             this.panelWorkArea.Controls.Add(this.txTableLayoutPanel1);
-            this.panelWorkArea.Size = new System.Drawing.Size(567, 346);
+            this.panelWorkArea.Size = new System.Drawing.Size(614, 457);
             // 
             // panelControlArea
             // 
-            this.panelControlArea.Location = new System.Drawing.Point(6, 376);
-            this.panelControlArea.Size = new System.Drawing.Size(567, 30);
+            this.panelControlArea.Location = new System.Drawing.Point(6, 487);
+            this.panelControlArea.Size = new System.Drawing.Size(614, 30);
             // 
             // label2
             // 
@@ -119,7 +119,7 @@
             this.txTableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.txTableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.txTableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.txTableLayoutPanel1.Size = new System.Drawing.Size(567, 346);
+            this.txTableLayoutPanel1.Size = new System.Drawing.Size(614, 457);
             this.txTableLayoutPanel1.TabIndex = 9;
             // 
             // textBox1
@@ -138,7 +138,7 @@
             this.textBox1.PasswordChar = '\0';
             this.textBox1.ReadOnly = true;
             this.textBox1.Required = false;
-            this.textBox1.Size = new System.Drawing.Size(481, 22);
+            this.textBox1.Size = new System.Drawing.Size(528, 22);
             this.textBox1.TabIndex = 9;
             // 
             // txtError
@@ -159,7 +159,7 @@
             this.txtError.ReadOnly = true;
             this.txtError.Required = false;
             this.txTableLayoutPanel1.SetRowSpan(this.txtError, 2);
-            this.txtError.Size = new System.Drawing.Size(481, 54);
+            this.txtError.Size = new System.Drawing.Size(528, 54);
             this.txtError.TabIndex = 7;
             // 
             // txtErrorDetail
@@ -181,7 +181,7 @@
             this.txtErrorDetail.Required = false;
             this.txTableLayoutPanel1.SetRowSpan(this.txtErrorDetail, 2);
             this.txtErrorDetail.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtErrorDetail.Size = new System.Drawing.Size(481, 250);
+            this.txtErrorDetail.Size = new System.Drawing.Size(528, 361);
             this.txtErrorDetail.TabIndex = 10;
             // 
             // frmErrorBox
@@ -191,7 +191,7 @@
             this.CapitionLogo = global::TX.Framework.WindowUI.Properties.Resources.naruto;
             this.CaptionColor = System.Drawing.Color.Maroon;
             this.CaptionFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ClientSize = new System.Drawing.Size(579, 409);
+            this.ClientSize = new System.Drawing.Size(626, 520);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MinimizeBox = false;

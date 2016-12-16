@@ -72,8 +72,8 @@ namespace TX.Framework.WindowUI.Forms
 
         protected DialogResult Error(string message)
         {
-            Random ran = new Random(DateTime.Now.Second);
-            return this.Error(this.iErrorCaptions[ran.Next(0, this.iErrorCaptions.Length)], message);
+            //Random ran = new Random(DateTime.Now.Second);
+            return this.Error("错误信息", message);
         }
 
         protected DialogResult Question(string captionText, string message)

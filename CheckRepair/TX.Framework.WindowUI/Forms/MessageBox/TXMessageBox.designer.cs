@@ -87,7 +87,7 @@ namespace TX.Framework.WindowUI.Forms
             this.tableLayoutPanel2.SetRowSpan(this.labMessage, 3);
             this.labMessage.Size = new System.Drawing.Size(265, 102);
             this.labMessage.TabIndex = 0;
-            this.labMessage.Text = "天下酒店网，一个神奇的网站！";
+            this.labMessage.Text = "消息提示";
             this.labMessage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel2
@@ -174,12 +174,14 @@ namespace TX.Framework.WindowUI.Forms
             this.ControlBoxSize = new System.Drawing.Size(35, 16);
             this.Controls.Add(this.tableLayoutPanel1);
             this.CornerRadius = 2;
+            this.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Location = new System.Drawing.Point(0, 0);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "TXMessageBox";
             this.Padding = new System.Windows.Forms.Padding(3);
-            this.Text = "天下酒店网MessageBox";
+            this.ShowIcon = false;
+            this.Text = "MessageBox";
             this.Load += new System.EventHandler(this.TXMessageBox_Load);
             this.txPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
