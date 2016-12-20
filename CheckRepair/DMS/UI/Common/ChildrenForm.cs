@@ -19,7 +19,7 @@ namespace DMS.UI.Common
         public override void RefreshCommands()
         {
             base.RefreshCommands();
-            SystemSetForm.Current.RefreshToolBar();
+            DMS.UI.SystemManage.SystemSetForm.Current.RefreshToolBar();
         }
     }
 }

@@ -89,5 +89,26 @@ namespace DMS.ORMappers.BasicInfo
             get;
             set;
         }
+
+        /// <summary>
+        /// 等级
+        /// </summary>
+        [Column(IsChangeable = true)]
+        public int Level
+        {
+            get;
+            set;
+        }
+
+        
+        /// <summary>
+        /// 占用空间大小
+        /// </summary>
+        [Column(IsChangeable = true)]
+        public int Size
+        {
+            get;
+            set;
+        }
     }
 }

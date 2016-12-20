@@ -106,6 +106,8 @@ namespace DMS.UI.Common
             dataGridPropertyDictionary[type].Add("PriorModule");
             dataGridPropertyDictionary[type].Add("IsDisplay");
             dataGridPropertyDictionary[type].Add("DisplayOrder");
+            dataGridPropertyDictionary[type].Add("Level");
+            dataGridPropertyDictionary[type].Add("Size");
 
             //角色信息
             type = typeof(Role).FullName;
@@ -152,6 +154,9 @@ namespace DMS.UI.Common
             dataGridPropertyTitleDictionary.Add(string.Format("{0}.PriorModule", type), "上级模块");
             dataGridPropertyTitleDictionary.Add(string.Format("{0}.IsDisplay", type), "是否显示");
             dataGridPropertyTitleDictionary.Add(string.Format("{0}.DisplayOrder", type), "显示顺序");
+            dataGridPropertyTitleDictionary.Add(string.Format("{0}.Level", type), "模块等级");
+            dataGridPropertyTitleDictionary.Add(string.Format("{0}.Size", type), "模块大小");
+
 
             //角色信息
             type = typeof(Role).FullName;

@@ -12,7 +12,7 @@ using DMS.DomainObjects;
 using DMS.DomainObjects.BasicInfo;
 using DMS.Common;
 
-namespace DMS.UI
+namespace DMS.UI.SystemManage
 {
     public partial class SystemSetForm : TX.Framework.WindowUI.Forms.BaseForm
     {
@@ -72,7 +72,7 @@ namespace DMS.UI
             foreach (Module module in modules)
             {
                 //加载所有的功能模块
-                if (module.PriorModule == parentModuleNO && module.IsDisplay == 1)
+                if (module.PriorModule == parentModuleNO && module.IsDisplay == 1 && module.Level == 2)
                 {
                     ToolStripMenuItem item = new ToolStripMenuItem();
                     TreeNode node = new TreeNode();
@@ -97,15 +97,6 @@ namespace DMS.UI
             IModule runner = (IModule)((ToolStripMenuItem)sender).Tag;
             if (runner != null)
                 runner.Run();
-        }
-
-        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (MsgHelper.ShowQuestionMsgBox("确定要关闭系统吗？") == DialogResult.No)
-            {
-                e.Cancel = true;
-                return;
-            }
         }
 
         private void tv_AfterSelect(object sender, TreeViewEventArgs e)

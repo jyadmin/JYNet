@@ -1,4 +1,4 @@
-﻿namespace DMS.UI
+﻿namespace DMS.UI.SystemManage
 {
     partial class SystemSetForm
     {
@@ -37,9 +37,9 @@
             // 
             // statustrip
             // 
-            this.statustrip.Location = new System.Drawing.Point(3, 560);
+            this.statustrip.Location = new System.Drawing.Point(3, 864);
             this.statustrip.Name = "statustrip";
-            this.statustrip.Size = new System.Drawing.Size(976, 22);
+            this.statustrip.Size = new System.Drawing.Size(1104, 22);
             this.statustrip.TabIndex = 1;
             this.statustrip.Text = "statusStrip1";
             // 
@@ -47,7 +47,7 @@
             // 
             this.menuItem.Location = new System.Drawing.Point(3, 27);
             this.menuItem.Name = "menuItem";
-            this.menuItem.Size = new System.Drawing.Size(976, 24);
+            this.menuItem.Size = new System.Drawing.Size(1104, 24);
             this.menuItem.TabIndex = 3;
             this.menuItem.Text = "menuStrip1";
             // 
@@ -56,7 +56,7 @@
             this.tv.Dock = System.Windows.Forms.DockStyle.Left;
             this.tv.Location = new System.Drawing.Point(3, 51);
             this.tv.Name = "tv";
-            this.tv.Size = new System.Drawing.Size(199, 509);
+            this.tv.Size = new System.Drawing.Size(199, 813);
             this.tv.TabIndex = 6;
             this.tv.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tv_AfterSelect);
             // 
@@ -64,7 +64,7 @@
             // 
             this.splitter1.Location = new System.Drawing.Point(202, 51);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(3, 509);
+            this.splitter1.Size = new System.Drawing.Size(3, 813);
             this.splitter1.TabIndex = 7;
             this.splitter1.TabStop = false;
             // 
@@ -72,7 +72,7 @@
             // 
             this.toolstrip.Location = new System.Drawing.Point(205, 51);
             this.toolstrip.Name = "toolstrip";
-            this.toolstrip.Size = new System.Drawing.Size(774, 25);
+            this.toolstrip.Size = new System.Drawing.Size(902, 25);
             this.toolstrip.TabIndex = 8;
             this.toolstrip.Text = "toolStrip1";
             // 
@@ -80,7 +80,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(982, 585);
+            this.ClientSize = new System.Drawing.Size(1110, 889);
             this.Controls.Add(this.toolstrip);
             this.Controls.Add(this.splitter1);
             this.Controls.Add(this.tv);
@@ -95,7 +95,6 @@
             this.ShowIcon = false;
             this.Text = "系统设置";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.MdiChildActivate += new System.EventHandler(this.MainForm_MdiChildActivate);
             this.ResumeLayout(false);

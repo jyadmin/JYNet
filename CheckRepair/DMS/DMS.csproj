@@ -212,22 +212,22 @@
     <Compile Include="UI\CustomerControl\DMSTreeView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="UI\SystemManage\Login\Form1.cs">
+    <Compile Include="UI\Login\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\SystemManage\Login\Form1.Designer.cs">
+    <Compile Include="UI\Login\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\SystemManage\Login\MainPage.cs">
+    <Compile Include="UI\Login\MainPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\SystemManage\Login\MainPage.Designer.cs">
+    <Compile Include="UI\Login\MainPage.Designer.cs">
       <DependentUpon>MainPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\SystemSetForm.cs">
+    <Compile Include="UI\SystemManage\SystemSetForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\SystemSetForm.designer.cs">
+    <Compile Include="UI\SystemManage\SystemSetForm.designer.cs">
       <DependentUpon>SystemSetForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\SystemManage\DictionaryManage\AddDictionaryForm.cs">
@@ -294,12 +294,6 @@
     <Compile Include="UI\SystemManage\EditionManage\ViewEditionForm.Designer.cs">
       <DependentUpon>ViewEditionForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\SystemManage\LoginForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\SystemManage\LoginForm.Designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\SystemManage\ModuleManage\AddModuleForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -364,6 +358,7 @@
     <Compile Include="UI\SystemManage\RoleManage\ViewRoleForm.Designer.cs">
       <DependentUpon>ViewRoleForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\SystemManage\SystemSetRunner.cs" />
     <Compile Include="UI\SystemManage\UserForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -419,13 +414,16 @@
     <EmbeddedResource Include="UI\Common\ListForm.resx">
       <DependentUpon>ListForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\SystemManage\Login\Form1.resx">
+    <EmbeddedResource Include="UI\SystemManage\DictionaryManage\DictionaryMainForm.resx">
+      <DependentUpon>DictionaryMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Login\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\SystemManage\Login\MainPage.resx">
+    <EmbeddedResource Include="UI\Login\MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\SystemSetForm.resx">
+    <EmbeddedResource Include="UI\SystemManage\SystemSetForm.resx">
       <DependentUpon>SystemSetForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\SystemManage\DictionaryManage\AddDictionaryForm.resx">
@@ -454,9 +452,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\SystemManage\EditionManage\ViewEditionForm.resx">
       <DependentUpon>ViewEditionForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\SystemManage\LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\SystemManage\ModuleManage\AddModuleForm.resx">
       <DependentUpon>AddModuleForm.cs</DependentUpon>
@@ -534,12 +529,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\TX.Framework.WindowUI\TX.Framework.WindowUI.csproj">
-      <Project>{e8746b10-eaaf-44b7-95cc-29e4c42ec8d5}</Project>
-      <Name>TX.Framework.WindowUI</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0">
@@ -675,7 +664,13 @@
     <Content Include="Resources\template.gif" />
     <Content Include="Resources\ToolButton_ExportExcel.bmp" />
     <Content Include="Resources\tubiao.gif" />
-    <Content Include="UI\SystemManage\Login\gotoo32X32.ico" />
+    <Content Include="UI\Login\gotoo32X32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TX.Framework.WindowUI\TX.Framework.WindowUI.csproj">
+      <Project>{e8746b10-eaaf-44b7-95cc-29e4c42ec8d5}</Project>
+      <Name>TX.Framework.WindowUI</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

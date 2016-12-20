@@ -44,6 +44,10 @@
             this.txtPriorModule = new DMS.UI.CustomerControl.DMSTextBox();
             this.cbDisplay = new System.Windows.Forms.CheckBox();
             this.txtDisplayOrder = new DMS.UI.CustomerControl.DMSTextBox();
+            this.dmsLabel8 = new DMS.UI.CustomerControl.DMSLabel();
+            this.dmsLabel9 = new DMS.UI.CustomerControl.DMSLabel();
+            this.txtLevel = new DMS.UI.CustomerControl.DMSTextBox();
+            this.txtSize = new DMS.UI.CustomerControl.DMSTextBox();
             this.gbDetail.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -69,17 +73,23 @@
             this.tableLayoutPanel1.Controls.Add(this.dmsLabel4, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.dmsLabel5, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.dmsLabel6, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.dmsLabel7, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.txtMemo, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.dmsLabel7, 0, 8);
+            this.tableLayoutPanel1.Controls.Add(this.txtMemo, 1, 8);
             this.tableLayoutPanel1.Controls.Add(this.txtModuleId, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtName, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtRunner, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtPriorModule, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.cbDisplay, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.txtDisplayOrder, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.dmsLabel8, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.dmsLabel9, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.txtLevel, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.txtSize, 1, 7);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 20);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 7;
+            this.tableLayoutPanel1.RowCount = 9;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
@@ -154,7 +164,7 @@
             // 
             this.dmsLabel7.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.dmsLabel7.AutoSize = true;
-            this.dmsLabel7.Location = new System.Drawing.Point(28, 241);
+            this.dmsLabel7.Location = new System.Drawing.Point(28, 266);
             this.dmsLabel7.Name = "dmsLabel7";
             this.dmsLabel7.Size = new System.Drawing.Size(29, 12);
             this.dmsLabel7.TabIndex = 2;
@@ -163,13 +173,13 @@
             // txtMemo
             // 
             this.txtMemo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtMemo.Location = new System.Drawing.Point(60, 150);
+            this.txtMemo.Location = new System.Drawing.Point(60, 200);
             this.txtMemo.Margin = new System.Windows.Forms.Padding(0);
             this.txtMemo.MaxLength = 200;
             this.txtMemo.Multiline = true;
             this.txtMemo.Name = "txtMemo";
             this.txtMemo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtMemo.Size = new System.Drawing.Size(284, 194);
+            this.txtMemo.Size = new System.Drawing.Size(284, 144);
             this.txtMemo.TabIndex = 3;
             // 
             // txtModuleId
@@ -233,6 +243,46 @@
             this.txtDisplayOrder.Size = new System.Drawing.Size(284, 21);
             this.txtDisplayOrder.TabIndex = 4;
             // 
+            // dmsLabel8
+            // 
+            this.dmsLabel8.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.dmsLabel8.AutoSize = true;
+            this.dmsLabel8.Location = new System.Drawing.Point(4, 156);
+            this.dmsLabel8.Name = "dmsLabel8";
+            this.dmsLabel8.Size = new System.Drawing.Size(53, 12);
+            this.dmsLabel8.TabIndex = 2;
+            this.dmsLabel8.Text = "模块等级";
+            // 
+            // dmsLabel9
+            // 
+            this.dmsLabel9.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.dmsLabel9.AutoSize = true;
+            this.dmsLabel9.Location = new System.Drawing.Point(4, 181);
+            this.dmsLabel9.Name = "dmsLabel9";
+            this.dmsLabel9.Size = new System.Drawing.Size(53, 12);
+            this.dmsLabel9.TabIndex = 2;
+            this.dmsLabel9.Text = "模块大小";
+            // 
+            // txtLevel
+            // 
+            this.txtLevel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtLevel.Location = new System.Drawing.Point(60, 152);
+            this.txtLevel.Margin = new System.Windows.Forms.Padding(0);
+            this.txtLevel.MaxLength = 5;
+            this.txtLevel.Name = "txtLevel";
+            this.txtLevel.Size = new System.Drawing.Size(284, 21);
+            this.txtLevel.TabIndex = 4;
+            // 
+            // txtSize
+            // 
+            this.txtSize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSize.Location = new System.Drawing.Point(60, 177);
+            this.txtSize.Margin = new System.Windows.Forms.Padding(0);
+            this.txtSize.MaxLength = 5;
+            this.txtSize.Name = "txtSize";
+            this.txtSize.Size = new System.Drawing.Size(284, 21);
+            this.txtSize.TabIndex = 4;
+            // 
             // ModuleFormBase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -267,5 +317,9 @@
         private DMS.UI.CustomerControl.DMSTextBox txtPriorModule;
         private System.Windows.Forms.CheckBox cbDisplay;
         private DMS.UI.CustomerControl.DMSTextBox txtDisplayOrder;
+        private CustomerControl.DMSLabel dmsLabel8;
+        private CustomerControl.DMSLabel dmsLabel9;
+        private CustomerControl.DMSTextBox txtLevel;
+        private CustomerControl.DMSTextBox txtSize;
     }
 }

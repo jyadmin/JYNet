@@ -17,16 +17,16 @@ namespace DMS.UI.SystemManage.DictionaryManage
         /// <summary>
         /// 添加数据项
         /// </summary>
-        public const int AddDataItem = 25;
+        public const int AddDataItem = 19;
 
         /// <summary>
         /// 修改数据项
         /// </summary>
-        public const int EditDataItem = 26;
+        public const int EditDataItem = 20;
 
         /// <summary>
         /// 删除数据项
         /// </summary>
-        public const int DeleteDataItem = 27;
+        public const int DeleteDataItem = 21;
     }
 }

@@ -97,6 +97,24 @@ namespace DMS.DomainObjects.BasicInfo
             get { return m_ModuleDA.Description; }
             set { m_ModuleDA.Description = value; }
         }
+
+        /// <summary>
+        /// 等级
+        /// </summary>
+        public int Level
+        {
+            get { return m_ModuleDA.Level; }
+            set { m_ModuleDA.Level = value; }
+        }
+
+        /// <summary>
+        ///占用空间大小
+        /// </summary>
+        public int Size
+        {
+            get { return m_ModuleDA.Size; }
+            set { m_ModuleDA.Size = value; }
+        }
         #endregion
 
         #region CURD

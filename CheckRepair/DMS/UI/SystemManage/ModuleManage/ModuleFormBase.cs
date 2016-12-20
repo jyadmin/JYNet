@@ -47,6 +47,8 @@ namespace DMS.UI.SystemManage.ModuleManage
             SetReadOnly(txtDisplayOrder, true, Color.White);
             SetReadOnly(txtMemo, true, Color.White);
             SetEnable(cbDisplay, false);
+            SetReadOnly(txtLevel, true, Color.White);
+            SetReadOnly(txtSize, true, Color.White);
         }
 
         public void SetModuleToForm()
@@ -57,7 +59,9 @@ namespace DMS.UI.SystemManage.ModuleManage
             txtPriorModule.Text = m_Module.PriorModule.ToString();
             txtDisplayOrder.Text = m_Module.DisplayOrder.ToString();
             txtMemo.Text = m_Module.Description;
-            cbDisplay.Checked = bool.Parse(m_Module.IsDisplay.ToString());
+            cbDisplay.Checked = (m_Module.IsDisplay == 1 ? true : false);
+            txtLevel.Text = m_Module.Level.ToString();
+            txtSize.Text = m_Module.Size.ToString();
         }
 
         public void GetFormToModule()
@@ -67,7 +71,9 @@ namespace DMS.UI.SystemManage.ModuleManage
             m_Module.PriorModule = ConvertHelper.ToInt32(txtPriorModule.Text);
             m_Module.DisplayOrder = ConvertHelper.ToInt32(txtDisplayOrder.Text);
             m_Module.Description = txtMemo.Text;
-            m_Module.IsDisplay = Int16.Parse(cbDisplay.Checked.ToString());
+            m_Module.IsDisplay = Int16.Parse((cbDisplay.Checked == true ? 1 : 0).ToString());
+            m_Module.Level = ConvertHelper.ToInt32(txtLevel.Text);
+            m_Module.Size = ConvertHelper.ToInt32(txtSize.Text);
         }
     }
 }
