@@ -37,6 +37,8 @@ namespace DMS.UI.SystemManage.ModuleManage
             AddRequiredTextItem(txtName, "模块名称不能为空!");
             AddRequiredTextItem(txtPriorModule, "上级模块不能为空!",@"^\d{1,5}$","必须为数字!");
             AddRequiredTextItem(txtDisplayOrder, "显示顺序不能为空!", @"^\d{1,5}$", "必须为数字!");
+            AddRequiredTextItem(txtLevel, "显示顺序不能为空!", @"^\d{1,5}$", "必须为数字!");
+            AddRequiredTextItem(txtSize, "显示顺序不能为空!", @"^[1-2]{1}$", "必须为数字1或2!");
         }
 
         protected void SetReadonlyControl()

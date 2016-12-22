@@ -95,6 +95,12 @@ namespace DMS.UI.Common
             dataGridPropertyDictionary[type].Add("LoginName");
             dataGridPropertyDictionary[type].Add("Password");
             dataGridPropertyDictionary[type].Add("Duty");
+            dataGridPropertyDictionary[type].Add("Role");
+            dataGridPropertyDictionary[type].Add("EmployeeNumber");
+            dataGridPropertyDictionary[type].Add("WorkingAge");
+            dataGridPropertyDictionary[type].Add("Qualification");
+            dataGridPropertyDictionary[type].Add("Grade");
+            dataGridPropertyDictionary[type].Add("LoginAllowed");
             dataGridPropertyDictionary[type].Add("Description");
 
             //功能模块
@@ -143,6 +149,12 @@ namespace DMS.UI.Common
             dataGridPropertyTitleDictionary.Add(string.Format("{0}.LoginName", type), "登陆帐号");
             dataGridPropertyTitleDictionary.Add(string.Format("{0}.Password", type), "密码");
             dataGridPropertyTitleDictionary.Add(string.Format("{0}.Duty", type), "职责");
+            dataGridPropertyTitleDictionary.Add(string.Format("{0}.Role", type), "角色");
+            dataGridPropertyTitleDictionary.Add(string.Format("{0}.EmployeeNumber", type), "工号");
+            dataGridPropertyTitleDictionary.Add(string.Format("{0}.WorkingAge", type), "工龄");
+            dataGridPropertyTitleDictionary.Add(string.Format("{0}.Qualification", type), "资质");
+            dataGridPropertyTitleDictionary.Add(string.Format("{0}.Grade", type), "级别");
+            dataGridPropertyTitleDictionary.Add(string.Format("{0}.LoginAllowed", type), "允许登录");
             dataGridPropertyTitleDictionary.Add(string.Format("{0}.Description", type), "描述");
 
 

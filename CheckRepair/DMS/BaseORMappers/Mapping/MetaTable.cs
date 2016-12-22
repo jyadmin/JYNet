@@ -9,6 +9,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 
 namespace DMS.BaseORMappers.Mapping
 {
@@ -138,12 +140,30 @@ namespace DMS.BaseORMappers.Mapping
 
 		private List<Parameter> GetUpdateParameters(string paramPrefix, object entity)
 		{
-			return RowType.MetaParameters.Where(p => p.IsChangeable)
+            List<Parameter> parameters = new List<Parameter>();
+            /*
+			parameters = RowType.MetaParameters.Where(p => p.IsChangeable)
 				.Select(p => new Parameter
 				{
 					Name = paramPrefix + p.MappedName,
 					Value = FormatValue(RowType.EntityType.GetProperty(p.PropertyName).GetValue(entity, null))
 				}).ToList();
+             */
+            foreach (MetaParameter mp in RowType.MetaParameters)
+            {
+                if (mp.IsChangeable)
+                {
+                    Parameter p =  new Parameter();
+                    
+                    p.Name = paramPrefix + mp.MappedName;
+                    object obj = RowType.EntityType.GetProperty(mp.PropertyName).GetValue(entity, null);
+                    p.Value = FormatValue(obj);
+
+                    parameters.Add(p);
+                }
+            }
+
+            return parameters;
 		}
 
 		private List<Parameter> GetKeyParameters(string paramPrefix, object entity)
@@ -169,7 +189,13 @@ namespace DMS.BaseORMappers.Mapping
 
             switch (value.GetType().ToString())
             {
-
+                case "System.Byte[]":
+                    {
+                        //BinaryFormatter formatter = new BinaryFormatter();
+                        //MemoryStream rems = new MemoryStream();
+                        //formatter.Serialize(rems, value);
+                        return value; 
+                    }
                 case "System.Boolean":
                     {
                         return Convert.ToInt32(value).ToString();

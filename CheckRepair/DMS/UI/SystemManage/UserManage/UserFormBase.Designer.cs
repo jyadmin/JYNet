@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.gbUser = new System.Windows.Forms.GroupBox();
+            this.userPhoto = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dmsLabel1 = new DMS.UI.CustomerControl.DMSLabel();
             this.dmsLabel2 = new DMS.UI.CustomerControl.DMSLabel();
@@ -44,22 +45,49 @@
             this.txtDescript = new DMS.UI.CustomerControl.DMSMutilineTextbox();
             this.dmsLabel7 = new DMS.UI.CustomerControl.DMSLabel();
             this.txtUserName = new DMS.UI.CustomerControl.DMSTextBox();
+            this.dmsLabel8 = new DMS.UI.CustomerControl.DMSLabel();
+            this.dmsLabel9 = new DMS.UI.CustomerControl.DMSLabel();
+            this.dmsLabel10 = new DMS.UI.CustomerControl.DMSLabel();
+            this.dmsLabel11 = new DMS.UI.CustomerControl.DMSLabel();
+            this.txtEmployeeNumber = new DMS.UI.CustomerControl.DMSTextBox();
+            this.txtWorkingAge = new DMS.UI.CustomerControl.DMSTextBox();
+            this.txtQualification = new DMS.UI.CustomerControl.DMSTextBox();
+            this.dmsLabel12 = new DMS.UI.CustomerControl.DMSLabel();
+            this.txtGrade = new DMS.UI.CustomerControl.DMSTextBox();
+            this.cbLoginAllowed = new System.Windows.Forms.CheckBox();
+            this.photoTipLabel = new DMS.UI.CustomerControl.DMSLabel();
             this.gbUser.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userPhoto)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbUser
             // 
-            this.gbUser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbUser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbUser.Controls.Add(this.userPhoto);
             this.gbUser.Controls.Add(this.tableLayoutPanel1);
-            this.gbUser.Location = new System.Drawing.Point(8, 51);
+            this.gbUser.Controls.Add(this.photoTipLabel);
+            this.gbUser.Location = new System.Drawing.Point(8, 28);
             this.gbUser.Name = "gbUser";
-            this.gbUser.Size = new System.Drawing.Size(269, 290);
+            this.gbUser.Size = new System.Drawing.Size(438, 426);
             this.gbUser.TabIndex = 0;
             this.gbUser.TabStop = false;
             this.gbUser.Text = "用户基本信息";
+            // 
+            // userPhoto
+            // 
+            this.userPhoto.BackColor = System.Drawing.Color.AliceBlue;
+            this.userPhoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.userPhoto.ImageLocation = "";
+            this.userPhoto.Location = new System.Drawing.Point(267, 20);
+            this.userPhoto.Name = "userPhoto";
+            this.userPhoto.Size = new System.Drawing.Size(165, 198);
+            this.userPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.userPhoto.TabIndex = 2;
+            this.userPhoto.TabStop = false;
+            this.userPhoto.DoubleClick += new System.EventHandler(this.choosePhoto_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -71,18 +99,33 @@
             this.tableLayoutPanel1.Controls.Add(this.dmsLabel3, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.dmsLabel4, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.dmsLabel5, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.dmsLabel6, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.dmsLabel6, 0, 11);
             this.tableLayoutPanel1.Controls.Add(this.txtuserId, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtLoginName, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtPassword, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtDuty, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.cmbRole, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.txtDescript, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.txtDescript, 1, 11);
             this.tableLayoutPanel1.Controls.Add(this.dmsLabel7, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.txtUserName, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.dmsLabel8, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.dmsLabel9, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.dmsLabel10, 0, 8);
+            this.tableLayoutPanel1.Controls.Add(this.dmsLabel11, 0, 9);
+            this.tableLayoutPanel1.Controls.Add(this.txtEmployeeNumber, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.txtWorkingAge, 1, 7);
+            this.tableLayoutPanel1.Controls.Add(this.txtQualification, 1, 8);
+            this.tableLayoutPanel1.Controls.Add(this.dmsLabel12, 0, 10);
+            this.tableLayoutPanel1.Controls.Add(this.txtGrade, 1, 9);
+            this.tableLayoutPanel1.Controls.Add(this.cbLoginAllowed, 1, 10);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 20);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 7;
+            this.tableLayoutPanel1.RowCount = 12;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
@@ -90,7 +133,8 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(255, 262);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(255, 397);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // dmsLabel1
@@ -147,7 +191,7 @@
             // 
             this.dmsLabel6.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.dmsLabel6.AutoSize = true;
-            this.dmsLabel6.Location = new System.Drawing.Point(28, 200);
+            this.dmsLabel6.Location = new System.Drawing.Point(28, 330);
             this.dmsLabel6.Name = "dmsLabel6";
             this.dmsLabel6.Size = new System.Drawing.Size(29, 12);
             this.dmsLabel6.TabIndex = 0;
@@ -207,13 +251,13 @@
             // txtDescript
             // 
             this.txtDescript.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtDescript.Location = new System.Drawing.Point(60, 150);
+            this.txtDescript.Location = new System.Drawing.Point(60, 275);
             this.txtDescript.Margin = new System.Windows.Forms.Padding(0);
             this.txtDescript.MaxLength = 100;
             this.txtDescript.Multiline = true;
             this.txtDescript.Name = "txtDescript";
             this.txtDescript.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtDescript.Size = new System.Drawing.Size(195, 112);
+            this.txtDescript.Size = new System.Drawing.Size(195, 122);
             this.txtDescript.TabIndex = 3;
             // 
             // dmsLabel7
@@ -236,17 +280,125 @@
             this.txtUserName.Size = new System.Drawing.Size(195, 21);
             this.txtUserName.TabIndex = 1;
             // 
+            // dmsLabel8
+            // 
+            this.dmsLabel8.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.dmsLabel8.AutoSize = true;
+            this.dmsLabel8.Location = new System.Drawing.Point(28, 156);
+            this.dmsLabel8.Name = "dmsLabel8";
+            this.dmsLabel8.Size = new System.Drawing.Size(29, 12);
+            this.dmsLabel8.TabIndex = 0;
+            this.dmsLabel8.Text = "工号";
+            // 
+            // dmsLabel9
+            // 
+            this.dmsLabel9.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.dmsLabel9.AutoSize = true;
+            this.dmsLabel9.Location = new System.Drawing.Point(28, 181);
+            this.dmsLabel9.Name = "dmsLabel9";
+            this.dmsLabel9.Size = new System.Drawing.Size(29, 12);
+            this.dmsLabel9.TabIndex = 0;
+            this.dmsLabel9.Text = "工龄";
+            // 
+            // dmsLabel10
+            // 
+            this.dmsLabel10.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.dmsLabel10.AutoSize = true;
+            this.dmsLabel10.Location = new System.Drawing.Point(28, 206);
+            this.dmsLabel10.Name = "dmsLabel10";
+            this.dmsLabel10.Size = new System.Drawing.Size(29, 12);
+            this.dmsLabel10.TabIndex = 0;
+            this.dmsLabel10.Text = "资质";
+            // 
+            // dmsLabel11
+            // 
+            this.dmsLabel11.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.dmsLabel11.AutoSize = true;
+            this.dmsLabel11.Location = new System.Drawing.Point(28, 231);
+            this.dmsLabel11.Name = "dmsLabel11";
+            this.dmsLabel11.Size = new System.Drawing.Size(29, 12);
+            this.dmsLabel11.TabIndex = 0;
+            this.dmsLabel11.Text = "级别";
+            // 
+            // txtEmployeeNumber
+            // 
+            this.txtEmployeeNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEmployeeNumber.Location = new System.Drawing.Point(60, 152);
+            this.txtEmployeeNumber.Margin = new System.Windows.Forms.Padding(0);
+            this.txtEmployeeNumber.Name = "txtEmployeeNumber";
+            this.txtEmployeeNumber.Size = new System.Drawing.Size(195, 21);
+            this.txtEmployeeNumber.TabIndex = 1;
+            // 
+            // txtWorkingAge
+            // 
+            this.txtWorkingAge.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtWorkingAge.BackColor = System.Drawing.Color.White;
+            this.txtWorkingAge.Location = new System.Drawing.Point(60, 177);
+            this.txtWorkingAge.Margin = new System.Windows.Forms.Padding(0);
+            this.txtWorkingAge.Name = "txtWorkingAge";
+            this.txtWorkingAge.Size = new System.Drawing.Size(195, 21);
+            this.txtWorkingAge.TabIndex = 1;
+            // 
+            // txtQualification
+            // 
+            this.txtQualification.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtQualification.Location = new System.Drawing.Point(60, 202);
+            this.txtQualification.Margin = new System.Windows.Forms.Padding(0);
+            this.txtQualification.Name = "txtQualification";
+            this.txtQualification.Size = new System.Drawing.Size(195, 21);
+            this.txtQualification.TabIndex = 1;
+            // 
+            // dmsLabel12
+            // 
+            this.dmsLabel12.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.dmsLabel12.AutoSize = true;
+            this.dmsLabel12.Location = new System.Drawing.Point(4, 256);
+            this.dmsLabel12.Name = "dmsLabel12";
+            this.dmsLabel12.Size = new System.Drawing.Size(53, 12);
+            this.dmsLabel12.TabIndex = 0;
+            this.dmsLabel12.Text = "允许登录";
+            // 
+            // txtGrade
+            // 
+            this.txtGrade.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtGrade.Location = new System.Drawing.Point(60, 227);
+            this.txtGrade.Margin = new System.Windows.Forms.Padding(0);
+            this.txtGrade.Name = "txtGrade";
+            this.txtGrade.Size = new System.Drawing.Size(195, 21);
+            this.txtGrade.TabIndex = 1;
+            // 
+            // cbLoginAllowed
+            // 
+            this.cbLoginAllowed.AutoSize = true;
+            this.cbLoginAllowed.Location = new System.Drawing.Point(63, 253);
+            this.cbLoginAllowed.Name = "cbLoginAllowed";
+            this.cbLoginAllowed.Size = new System.Drawing.Size(15, 14);
+            this.cbLoginAllowed.TabIndex = 4;
+            this.cbLoginAllowed.UseVisualStyleBackColor = true;
+            // 
+            // photoTipLabel
+            // 
+            this.photoTipLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.photoTipLabel.AutoSize = true;
+            this.photoTipLabel.Location = new System.Drawing.Point(298, 226);
+            this.photoTipLabel.Name = "photoTipLabel";
+            this.photoTipLabel.Size = new System.Drawing.Size(101, 12);
+            this.photoTipLabel.TabIndex = 0;
+            this.photoTipLabel.Text = "双击方框选择照片";
+            // 
             // UserFormBase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(289, 350);
+            this.ClientSize = new System.Drawing.Size(446, 466);
             this.Controls.Add(this.gbUser);
             this.Name = "UserFormBase";
             this.Text = "UserFormBase";
             this.Load += new System.EventHandler(this.UserFormBase_Load);
             this.Controls.SetChildIndex(this.gbUser, 0);
             this.gbUser.ResumeLayout(false);
+            this.gbUser.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userPhoto)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -272,5 +424,17 @@
         private DMS.UI.CustomerControl.DMSMutilineTextbox txtDescript;
         private DMS.UI.CustomerControl.DMSLabel dmsLabel7;
         private DMS.UI.CustomerControl.DMSTextBox txtUserName;
+        private CustomerControl.DMSLabel dmsLabel8;
+        private CustomerControl.DMSLabel dmsLabel9;
+        private CustomerControl.DMSLabel dmsLabel10;
+        private CustomerControl.DMSLabel dmsLabel11;
+        private CustomerControl.DMSTextBox txtEmployeeNumber;
+        private CustomerControl.DMSTextBox txtWorkingAge;
+        private CustomerControl.DMSTextBox txtQualification;
+        private CustomerControl.DMSTextBox txtGrade;
+        private CustomerControl.DMSLabel dmsLabel12;
+        private System.Windows.Forms.CheckBox cbLoginAllowed;
+        private System.Windows.Forms.PictureBox userPhoto;
+        private CustomerControl.DMSLabel photoTipLabel;
     }
 }

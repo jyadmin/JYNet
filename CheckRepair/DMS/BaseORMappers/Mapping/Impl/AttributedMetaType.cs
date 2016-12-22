@@ -42,7 +42,7 @@ namespace DMS.BaseORMappers.Mapping
 			List<MetaParameter> parameters = new List<MetaParameter>();
 			foreach (var pi in EntityType.GetProperties())
 			{
-				if (pi.CanWrite && !pi.PropertyType.IsArray
+				if (pi.CanWrite /*&& !pi.PropertyType.IsArray*/
 					&& !pi.PropertyType.IsGenericType
 					&& !pi.PropertyType.IsInterface)
 				{

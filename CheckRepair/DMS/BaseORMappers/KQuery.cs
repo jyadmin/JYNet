@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Data;
+using System.Windows.Forms;
 using DMS.BaseORMappers.Mapping;
 
 namespace DMS.BaseORMappers
@@ -172,7 +173,12 @@ namespace DMS.BaseORMappers
 			foreach (MetaParameter param in MetaManager.GetMetaParameters(type))
 			{
 				object value = reader[param.MappedName];
-				if (value == DBNull.Value)
+
+                if (value == DBNull.Value && type.GetProperty(param.PropertyName).PropertyType == typeof(Byte[]))
+                {
+                    value = new Byte[1];
+                }
+                if (value == DBNull.Value)
 				{
 					value = String.Empty;
 				}

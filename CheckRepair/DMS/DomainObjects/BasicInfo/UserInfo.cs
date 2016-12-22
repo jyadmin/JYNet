@@ -122,6 +122,55 @@ namespace DMS.DomainObjects.BasicInfo
             set;
         }
 
+        /// <summary>
+        /// 工号
+        /// </summary>
+        public string EmployeeNumber
+        {
+            get { return m_UserInfoDA.EmployeeNumber; }
+            set { m_UserInfoDA.EmployeeNumber = value; }
+        }
+
+        /// <summary>
+        /// 工龄
+        /// </summary>
+        public int WorkingAge
+        {
+            get { return m_UserInfoDA.WorkingAge; }
+            set { m_UserInfoDA.WorkingAge = value; }
+        }
+
+        /// <summary>
+        /// 资质
+        /// </summary>
+        public string Qualification
+        {
+            get { return m_UserInfoDA.Qualification; }
+            set { m_UserInfoDA.Qualification = value; }
+        }
+
+        /// <summary>
+        /// 级别
+        /// </summary>
+        public string Grade
+        {
+            get { return m_UserInfoDA.Grade; }
+            set { m_UserInfoDA.Grade = value; }
+        }
+        /// <summary>
+        /// 照片
+        /// </summary>
+        public byte[] Photo
+        {
+            get { return m_UserInfoDA.Photo; }
+            set { m_UserInfoDA.Photo = value; }
+        }
+
+        public Int16 LoginAllowed
+        {
+            get { return m_UserInfoDA.LoginAllowed; }
+            set { m_UserInfoDA.LoginAllowed = value; }
+        }
         #endregion
 
         #region CURDL
@@ -244,7 +293,7 @@ namespace DMS.DomainObjects.BasicInfo
                     message = "登陆密码不正确！";
                 }
 
-                if (string.IsNullOrEmpty(message) && Role == 0)
+                if (string.IsNullOrEmpty(message) && (Role == 0 || this.LoginAllowed != 1))
                 {
                     message = "用户没有权限,使用本系统！";
                 }

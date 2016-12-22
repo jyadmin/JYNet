@@ -44,6 +44,9 @@ namespace DMS.ORMappers.BasicInfo
         [Column(IsNullable = true)]
         public int Edition { get; set; }
 
+        [Column(IsNullable = true)]
+        public Int16 LoginAllowed { get; set; }
+        
         /// <summary>
         /// 是否黙认用户
         /// </summary>
@@ -53,5 +56,20 @@ namespace DMS.ORMappers.BasicInfo
             get;
             set;
         }
+
+        [Column(IsNullable = true)]
+        public string EmployeeNumber { get; set; }
+
+        [Column(IsNullable = true)]
+        public int WorkingAge { get; set; }
+
+        [Column(IsNullable = true)]
+        public string Qualification { get; set; }
+
+        [Column(IsNullable = true)]
+        public string Grade { get; set; }
+
+        [Column(IsNullable = true)]
+        public byte[] Photo { get; set; }
     }
 }

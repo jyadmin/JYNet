@@ -43,65 +43,18 @@ namespace Login
             if (string.IsNullOrEmpty(message))
             {
                 this.Hide();
-                //MainForm.Current.ShowDialog();
                 string connstr = ConfigurationManager.AppSettings["strCon"];
                 SqlConnection conn = new SqlConnection(connstr);
                 Thread th = new Thread(fun => { Application.Run(new MainPage.MainPage(loginName, conn)); });
                 th.Start();
-                
                 this.Close();
             }
             else
             {
                 //errorProviderUser.SetError(password, message);
                 //MessageBox.Show("登录错误");
-                this.Error("登录失败");
+                this.Error(message);
             }
-
-            /*
-            string msg = "";
-            try
-            {
-                string connstr = ConfigurationManager.AppSettings["strCon"];  
-                SqlConnection conn = new SqlConnection(connstr);
-                conn.Open();
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = conn;
-                string username = txTextBox1.Text.ToString();
-                string password = txTextBox2.Text.ToString();
-                string selectSql = "select password from C_DMS_User where  loginname = '" + username + "'";
-                cmd.CommandText = selectSql;
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.Read())
-                {
-                    string pwd = reader.GetString(0);
-                    if (pwd.Equals(password))
-                    {
-                        //跳转到主页面
-
-                        Thread th = new Thread(fun => { Application.Run(new MainPage.MainPage(username, conn)); });
-                        th.Start();
-                        this.Close();
-                        
-                    }
-                    else
-                    {
-                        msg = "用户或密码错误";
-                        this.Info(msg);
-                    }
-                   
-                }
-                else
-                {
-                    msg = "用户或密码错误";
-                    this.Info(msg);
-                }
-            }
-            catch (Exception ex)
-            {
-                msg = ex.Message;
-            }
-            */
         }
 
         private void txTextBox2_KeyDown(object sender, KeyEventArgs e)
