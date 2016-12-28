@@ -54,6 +54,7 @@
             this.txPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.txPanel1.Controls.Add(this.flowLayoutPanel1);
             this.txPanel1.Controls.Add(this.label1);
+            this.txPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txPanel1.Location = new System.Drawing.Point(3, 31);
             this.txPanel1.Name = "txPanel1";
             this.txPanel1.Size = new System.Drawing.Size(1141, 599);
@@ -61,6 +62,7 @@
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(329, 64);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(5);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -81,6 +83,7 @@
             this.Name = "MainPage";
             this.ResizeEnable = false;
             this.Text = "检 修 系 统";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.txPanel1.ResumeLayout(false);
             this.txPanel1.PerformLayout();
             this.ResumeLayout(false);

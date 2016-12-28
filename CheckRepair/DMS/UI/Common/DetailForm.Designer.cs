@@ -57,9 +57,7 @@
             this.ClientSize = new System.Drawing.Size(292, 266);
             this.Controls.Add(this.tsTool);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
             this.Name = "DetailForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "DetailForm";
             this.Load += new System.EventHandler(this.DetailForm_Load);
             this.ResumeLayout(false);

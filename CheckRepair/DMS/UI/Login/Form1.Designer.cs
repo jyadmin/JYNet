@@ -69,7 +69,7 @@
             this.txTextBox1.ImageSize = new System.Drawing.Size(0, 0);
             this.txTextBox1.Location = new System.Drawing.Point(242, 111);
             this.txTextBox1.Name = "txTextBox1";
-            this.txTextBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.txTextBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txTextBox1.PasswordChar = '\0';
             this.txTextBox1.Required = false;
             this.txTextBox1.Size = new System.Drawing.Size(169, 22);
@@ -87,7 +87,7 @@
             this.txTextBox2.ImageSize = new System.Drawing.Size(0, 0);
             this.txTextBox2.Location = new System.Drawing.Point(242, 157);
             this.txTextBox2.Name = "txTextBox2";
-            this.txTextBox2.Padding = new System.Windows.Forms.Padding(2);
+            this.txTextBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txTextBox2.PasswordChar = '*';
             this.txTextBox2.Required = false;
             this.txTextBox2.Size = new System.Drawing.Size(169, 22);
@@ -121,6 +121,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CaptionFont = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.ClientSize = new System.Drawing.Size(620, 337);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);

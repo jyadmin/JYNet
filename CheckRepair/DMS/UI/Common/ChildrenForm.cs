@@ -21,5 +21,19 @@ namespace DMS.UI.Common
             base.RefreshCommands();
             DMS.UI.SystemManage.SystemSetForm.Current.RefreshToolBar();
         }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // ChildrenForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(514, 364);
+            this.Name = "ChildrenForm";
+            this.ResumeLayout(false);
+
+        }
     }
 }

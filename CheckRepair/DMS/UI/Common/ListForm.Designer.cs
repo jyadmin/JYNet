@@ -36,9 +36,9 @@
             // dgMain
             // 
             this.dgMain.AlternatingBackColor = System.Drawing.Color.White;
-            this.dgMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgMain.BackColor = System.Drawing.Color.White;
             this.dgMain.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgMain.CaptionBackColor = System.Drawing.Color.LightSteelBlue;
@@ -52,21 +52,21 @@
             this.dgMain.HeaderFont = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.dgMain.HeaderForeColor = System.Drawing.Color.White;
             this.dgMain.LinkColor = System.Drawing.Color.DarkSlateBlue;
-            this.dgMain.Location = new System.Drawing.Point(0, 21);
+            this.dgMain.Location = new System.Drawing.Point(3, 25);
             this.dgMain.Name = "dgMain";
             this.dgMain.ParentRowsBackColor = System.Drawing.Color.Ivory;
             this.dgMain.ParentRowsForeColor = System.Drawing.Color.Black;
             this.dgMain.RowHeadersVisible = false;
             this.dgMain.SelectionBackColor = System.Drawing.Color.Wheat;
             this.dgMain.SelectionForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.dgMain.Size = new System.Drawing.Size(617, 387);
+            this.dgMain.Size = new System.Drawing.Size(611, 380);
             this.dgMain.TabIndex = 0;
             // 
             // lblRecord
             // 
             this.lblRecord.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblRecord.AutoSize = true;
-            this.lblRecord.Location = new System.Drawing.Point(448, 5);
+            this.lblRecord.Location = new System.Drawing.Point(468, 10);
             this.lblRecord.Name = "lblRecord";
             this.lblRecord.Size = new System.Drawing.Size(143, 12);
             this.lblRecord.TabIndex = 1;

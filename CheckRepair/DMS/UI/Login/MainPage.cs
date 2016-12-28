@@ -88,9 +88,9 @@ namespace MainPage
                         bt.Name = Modules[i].ID.ToString();
                         bt.Padding = new System.Windows.Forms.Padding(5);
                         bt.TabIndex = 0;
-                        bt.Text = "工长派工";
+                        bt.Text = Modules[i].Name;
                         bt.UseVisualStyleBackColor = false;
-                        //bt.Click += new System.EventHandler(this.button_Click);
+                        bt.Click += new System.EventHandler(this.button_Click);
                         flowLayoutPanel1.Controls.Add(bt);
                         break;
                     case "互检":
@@ -109,7 +109,7 @@ namespace MainPage
                         bt.TabIndex = 0;
                         bt.Text = Modules[i].Name;
                         bt.UseVisualStyleBackColor = false;
-                        //bt.Click += new System.EventHandler(this.button_Click);
+                        bt.Click += new System.EventHandler(this.button_Click);
                         flowLayoutPanel1.Controls.Add(bt);
                         break;
                     case "实时进度":
@@ -128,7 +128,7 @@ namespace MainPage
                         bt.TabIndex = 0;
                         bt.Text = Modules[i].Name;
                         bt.UseVisualStyleBackColor = false;
-                        //bt.Click += new System.EventHandler(this.button_Click);
+                        bt.Click += new System.EventHandler(this.button_Click);
                         flowLayoutPanel1.Controls.Add(bt);
                         break;
                     case "数据查询统计":
@@ -147,7 +147,7 @@ namespace MainPage
                         bt.TabIndex = 0;
                         bt.Text = Modules[i].Name;
                         bt.UseVisualStyleBackColor = false;
-                        //bt.Click += new System.EventHandler(this.button_Click);
+                        bt.Click += new System.EventHandler(this.button_Click);
                         flowLayoutPanel1.Controls.Add(bt);
                         break;
                     case "班组风采":
@@ -166,7 +166,7 @@ namespace MainPage
                         bt.TabIndex = 0;
                         bt.Text = Modules[i].Name;
                         bt.UseVisualStyleBackColor = false;
-                        //bt.Click += new System.EventHandler(this.button_Click);
+                        bt.Click += new System.EventHandler(this.button_Click);
                         flowLayoutPanel1.Controls.Add(bt);
                         break;
                     case "文电传达":
@@ -185,7 +185,7 @@ namespace MainPage
                         bt.TabIndex = 0;
                         bt.Text = Modules[i].Name;
                         bt.UseVisualStyleBackColor = false;
-                        //bt.Click += new System.EventHandler(this.button_Click);
+                        bt.Click += new System.EventHandler(this.button_Click);
                         flowLayoutPanel1.Controls.Add(bt);
                         break;
                     case "事务公开":
@@ -204,7 +204,7 @@ namespace MainPage
                         bt.TabIndex = 0;
                         bt.Text = Modules[i].Name;
                         bt.UseVisualStyleBackColor = false;
-                        //bt.Click += new System.EventHandler(this.button_Click);
+                        bt.Click += new System.EventHandler(this.button_Click);
                         flowLayoutPanel1.Controls.Add(bt);
                         break;
                     case "8S管理":
@@ -223,7 +223,7 @@ namespace MainPage
                         bt.TabIndex = 0;
                         bt.Text = Modules[i].Name;
                         bt.UseVisualStyleBackColor = false;
-                        //bt.Click += new System.EventHandler(this.button_Click);
+                        bt.Click += new System.EventHandler(this.button_Click);
                         flowLayoutPanel1.Controls.Add(bt);
                         break;
                 }
@@ -275,38 +275,6 @@ namespace MainPage
                     }
                 }
             }
-            /*
-            switch (btn.Name)
-            {
-                case "SystemSettings":
-                    //Thread th = new Thread(fun => { Application.Run(new DMS.UI.SystemSetForm()); });
-                    //th.Start();
-                    foreach (Module module in Modules)
-                    {
-                        if (module.Name == "系统设置")
-                        {
-                            object runner = Reflector.Reflect(module.TypeFullName);
-                            
-                        }
-                    }
-
-                    //DMS.UI.SystemSetForm.Current.ShowDialog();
-                    break;
-                case "AssignTask":
-                    foreach (Module module in Modules)
-                    {
-                        if (module.Name == "工长派工")
-                        {
-                            object runner = Reflector.Reflect(module.TypeFullName);
-                            if (runner != null)
-                            {
-                                IModule r = (IModule)runner;
-                                r.Run();
-                            }
-                        }
-                    }
-                    break;
-            }*/
         }
     }
 }

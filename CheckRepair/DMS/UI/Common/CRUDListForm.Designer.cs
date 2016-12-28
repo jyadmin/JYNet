@@ -32,7 +32,12 @@
             this.tbcModify = new DMS.UI.Common.ToolBarCommand();
             this.tbcView = new DMS.UI.Common.ToolBarCommand();
             this.tbcDelete = new DMS.UI.Common.ToolBarCommand();
-
+            ((System.ComponentModel.ISupportInitialize)(this.dgMain)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dgMain
+            // 
+            this.dgMain.Size = new System.Drawing.Size(631, 401);
             // 
             // tbcAdd
             // 
@@ -73,11 +78,21 @@
             this.tbcDelete.Name = "删除";
             this.tbcDelete.Type = DMS.UI.Common.CommandType.Delete;
             this.tbcDelete.Commanded += new System.EventHandler(this.tbcDelete_Commanded);
-
-            this.Load += new System.EventHandler(CRUDList_Load);
-            this.components = new System.ComponentModel.Container();
+            // 
+            // CRUDListForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(631, 422);
+            this.ControlBox = false;
+            this.Name = "CRUDListForm";
+            this.ShowInTaskbar = false;
             this.Text = "CRUDList";
+            this.Load += new System.EventHandler(this.CRUDList_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgMain)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
         #endregion
 

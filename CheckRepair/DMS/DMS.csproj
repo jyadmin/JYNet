@@ -134,6 +134,7 @@
     <Compile Include="DomainObjects\BasicInfo\Module.cs" />
     <Compile Include="DomainObjects\BasicInfo\Role.cs" />
     <Compile Include="DomainObjects\BasicInfo\UserInfo.cs" />
+    <Compile Include="DomainObjects\BusinessFunctions\MessageConvey.cs" />
     <Compile Include="DomainObjects\CurrentUser.cs" />
     <Compile Include="DomainObjects\DomainObject.cs" />
     <Compile Include="ORMappers\BasicInfo\DictionaryDA.cs" />
@@ -149,7 +150,16 @@
     <Compile Include="frmList.Designer.cs">
       <DependentUpon>frmList.cs</DependentUpon>
     </Compile>
+    <Compile Include="ORMappers\BusinessFunctions\MessageConveyDA.cs" />
+    <Compile Include="ORMappers\BusinessFunctions\MessageUserDA.cs" />
     <Compile Include="TestData.cs" />
+    <Compile Include="UI\FileManage\FileManageMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FileManage\FileManageMainForm.Designer.cs">
+      <DependentUpon>FileManageMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FileManage\AffairsOpenMainFormRunner.cs" />
     <Compile Include="UI\Common\BaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +175,7 @@
     <Compile Include="UI\Common\CommandType.cs" />
     <Compile Include="UI\Common\CommandVisibleStateManager.cs" />
     <Compile Include="UI\Common\CommonModule.cs" />
+    <Compile Include="UI\Common\CommonUser.cs" />
     <Compile Include="UI\Common\CRUDListForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +223,16 @@
     <Compile Include="UI\CustomerControl\DMSTreeView.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UI\FileManage\FileShare.cs" />
+    <Compile Include="UI\FileManage\MessageConveyMainFormRunner.cs" />
+    <Compile Include="UI\FileManage\PictureShowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FileManage\PictureShowForm.Designer.cs">
+      <DependentUpon>PictureShowForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FileManage\TeamMienMainFormRunner.cs" />
+    <Compile Include="UI\FileManage\8SManageMainFormRunner.cs" />
     <Compile Include="UI\Login\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -224,6 +245,25 @@
     <Compile Include="UI\Login\MainPage.Designer.cs">
       <DependentUpon>MainPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\MessageConvey\AddMessageConveyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MessageConvey\AddMessageConveyForm.Designer.cs">
+      <DependentUpon>AddMessageConveyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MessageConvey\MessageConveyFormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MessageConvey\MessageConveyFormBase.Designer.cs">
+      <DependentUpon>MessageConveyFormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MessageConvey\MessageConveyMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MessageConvey\MessageConveyMainForm.Designer.cs">
+      <DependentUpon>MessageConveyMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MessageConvey\MessageConveyMainFormRunner.cs" />
     <Compile Include="UI\SystemManage\SystemSetForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -408,11 +448,32 @@
     <EmbeddedResource Include="frmList.resx">
       <DependentUpon>frmList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\FileManage\FileManageMainForm.resx">
+      <DependentUpon>FileManageMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Common\BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Common\ChildrenForm.resx">
+      <DependentUpon>ChildrenForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Common\CRUDListForm.resx">
+      <DependentUpon>CRUDListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Common\DetailForm.resx">
       <DependentUpon>DetailForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Common\ListForm.resx">
       <DependentUpon>ListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FileManage\PictureShowForm.resx">
+      <DependentUpon>PictureShowForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MessageConvey\MessageConveyFormBase.resx">
+      <DependentUpon>MessageConveyFormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MessageConvey\MessageConveyMainForm.resx">
+      <DependentUpon>MessageConveyMainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\SystemManage\DictionaryManage\DictionaryMainForm.resx">
       <DependentUpon>DictionaryMainForm.cs</DependentUpon>
@@ -671,6 +732,26 @@
       <Project>{e8746b10-eaaf-44b7-95cc-29e4c42ec8d5}</Project>
       <Name>TX.Framework.WindowUI</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
