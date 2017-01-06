@@ -47,6 +47,7 @@
             // gbDetail
             // 
             this.gbDetail.Controls.Add(this.tableLayoutPanel1);
+            this.gbDetail.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.gbDetail.Location = new System.Drawing.Point(8, 51);
             this.gbDetail.Name = "gbDetail";
             this.gbDetail.Size = new System.Drawing.Size(351, 152);
@@ -57,7 +58,7 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.dmsLabel1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.dmsLabel2, 0, 1);
@@ -84,9 +85,9 @@
             // 
             this.dmsLabel1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.dmsLabel1.AutoSize = true;
-            this.dmsLabel1.Location = new System.Drawing.Point(4, 6);
+            this.dmsLabel1.Location = new System.Drawing.Point(25, 4);
             this.dmsLabel1.Name = "dmsLabel1";
-            this.dmsLabel1.Size = new System.Drawing.Size(53, 12);
+            this.dmsLabel1.Size = new System.Drawing.Size(72, 16);
             this.dmsLabel1.TabIndex = 0;
             this.dmsLabel1.Text = "数据项ID";
             // 
@@ -94,9 +95,9 @@
             // 
             this.dmsLabel2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.dmsLabel2.AutoSize = true;
-            this.dmsLabel2.Location = new System.Drawing.Point(16, 31);
+            this.dmsLabel2.Location = new System.Drawing.Point(41, 29);
             this.dmsLabel2.Name = "dmsLabel2";
-            this.dmsLabel2.Size = new System.Drawing.Size(41, 12);
+            this.dmsLabel2.Size = new System.Drawing.Size(56, 16);
             this.dmsLabel2.TabIndex = 1;
             this.dmsLabel2.Text = "数据项";
             // 
@@ -104,9 +105,9 @@
             // 
             this.dmsLabel3.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.dmsLabel3.AutoSize = true;
-            this.dmsLabel3.Location = new System.Drawing.Point(4, 56);
+            this.dmsLabel3.Location = new System.Drawing.Point(25, 54);
             this.dmsLabel3.Name = "dmsLabel3";
-            this.dmsLabel3.Size = new System.Drawing.Size(53, 12);
+            this.dmsLabel3.Size = new System.Drawing.Size(72, 16);
             this.dmsLabel3.TabIndex = 2;
             this.dmsLabel3.Text = "显示顺序";
             // 
@@ -114,9 +115,9 @@
             // 
             this.dmsLabel4.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.dmsLabel4.AutoSize = true;
-            this.dmsLabel4.Location = new System.Drawing.Point(4, 81);
+            this.dmsLabel4.Location = new System.Drawing.Point(25, 79);
             this.dmsLabel4.Name = "dmsLabel4";
-            this.dmsLabel4.Size = new System.Drawing.Size(53, 12);
+            this.dmsLabel4.Size = new System.Drawing.Size(72, 16);
             this.dmsLabel4.TabIndex = 2;
             this.dmsLabel4.Text = "父数据项";
             // 
@@ -124,9 +125,9 @@
             // 
             this.dmsLabel6.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.dmsLabel6.AutoSize = true;
-            this.dmsLabel6.Location = new System.Drawing.Point(4, 106);
+            this.dmsLabel6.Location = new System.Drawing.Point(25, 104);
             this.dmsLabel6.Name = "dmsLabel6";
-            this.dmsLabel6.Size = new System.Drawing.Size(53, 12);
+            this.dmsLabel6.Size = new System.Drawing.Size(72, 16);
             this.dmsLabel6.TabIndex = 2;
             this.dmsLabel6.Text = "数据类型";
             // 
@@ -134,60 +135,62 @@
             // 
             this.txtDictionaryId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDictionaryId.BackColor = System.Drawing.Color.White;
-            this.txtDictionaryId.Location = new System.Drawing.Point(60, 2);
+            this.txtDictionaryId.Location = new System.Drawing.Point(100, 0);
             this.txtDictionaryId.Margin = new System.Windows.Forms.Padding(0);
             this.txtDictionaryId.Name = "txtDictionaryId";
             this.txtDictionaryId.ReadOnly = true;
-            this.txtDictionaryId.Size = new System.Drawing.Size(284, 21);
+            this.txtDictionaryId.Size = new System.Drawing.Size(244, 26);
             this.txtDictionaryId.TabIndex = 4;
             // 
             // txtName
             // 
             this.txtName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtName.Location = new System.Drawing.Point(60, 27);
+            this.txtName.Location = new System.Drawing.Point(100, 25);
             this.txtName.Margin = new System.Windows.Forms.Padding(0);
             this.txtName.MaxLength = 50;
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(284, 21);
+            this.txtName.Size = new System.Drawing.Size(244, 26);
             this.txtName.TabIndex = 4;
             // 
             // txtDisplayOrder
             // 
             this.txtDisplayOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDisplayOrder.Location = new System.Drawing.Point(60, 52);
+            this.txtDisplayOrder.Location = new System.Drawing.Point(100, 50);
             this.txtDisplayOrder.Margin = new System.Windows.Forms.Padding(0);
             this.txtDisplayOrder.MaxLength = 200;
             this.txtDisplayOrder.Name = "txtDisplayOrder";
-            this.txtDisplayOrder.Size = new System.Drawing.Size(284, 21);
+            this.txtDisplayOrder.Size = new System.Drawing.Size(244, 26);
             this.txtDisplayOrder.TabIndex = 4;
             // 
             // txtPriorID
             // 
             this.txtPriorID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPriorID.Location = new System.Drawing.Point(60, 77);
+            this.txtPriorID.Location = new System.Drawing.Point(100, 75);
             this.txtPriorID.Margin = new System.Windows.Forms.Padding(0);
             this.txtPriorID.MaxLength = 5;
             this.txtPriorID.Name = "txtPriorID";
-            this.txtPriorID.Size = new System.Drawing.Size(284, 21);
+            this.txtPriorID.Size = new System.Drawing.Size(244, 26);
             this.txtPriorID.TabIndex = 4;
             this.txtPriorID.Text = "0";
             // 
             // txtTypeName
             // 
             this.txtTypeName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTypeName.Location = new System.Drawing.Point(60, 102);
+            this.txtTypeName.Location = new System.Drawing.Point(100, 100);
             this.txtTypeName.Margin = new System.Windows.Forms.Padding(0);
-            this.txtTypeName.MaxLength = 5;
+            this.txtTypeName.MaxLength = 30;
             this.txtTypeName.Name = "txtTypeName";
-            this.txtTypeName.Size = new System.Drawing.Size(284, 21);
+            this.txtTypeName.Size = new System.Drawing.Size(244, 26);
             this.txtTypeName.TabIndex = 4;
             // 
             // DictionaryFormBase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(368, 211);
+            this.ClientSize = new System.Drawing.Size(385, 228);
             this.Controls.Add(this.gbDetail);
+            this.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Margin = new System.Windows.Forms.Padding(3);
             this.Name = "DictionaryFormBase";
             this.Text = "DictionaryFormBase";
             this.Load += new System.EventHandler(this.DictionaryFormBase_Load);

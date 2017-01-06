@@ -69,9 +69,11 @@
             this.gbUser.Controls.Add(this.userPhoto);
             this.gbUser.Controls.Add(this.tableLayoutPanel1);
             this.gbUser.Controls.Add(this.photoTipLabel);
-            this.gbUser.Location = new System.Drawing.Point(8, 28);
+            this.gbUser.Location = new System.Drawing.Point(11, 48);
+            this.gbUser.Margin = new System.Windows.Forms.Padding(4);
             this.gbUser.Name = "gbUser";
-            this.gbUser.Size = new System.Drawing.Size(438, 426);
+            this.gbUser.Padding = new System.Windows.Forms.Padding(4);
+            this.gbUser.Size = new System.Drawing.Size(582, 582);
             this.gbUser.TabIndex = 0;
             this.gbUser.TabStop = false;
             this.gbUser.Text = "用户基本信息";
@@ -81,9 +83,10 @@
             this.userPhoto.BackColor = System.Drawing.Color.AliceBlue;
             this.userPhoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.userPhoto.ImageLocation = "";
-            this.userPhoto.Location = new System.Drawing.Point(267, 20);
+            this.userPhoto.Location = new System.Drawing.Point(356, 27);
+            this.userPhoto.Margin = new System.Windows.Forms.Padding(4);
             this.userPhoto.Name = "userPhoto";
-            this.userPhoto.Size = new System.Drawing.Size(165, 198);
+            this.userPhoto.Size = new System.Drawing.Size(219, 263);
             this.userPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.userPhoto.TabIndex = 2;
             this.userPhoto.TabStop = false;
@@ -92,7 +95,7 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.dmsLabel1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.dmsLabel2, 0, 1);
@@ -118,32 +121,34 @@
             this.tableLayoutPanel1.Controls.Add(this.dmsLabel12, 0, 10);
             this.tableLayoutPanel1.Controls.Add(this.txtGrade, 1, 9);
             this.tableLayoutPanel1.Controls.Add(this.cbLoginAllowed, 1, 10);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 20);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(8, 27);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 12;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(255, 397);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(340, 529);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // dmsLabel1
             // 
             this.dmsLabel1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.dmsLabel1.AutoSize = true;
-            this.dmsLabel1.Location = new System.Drawing.Point(16, 6);
+            this.dmsLabel1.Location = new System.Drawing.Point(20, 8);
+            this.dmsLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.dmsLabel1.Name = "dmsLabel1";
-            this.dmsLabel1.Size = new System.Drawing.Size(41, 12);
+            this.dmsLabel1.Size = new System.Drawing.Size(56, 16);
             this.dmsLabel1.TabIndex = 0;
             this.dmsLabel1.Text = "用户ID";
             // 
@@ -151,9 +156,10 @@
             // 
             this.dmsLabel2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.dmsLabel2.AutoSize = true;
-            this.dmsLabel2.Location = new System.Drawing.Point(4, 31);
+            this.dmsLabel2.Location = new System.Drawing.Point(4, 41);
+            this.dmsLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.dmsLabel2.Name = "dmsLabel2";
-            this.dmsLabel2.Size = new System.Drawing.Size(53, 12);
+            this.dmsLabel2.Size = new System.Drawing.Size(72, 16);
             this.dmsLabel2.TabIndex = 0;
             this.dmsLabel2.Text = "登陆帐名";
             // 
@@ -161,9 +167,10 @@
             // 
             this.dmsLabel3.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.dmsLabel3.AutoSize = true;
-            this.dmsLabel3.Location = new System.Drawing.Point(4, 56);
+            this.dmsLabel3.Location = new System.Drawing.Point(4, 74);
+            this.dmsLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.dmsLabel3.Name = "dmsLabel3";
-            this.dmsLabel3.Size = new System.Drawing.Size(53, 12);
+            this.dmsLabel3.Size = new System.Drawing.Size(72, 16);
             this.dmsLabel3.TabIndex = 0;
             this.dmsLabel3.Text = "登陆密码";
             // 
@@ -171,9 +178,10 @@
             // 
             this.dmsLabel4.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.dmsLabel4.AutoSize = true;
-            this.dmsLabel4.Location = new System.Drawing.Point(28, 106);
+            this.dmsLabel4.Location = new System.Drawing.Point(36, 140);
+            this.dmsLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.dmsLabel4.Name = "dmsLabel4";
-            this.dmsLabel4.Size = new System.Drawing.Size(29, 12);
+            this.dmsLabel4.Size = new System.Drawing.Size(40, 16);
             this.dmsLabel4.TabIndex = 0;
             this.dmsLabel4.Text = "职责";
             // 
@@ -181,9 +189,10 @@
             // 
             this.dmsLabel5.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.dmsLabel5.AutoSize = true;
-            this.dmsLabel5.Location = new System.Drawing.Point(28, 131);
+            this.dmsLabel5.Location = new System.Drawing.Point(36, 173);
+            this.dmsLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.dmsLabel5.Name = "dmsLabel5";
-            this.dmsLabel5.Size = new System.Drawing.Size(29, 12);
+            this.dmsLabel5.Size = new System.Drawing.Size(40, 16);
             this.dmsLabel5.TabIndex = 0;
             this.dmsLabel5.Text = "角色";
             // 
@@ -191,9 +200,10 @@
             // 
             this.dmsLabel6.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.dmsLabel6.AutoSize = true;
-            this.dmsLabel6.Location = new System.Drawing.Point(28, 330);
+            this.dmsLabel6.Location = new System.Drawing.Point(36, 438);
+            this.dmsLabel6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.dmsLabel6.Name = "dmsLabel6";
-            this.dmsLabel6.Size = new System.Drawing.Size(29, 12);
+            this.dmsLabel6.Size = new System.Drawing.Size(40, 16);
             this.dmsLabel6.TabIndex = 0;
             this.dmsLabel6.Text = "备注";
             // 
@@ -201,40 +211,40 @@
             // 
             this.txtuserId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtuserId.BackColor = System.Drawing.Color.White;
-            this.txtuserId.Location = new System.Drawing.Point(60, 2);
+            this.txtuserId.Location = new System.Drawing.Point(80, 3);
             this.txtuserId.Margin = new System.Windows.Forms.Padding(0);
             this.txtuserId.Name = "txtuserId";
             this.txtuserId.ReadOnly = true;
-            this.txtuserId.Size = new System.Drawing.Size(195, 21);
+            this.txtuserId.Size = new System.Drawing.Size(260, 26);
             this.txtuserId.TabIndex = 1;
             // 
             // txtLoginName
             // 
             this.txtLoginName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtLoginName.Location = new System.Drawing.Point(60, 27);
+            this.txtLoginName.Location = new System.Drawing.Point(80, 36);
             this.txtLoginName.Margin = new System.Windows.Forms.Padding(0);
             this.txtLoginName.MaxLength = 10;
             this.txtLoginName.Name = "txtLoginName";
-            this.txtLoginName.Size = new System.Drawing.Size(195, 21);
+            this.txtLoginName.Size = new System.Drawing.Size(260, 26);
             this.txtLoginName.TabIndex = 1;
             // 
             // txtPassword
             // 
             this.txtPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPassword.Location = new System.Drawing.Point(60, 52);
+            this.txtPassword.Location = new System.Drawing.Point(80, 69);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(0);
             this.txtPassword.MaxLength = 20;
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(195, 21);
+            this.txtPassword.Size = new System.Drawing.Size(260, 26);
             this.txtPassword.TabIndex = 1;
             // 
             // txtDuty
             // 
             this.txtDuty.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDuty.Location = new System.Drawing.Point(60, 102);
+            this.txtDuty.Location = new System.Drawing.Point(80, 135);
             this.txtDuty.Margin = new System.Windows.Forms.Padding(0);
             this.txtDuty.Name = "txtDuty";
-            this.txtDuty.Size = new System.Drawing.Size(195, 21);
+            this.txtDuty.Size = new System.Drawing.Size(260, 26);
             this.txtDuty.TabIndex = 1;
             // 
             // cmbRole
@@ -242,51 +252,53 @@
             this.cmbRole.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbRole.FormattingEnabled = true;
-            this.cmbRole.Location = new System.Drawing.Point(60, 127);
+            this.cmbRole.Location = new System.Drawing.Point(80, 171);
             this.cmbRole.Margin = new System.Windows.Forms.Padding(0);
             this.cmbRole.Name = "cmbRole";
-            this.cmbRole.Size = new System.Drawing.Size(195, 20);
+            this.cmbRole.Size = new System.Drawing.Size(260, 24);
             this.cmbRole.TabIndex = 2;
             // 
             // txtDescript
             // 
             this.txtDescript.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtDescript.Location = new System.Drawing.Point(60, 275);
+            this.txtDescript.Location = new System.Drawing.Point(80, 363);
             this.txtDescript.Margin = new System.Windows.Forms.Padding(0);
             this.txtDescript.MaxLength = 100;
             this.txtDescript.Multiline = true;
             this.txtDescript.Name = "txtDescript";
             this.txtDescript.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtDescript.Size = new System.Drawing.Size(195, 122);
+            this.txtDescript.Size = new System.Drawing.Size(260, 166);
             this.txtDescript.TabIndex = 3;
             // 
             // dmsLabel7
             // 
             this.dmsLabel7.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.dmsLabel7.AutoSize = true;
-            this.dmsLabel7.Location = new System.Drawing.Point(16, 81);
+            this.dmsLabel7.Location = new System.Drawing.Point(20, 107);
+            this.dmsLabel7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.dmsLabel7.Name = "dmsLabel7";
-            this.dmsLabel7.Size = new System.Drawing.Size(41, 12);
+            this.dmsLabel7.Size = new System.Drawing.Size(56, 16);
             this.dmsLabel7.TabIndex = 0;
             this.dmsLabel7.Text = "用户名";
             // 
             // txtUserName
             // 
             this.txtUserName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtUserName.Location = new System.Drawing.Point(60, 77);
+            this.txtUserName.Location = new System.Drawing.Point(80, 102);
             this.txtUserName.Margin = new System.Windows.Forms.Padding(0);
             this.txtUserName.MaxLength = 50;
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(195, 21);
+            this.txtUserName.Size = new System.Drawing.Size(260, 26);
             this.txtUserName.TabIndex = 1;
             // 
             // dmsLabel8
             // 
             this.dmsLabel8.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.dmsLabel8.AutoSize = true;
-            this.dmsLabel8.Location = new System.Drawing.Point(28, 156);
+            this.dmsLabel8.Location = new System.Drawing.Point(36, 206);
+            this.dmsLabel8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.dmsLabel8.Name = "dmsLabel8";
-            this.dmsLabel8.Size = new System.Drawing.Size(29, 12);
+            this.dmsLabel8.Size = new System.Drawing.Size(40, 16);
             this.dmsLabel8.TabIndex = 0;
             this.dmsLabel8.Text = "工号";
             // 
@@ -294,9 +306,10 @@
             // 
             this.dmsLabel9.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.dmsLabel9.AutoSize = true;
-            this.dmsLabel9.Location = new System.Drawing.Point(28, 181);
+            this.dmsLabel9.Location = new System.Drawing.Point(36, 239);
+            this.dmsLabel9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.dmsLabel9.Name = "dmsLabel9";
-            this.dmsLabel9.Size = new System.Drawing.Size(29, 12);
+            this.dmsLabel9.Size = new System.Drawing.Size(40, 16);
             this.dmsLabel9.TabIndex = 0;
             this.dmsLabel9.Text = "工龄";
             // 
@@ -304,9 +317,10 @@
             // 
             this.dmsLabel10.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.dmsLabel10.AutoSize = true;
-            this.dmsLabel10.Location = new System.Drawing.Point(28, 206);
+            this.dmsLabel10.Location = new System.Drawing.Point(36, 272);
+            this.dmsLabel10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.dmsLabel10.Name = "dmsLabel10";
-            this.dmsLabel10.Size = new System.Drawing.Size(29, 12);
+            this.dmsLabel10.Size = new System.Drawing.Size(40, 16);
             this.dmsLabel10.TabIndex = 0;
             this.dmsLabel10.Text = "资质";
             // 
@@ -314,63 +328,66 @@
             // 
             this.dmsLabel11.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.dmsLabel11.AutoSize = true;
-            this.dmsLabel11.Location = new System.Drawing.Point(28, 231);
+            this.dmsLabel11.Location = new System.Drawing.Point(36, 305);
+            this.dmsLabel11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.dmsLabel11.Name = "dmsLabel11";
-            this.dmsLabel11.Size = new System.Drawing.Size(29, 12);
+            this.dmsLabel11.Size = new System.Drawing.Size(40, 16);
             this.dmsLabel11.TabIndex = 0;
             this.dmsLabel11.Text = "级别";
             // 
             // txtEmployeeNumber
             // 
             this.txtEmployeeNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEmployeeNumber.Location = new System.Drawing.Point(60, 152);
+            this.txtEmployeeNumber.Location = new System.Drawing.Point(80, 201);
             this.txtEmployeeNumber.Margin = new System.Windows.Forms.Padding(0);
             this.txtEmployeeNumber.Name = "txtEmployeeNumber";
-            this.txtEmployeeNumber.Size = new System.Drawing.Size(195, 21);
+            this.txtEmployeeNumber.Size = new System.Drawing.Size(260, 26);
             this.txtEmployeeNumber.TabIndex = 1;
             // 
             // txtWorkingAge
             // 
             this.txtWorkingAge.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtWorkingAge.BackColor = System.Drawing.Color.White;
-            this.txtWorkingAge.Location = new System.Drawing.Point(60, 177);
+            this.txtWorkingAge.Location = new System.Drawing.Point(80, 234);
             this.txtWorkingAge.Margin = new System.Windows.Forms.Padding(0);
             this.txtWorkingAge.Name = "txtWorkingAge";
-            this.txtWorkingAge.Size = new System.Drawing.Size(195, 21);
+            this.txtWorkingAge.Size = new System.Drawing.Size(260, 26);
             this.txtWorkingAge.TabIndex = 1;
             // 
             // txtQualification
             // 
             this.txtQualification.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtQualification.Location = new System.Drawing.Point(60, 202);
+            this.txtQualification.Location = new System.Drawing.Point(80, 267);
             this.txtQualification.Margin = new System.Windows.Forms.Padding(0);
             this.txtQualification.Name = "txtQualification";
-            this.txtQualification.Size = new System.Drawing.Size(195, 21);
+            this.txtQualification.Size = new System.Drawing.Size(260, 26);
             this.txtQualification.TabIndex = 1;
             // 
             // dmsLabel12
             // 
             this.dmsLabel12.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.dmsLabel12.AutoSize = true;
-            this.dmsLabel12.Location = new System.Drawing.Point(4, 256);
+            this.dmsLabel12.Location = new System.Drawing.Point(4, 338);
+            this.dmsLabel12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.dmsLabel12.Name = "dmsLabel12";
-            this.dmsLabel12.Size = new System.Drawing.Size(53, 12);
+            this.dmsLabel12.Size = new System.Drawing.Size(72, 16);
             this.dmsLabel12.TabIndex = 0;
             this.dmsLabel12.Text = "允许登录";
             // 
             // txtGrade
             // 
             this.txtGrade.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtGrade.Location = new System.Drawing.Point(60, 227);
+            this.txtGrade.Location = new System.Drawing.Point(80, 300);
             this.txtGrade.Margin = new System.Windows.Forms.Padding(0);
             this.txtGrade.Name = "txtGrade";
-            this.txtGrade.Size = new System.Drawing.Size(195, 21);
+            this.txtGrade.Size = new System.Drawing.Size(260, 26);
             this.txtGrade.TabIndex = 1;
             // 
             // cbLoginAllowed
             // 
             this.cbLoginAllowed.AutoSize = true;
-            this.cbLoginAllowed.Location = new System.Drawing.Point(63, 253);
+            this.cbLoginAllowed.Location = new System.Drawing.Point(84, 334);
+            this.cbLoginAllowed.Margin = new System.Windows.Forms.Padding(4);
             this.cbLoginAllowed.Name = "cbLoginAllowed";
             this.cbLoginAllowed.Size = new System.Drawing.Size(15, 14);
             this.cbLoginAllowed.TabIndex = 4;
@@ -380,17 +397,18 @@
             // 
             this.photoTipLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.photoTipLabel.AutoSize = true;
-            this.photoTipLabel.Location = new System.Drawing.Point(298, 226);
+            this.photoTipLabel.Location = new System.Drawing.Point(397, 299);
+            this.photoTipLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.photoTipLabel.Name = "photoTipLabel";
-            this.photoTipLabel.Size = new System.Drawing.Size(101, 12);
+            this.photoTipLabel.Size = new System.Drawing.Size(136, 16);
             this.photoTipLabel.TabIndex = 0;
             this.photoTipLabel.Text = "双击方框选择照片";
             // 
             // UserFormBase
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(446, 466);
+            this.ClientSize = new System.Drawing.Size(606, 643);
             this.Controls.Add(this.gbUser);
             this.Name = "UserFormBase";
             this.Text = "UserFormBase";

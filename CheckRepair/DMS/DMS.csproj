@@ -134,7 +134,8 @@
     <Compile Include="DomainObjects\BasicInfo\Module.cs" />
     <Compile Include="DomainObjects\BasicInfo\Role.cs" />
     <Compile Include="DomainObjects\BasicInfo\UserInfo.cs" />
-    <Compile Include="DomainObjects\BusinessFunctions\MessageConvey.cs" />
+    <Compile Include="DomainObjects\BusinessFunctions\DeviceReceive.cs" />
+    <Compile Include="DomainObjects\BusinessFunctions\FlowTemplateMain.cs" />
     <Compile Include="DomainObjects\CurrentUser.cs" />
     <Compile Include="DomainObjects\DomainObject.cs" />
     <Compile Include="ORMappers\BasicInfo\DictionaryDA.cs" />
@@ -150,8 +151,8 @@
     <Compile Include="frmList.Designer.cs">
       <DependentUpon>frmList.cs</DependentUpon>
     </Compile>
-    <Compile Include="ORMappers\BusinessFunctions\MessageConveyDA.cs" />
-    <Compile Include="ORMappers\BusinessFunctions\MessageUserDA.cs" />
+    <Compile Include="ORMappers\BusinessFunctions\DeviceReceiveDA.cs" />
+    <Compile Include="ORMappers\BusinessFunctions\FlowTemplateMainDA.cs" />
     <Compile Include="TestData.cs" />
     <Compile Include="UI\FileManage\FileManageMainForm.cs">
       <SubType>Form</SubType>
@@ -245,25 +246,13 @@
     <Compile Include="UI\Login\MainPage.Designer.cs">
       <DependentUpon>MainPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\MessageConvey\AddMessageConveyForm.cs">
+    <Compile Include="UI\ReceiveDevice\ReceiveDeviceRunner.cs" />
+    <Compile Include="UI\ReceiveDevice\ReceiveDeviceForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\MessageConvey\AddMessageConveyForm.Designer.cs">
-      <DependentUpon>AddMessageConveyForm.cs</DependentUpon>
+    <Compile Include="UI\ReceiveDevice\ReceiveDeviceForm.Designer.cs">
+      <DependentUpon>ReceiveDeviceForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\MessageConvey\MessageConveyFormBase.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\MessageConvey\MessageConveyFormBase.Designer.cs">
-      <DependentUpon>MessageConveyFormBase.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\MessageConvey\MessageConveyMainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\MessageConvey\MessageConveyMainForm.Designer.cs">
-      <DependentUpon>MessageConveyMainForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\MessageConvey\MessageConveyMainFormRunner.cs" />
     <Compile Include="UI\SystemManage\SystemSetForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -448,6 +437,9 @@
     <EmbeddedResource Include="frmList.resx">
       <DependentUpon>frmList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Common\CommandsForm.resx">
+      <DependentUpon>CommandsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\FileManage\FileManageMainForm.resx">
       <DependentUpon>FileManageMainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -469,11 +461,8 @@
     <EmbeddedResource Include="UI\FileManage\PictureShowForm.resx">
       <DependentUpon>PictureShowForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\MessageConvey\MessageConveyFormBase.resx">
-      <DependentUpon>MessageConveyFormBase.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\MessageConvey\MessageConveyMainForm.resx">
-      <DependentUpon>MessageConveyMainForm.cs</DependentUpon>
+    <EmbeddedResource Include="UI\ReceiveDevice\ReceiveDeviceForm.resx">
+      <DependentUpon>ReceiveDeviceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\SystemManage\DictionaryManage\DictionaryMainForm.resx">
       <DependentUpon>DictionaryMainForm.cs</DependentUpon>
@@ -483,6 +472,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Login\MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SystemManage\RoleManage\RoleMainForm.resx">
+      <DependentUpon>RoleMainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\SystemManage\SystemSetForm.resx">
       <DependentUpon>SystemSetForm.cs</DependentUpon>
@@ -753,6 +745,7 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

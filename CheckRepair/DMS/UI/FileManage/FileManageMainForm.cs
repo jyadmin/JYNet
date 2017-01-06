@@ -19,7 +19,7 @@ namespace DMS.UI.FileManage
         #region Signle Contract
         
         //共享目录地址
-        private string url = @"\\192.168.1.199\CheckRepair\";
+        private string url = @"\\192.168.1.199\CheckRepair";
         //共享目录子目录名
         public string dir;
         //form Text
@@ -31,7 +31,6 @@ namespace DMS.UI.FileManage
             this.text = text;
             InitializeComponent();
             this.Text = text;
-            url = url + dir;
             LoadData();
         }
         #endregion
@@ -39,32 +38,44 @@ namespace DMS.UI.FileManage
         public void LoadData(){
            
             //连接共享文件夹
-            //status = FileShare.connectState(url, "Administrator", "");
+            bool status = true;
+            DirectoryInfo f = new DirectoryInfo(url);
+            if (!f.Exists)//判断是否已经连接到共享目录，若没有则打开共享目录
+            {
+                status = false;
+                status = FileShare.connectState(url, "Administrator", "");
+            }
             try
             {
-                DirectoryInfo theFolder = new DirectoryInfo(url);
-                if (!theFolder.Exists)
+                if (status)
                 {
-                    theFolder.Create();
-                };
-                //清空dataGridView
-                dgvFileManange.Rows.Clear();
-                //遍历共享文件夹，把共享文件夹下的文件列表列到listbox
-                foreach (FileInfo NextFile in theFolder.GetFiles())
-                {
-                    DataGridViewRow dr = new DataGridViewRow();
-                    DataGridViewTextBoxCell cellFileName = new DataGridViewTextBoxCell();
-                    cellFileName.Value = NextFile.Name;
-                    DataGridViewTextBoxCell cellFileTime = new DataGridViewTextBoxCell();
-                    cellFileTime.Value = NextFile.LastAccessTime.ToString();
-                    dr.Cells.Add(cellFileName);
-                    dr.Cells.Add(cellFileTime);
-                    dr.Cells[0].Value = NextFile.Name;
-                    dr.Cells[1].Value = NextFile.LastAccessTime.ToString();
-                    dgvFileManange.Rows.Add(dr);
+                    DirectoryInfo theFolder = new DirectoryInfo(url + "\\" + dir);
+                    if (!theFolder.Exists)
+                    {
+                        theFolder.Create();
+                    };
+                    //清空dataGridView
+                    dgvFileManange.Rows.Clear();
+                    //遍历共享文件夹，把共享文件夹下的文件列表列到listbox
+                    foreach (FileInfo NextFile in theFolder.GetFiles())
+                    {
+                        if ((NextFile.Attributes & FileAttributes.Hidden) != FileAttributes.Hidden)//判断文件是否有隐藏属性
+                        {
+                            DataGridViewRow dr = new DataGridViewRow();
+                            DataGridViewTextBoxCell cellFileName = new DataGridViewTextBoxCell();
+                            cellFileName.Value = NextFile.Name;
+                            DataGridViewTextBoxCell cellFileTime = new DataGridViewTextBoxCell();
+                            cellFileTime.Value = NextFile.LastAccessTime.ToString();
+                            dr.Cells.Add(cellFileName);
+                            dr.Cells.Add(cellFileTime);
+                            dr.Cells[0].Value = NextFile.Name;
+                            dr.Cells[1].Value = NextFile.LastAccessTime.ToString();
+                            dgvFileManange.Rows.Add(dr);
+                        }
+                    }
+                    //设置按时间排序
+                    dgvFileManange.Sort(dgvFileManange.Columns[1], ListSortDirection.Descending);
                 }
-                //设置按时间排序
-                dgvFileManange.Sort(dgvFileManange.Columns[1], ListSortDirection.Descending);
             }
             catch
             {
@@ -78,11 +89,11 @@ namespace DMS.UI.FileManage
         {
             DataGridView dgv = (DataGridView)sender;
             //查看按钮或双击数据
-            if (e.RowIndex != -1 && (e.ColumnIndex != 3 && e.ColumnIndex != 4))
+            if (e.RowIndex != -1 && (e.ColumnIndex == 2))
             {
                 try
                 {
-                    object fileName = url + @"\" + dgv.Rows[dgv.CurrentCell.RowIndex].Cells[0].Value;
+                    object fileName = url + @"\" + dir + @"\" + dgv.Rows[dgv.CurrentCell.RowIndex].Cells[0].Value;
                     object missing = System.Reflection.Missing.Value;
                     object readOnly = true;
                     object isVisable = true;
@@ -100,7 +111,7 @@ namespace DMS.UI.FileManage
                                                ref missing, ref missing, ref missing);
                     }
                     //打开excel文件
-                    if (fileName.ToString().EndsWith(".xls") || fileName.ToString().EndsWith(".xlsx"))
+                    else if (fileName.ToString().EndsWith(".xls") || fileName.ToString().EndsWith(".xlsx"))
                     {
                         //引用Excel对象
                         Microsoft.Office.Interop.Excel.Application excel =
@@ -112,7 +123,7 @@ namespace DMS.UI.FileManage
                         excel.Visible = true; 
                     }
                     //打开图片文件
-                    if (fileName.ToString().EndsWith(".jpg") || fileName.ToString().EndsWith(".bmp") || fileName.ToString().EndsWith(".png")
+                    else if (fileName.ToString().EndsWith(".jpg") || fileName.ToString().EndsWith(".bmp") || fileName.ToString().EndsWith(".png")
                         ||fileName.ToString().EndsWith(".JPG") || fileName.ToString().EndsWith(".BMP") || fileName.ToString().EndsWith(".PNG"))
                     {
                         PictureShowForm picFrm = new PictureShowForm();
@@ -121,21 +132,21 @@ namespace DMS.UI.FileManage
                         picFrm.ShowDialog();
                     }
                 }
-                catch
+                catch(Exception excp)
                 {
-
+                    MessageBox.Show(excp.ToString());
                 }
             }
-            if (e.RowIndex != -1 && e.ColumnIndex == 3/*dgv.CurrentCell != null && dgv.CurrentCell.ColumnIndex == 3*/)//删除按钮
+            else if (e.RowIndex != -1 && e.ColumnIndex == 3/*dgv.CurrentCell != null && dgv.CurrentCell.ColumnIndex == 3*/)//删除按钮
             {
                 if (MessageBox.Show("确定删除\"" + dgv.Rows[dgv.CurrentCell.RowIndex].Cells[0].Value + "\"吗？", "提示", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     //判断文件是不是存在
-                    if (File.Exists(url + @"\" + dgv.Rows[dgv.CurrentCell.RowIndex].Cells[0].Value))
+                    if (File.Exists(url + @"\" + dir + @"\" + dgv.Rows[dgv.CurrentCell.RowIndex].Cells[0].Value))
                     {
                         //如果存在则删除
-                        File.Delete(url + @"\" + dgv.Rows[dgv.CurrentCell.RowIndex].Cells[0].Value);
-                        if (!File.Exists(url + @"\" + dgv.Rows[dgv.CurrentCell.RowIndex].Cells[0].Value))
+                        File.Delete(url + @"\" + dir + @"\" + dgv.Rows[dgv.CurrentCell.RowIndex].Cells[0].Value);
+                        if (!File.Exists(url + @"\" + dir + @"\" + dgv.Rows[dgv.CurrentCell.RowIndex].Cells[0].Value))
                         {
                             MessageBox.Show("删除文件\"" + dgv.Rows[dgv.CurrentCell.RowIndex].Cells[0].Value + "\"成功！");
                         }
@@ -149,7 +160,6 @@ namespace DMS.UI.FileManage
             }
             
         }
-
         #endregion
 
         public string FilePathStr = "";
@@ -166,19 +176,19 @@ namespace DMS.UI.FileManage
             {
                 string[] strs = FilePathStr.Split('\\');
                 string fileName = strs[strs.Length - 1];
-                if (!System.IO.Directory.Exists(url + @"\"))
+                if (!System.IO.Directory.Exists(url + @"\" + dir + @"\" ))
                 {
                     // 目录不存在，建立目录
-                    System.IO.Directory.CreateDirectory(url + @"\");
+                    System.IO.Directory.CreateDirectory(url + @"\" + dir + @"\");
                 }
                 //判断是否存在同名文件
-                if (System.IO.File.Exists(url + @"\" + fileName))
+                if (System.IO.File.Exists(url + @"\" + dir + @"\" + fileName))
                 {
                     bool b = MessageBox.Show("存在同名文件，确定覆盖吗？", "提示", MessageBoxButtons.YesNo) == DialogResult.Yes;
                     if (b)
                     {
                         String sourcePath = FilePathStr;
-                        String targetPath = url + @"\" + fileName;
+                        String targetPath = url + @"\" + dir + @"\" + fileName;
                         // true=覆盖已存在的同名文件,false则反之
                         bool isrewrite = true; 
                         System.IO.File.Copy(sourcePath, targetPath, isrewrite);
@@ -192,7 +202,7 @@ namespace DMS.UI.FileManage
                 else
                 {
                     String sourcePath = FilePathStr;
-                    String targetPath = url + @"\" + fileName;
+                    String targetPath = url + @"\" + dir + @"\" + fileName;
                     // true=覆盖已存在的同名文件,false则反之
                     bool isrewrite = true; 
                     System.IO.File.Copy(sourcePath, targetPath, isrewrite);
@@ -213,5 +223,6 @@ namespace DMS.UI.FileManage
                 FilePathStr = InvokeDialog.FileName;
             }
         }
+
     }
 }

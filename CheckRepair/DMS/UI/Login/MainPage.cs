@@ -226,6 +226,25 @@ namespace MainPage
                         bt.Click += new System.EventHandler(this.button_Click);
                         flowLayoutPanel1.Controls.Add(bt);
                         break;
+                    case "设备接收":
+                        //设置颜色
+                        bt.BackColor = System.Drawing.SystemColors.HotTrack;
+                        //设置Dock
+                        bt.Dock = System.Windows.Forms.DockStyle.Top;
+                        bt.FlatAppearance.BorderSize = 0;
+                        bt.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+                        bt.ForeColor = System.Drawing.Color.White;
+                        //设置大小和位置
+                        setLocation(bt, Modules[i].Size);
+                        bt.Margin = new System.Windows.Forms.Padding(5);
+                        bt.Name = Modules[i].ID.ToString();
+                        bt.Padding = new System.Windows.Forms.Padding(5);
+                        bt.TabIndex = 0;
+                        bt.Text = Modules[i].Name;
+                        bt.UseVisualStyleBackColor = false;
+                        bt.Click += new System.EventHandler(this.button_Click);
+                        flowLayoutPanel1.Controls.Add(bt);
+                        break;
                 }
 
             }

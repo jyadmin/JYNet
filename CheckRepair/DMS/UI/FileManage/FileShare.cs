@@ -53,7 +53,7 @@ namespace DMS.UI.FileManage
             }
             catch (Exception ex)
             {
-                throw ex;
+                //throw ex;
             }
             finally
             {

@@ -36,7 +36,7 @@
             // 
             this.tsTool.Location = new System.Drawing.Point(0, 0);
             this.tsTool.Name = "tsTool";
-            this.tsTool.Size = new System.Drawing.Size(292, 25);
+            this.tsTool.Size = new System.Drawing.Size(389, 25);
             this.tsTool.TabIndex = 0;
             this.tsTool.Text = "toolStrip1";
             // 
@@ -52,9 +52,9 @@
             // 
             // DetailForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(292, 266);
+            this.ClientSize = new System.Drawing.Size(389, 355);
             this.Controls.Add(this.tsTool);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "DetailForm";

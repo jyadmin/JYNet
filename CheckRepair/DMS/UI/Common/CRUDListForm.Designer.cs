@@ -37,7 +37,8 @@
             // 
             // dgMain
             // 
-            this.dgMain.Size = new System.Drawing.Size(631, 401);
+            this.dgMain.Margin = new System.Windows.Forms.Padding(5);
+            this.dgMain.Size = new System.Drawing.Size(836, 535);
             // 
             // tbcAdd
             // 
@@ -81,10 +82,11 @@
             // 
             // CRUDListForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(631, 422);
+            this.ClientSize = new System.Drawing.Size(841, 563);
             this.ControlBox = false;
+            this.Margin = new System.Windows.Forms.Padding(7);
             this.Name = "CRUDListForm";
             this.ShowInTaskbar = false;
             this.Text = "CRUDList";

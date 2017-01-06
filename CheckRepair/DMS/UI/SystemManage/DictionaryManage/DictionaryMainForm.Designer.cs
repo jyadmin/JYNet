@@ -28,9 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            ((System.ComponentModel.ISupportInitialize)(this.dgMain)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dgMain
+            // 
+            this.dgMain.Margin = new System.Windows.Forms.Padding(4);
+            this.dgMain.Size = new System.Drawing.Size(903, 535);
+            // 
+            // DictionaryMainForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "DictionaryMainForm";
+            this.ClientSize = new System.Drawing.Size(693, 422);
+            this.Name = "DictionaryMainForm";
+            this.Text = "字典管理";
+            ((System.ComponentModel.ISupportInitialize)(this.dgMain)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

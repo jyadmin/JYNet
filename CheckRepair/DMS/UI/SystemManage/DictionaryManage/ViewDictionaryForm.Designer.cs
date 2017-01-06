@@ -34,11 +34,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(292, 266);
+            this.ClientSize = new System.Drawing.Size(366, 266);
             this.Name = "ViewDictionaryForm";
             this.Text = "ViewDictionaryForm";
             this.Load += new System.EventHandler(this.ViewDictionaryForm_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

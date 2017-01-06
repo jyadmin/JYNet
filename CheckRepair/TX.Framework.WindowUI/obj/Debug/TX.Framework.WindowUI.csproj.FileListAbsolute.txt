@@ -279,4 +279,3 @@ E:\GitWork\JYNet\CheckRepair\TX.Framework.WindowUI\obj\Debug\TX.Framework.Window
 E:\GitWork\JYNet\CheckRepair\TX.Framework.WindowUI\obj\Debug\TX.Framework.WindowUI.csproj.GenerateResource.Cache
 E:\GitWork\JYNet\CheckRepair\TX.Framework.WindowUI\obj\Debug\TX.Framework.WindowUI.dll
 E:\GitWork\JYNet\CheckRepair\TX.Framework.WindowUI\obj\Debug\TX.Framework.WindowUI.pdb
-E:\GitWork\JYNet\CheckRepair\TX.Framework.WindowUI\obj\Debug\TX.Framework.WindowUI.csprojResolveAssemblyReference.cache
