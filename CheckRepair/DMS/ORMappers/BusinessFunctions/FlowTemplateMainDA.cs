@@ -26,7 +26,7 @@ namespace DMS.ORMappers.BusinessFunctions
         /// 排序
         /// </summary>
         [Column(IsChangeable = true)]
-        public int DispalyOrder
+        public int DisplayOrder
         {
             get;
             set;
@@ -217,7 +217,7 @@ namespace DMS.ORMappers.BusinessFunctions
         /// 上次检查人编号
         /// </summary>
         [Column(IsChangeable = true)]
-        public int LastCheckerCode
+        public string LastCheckerCode
         {
             get;
             set;

@@ -14,7 +14,7 @@ using DMS.DomainObjects;
 
 namespace DMS.UI.Common
 {
-    public class CommandsForm:BaseForm
+    public class CommandsForm : BaseForm1
     {
         CommandVisibleStateManager cvsm;
 

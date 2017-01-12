@@ -96,6 +96,12 @@ namespace DMS.BaseORMappers.Mapping
             return query.FindAll<TEntity>(where);
         }
 
+        public static List<TEntity> FindPage(int pageSize, int pageIndex, string where)
+        {
+            KQuery query = new KQuery();
+            return query.FindPage<TEntity>(pageSize, pageIndex, where);
+        }
+
 		public virtual string ToJson()
 		{
 			TEntity entity = GetEntity();

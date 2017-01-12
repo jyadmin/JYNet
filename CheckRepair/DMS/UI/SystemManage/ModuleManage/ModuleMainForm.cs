@@ -17,6 +17,7 @@ namespace DMS.UI.SystemManage.ModuleManage
         public ModuleMainForm()
         {
             InitializeComponent();
+            txPager1.formsId = this;
         }
 
         #region override
@@ -25,11 +26,13 @@ namespace DMS.UI.SystemManage.ModuleManage
             this.SetPermission(new ToolBarCommand[] { this.tbcAdd, this.tbcModify, this.tbcDelete }, new int[] { ModuleFunctions.AddModule, ModuleFunctions.EditModule, ModuleFunctions.DeleteModule });
         }
 
-        protected override void BindGridData()
+        public override void BindGridData()
         {
-            this.dgMain.DataSource = new SortList(Module.GetList());
+            string where = String.Empty;
+            List<Module> list = Module.GetList();
+            txPager1.Total = list.Count;
+            this.dgMain.DataSource = new SortList(Module.GetPageList(txPager1.PageSize, txPager1.PageIndex, where));
             DataGridStyleHelper.SetStyle(this.dgMain, typeof(Module));
-            SetRecordsCount((dgMain.DataSource as SortList).Count);
             SetLogic();
         }
         #endregion

@@ -25,6 +25,7 @@ namespace DMS.UI.SystemManage.RoleManage
         public RoleMainForm()
         {
             InitializeComponent();
+            txPager1.formsId = this;
         }
 
         #region override method
@@ -33,11 +34,14 @@ namespace DMS.UI.SystemManage.RoleManage
             this.SetPermission(new ToolBarCommand[] { this.tbcAdd, this.tbcModify, this.tbcDelete }, new int[] { RoleFunctions.AddRole, RoleFunctions.EditRole, RoleFunctions.DeleteRole });
         }
 
-        protected override void BindGridData()
+        public override void BindGridData()
         {
-            this.dgMain.DataSource = new SortList(Role.GetList());
+
+            string where = String.Empty;
+            List<Role> list = Role.GetList();
+            txPager1.Total = list.Count;
+            this.dgMain.DataSource = new SortList(Role.GetPageList(txPager1.PageSize, txPager1.PageIndex, where));
             DataGridStyleHelper.SetStyle(this.dgMain, typeof(Role));
-            SetRecordsCount((dgMain.DataSource as SortList).Count);
             SetLogic();
         }
         #endregion

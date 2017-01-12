@@ -23,7 +23,6 @@ namespace TX.Framework.WindowUI.Controls
         private double _ItemCount = 0;
 
         private int _PageIndex = 1;
-        private System.Windows.Forms.Panel panelCheckItem;
         private ToolStrip toolStrip1;
         private ToolStripButton tsbFirst;
         private ToolStripButton tsbPrevious;
@@ -47,7 +46,8 @@ namespace TX.Framework.WindowUI.Controls
         private ToolStripMenuItem tsbPageSize250;
         private ToolStripSeparator toolStripSeparator5;
 
-        private int _PageSize = 20;
+        private int _PageSize = 50;
+        private System.Windows.Forms.Panel panelCheckItem;
 
         private List<int> _PageSizes;
 
@@ -112,6 +112,11 @@ namespace TX.Framework.WindowUI.Controls
             }
 
         }
+
+        /// <summary>
+        /// 分页表格所属form
+        /// </summary>
+        public TX.Framework.WindowUI.Forms.BaseForm formsId;
 
         /// <summary>
         /// 获取或设置需要分页的元素的总个数
@@ -223,9 +228,11 @@ namespace TX.Framework.WindowUI.Controls
         #endregion
 
         #region private methods
-
+        
         private void Paging( object sender )
         {
+            
+            
             if( OnPaging != null )
             {
                 PagerEventArgs e = new PagerEventArgs( this.PageIndex, this.PageSize );
@@ -233,8 +240,7 @@ namespace TX.Framework.WindowUI.Controls
             }
             else
             {
-
-                TXMessageBoxExtensions.Error( "这个技术人员很懒啊，还没实现分页查询功能的！" );
+                formsId.BindGridData();
             }
         }
 
@@ -327,7 +333,6 @@ namespace TX.Framework.WindowUI.Controls
 
         private void InitializeComponent()
         {
-            this.panelCheckItem = new System.Windows.Forms.Panel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.tstPageIndex = new System.Windows.Forms.ToolStripTextBox();
@@ -350,17 +355,9 @@ namespace TX.Framework.WindowUI.Controls
             this.tsbPageSize150 = new System.Windows.Forms.ToolStripMenuItem();
             this.tsbPageSize250 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.panelCheckItem = new System.Windows.Forms.Panel();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panelCheckItem
-            // 
-            this.panelCheckItem.BackColor = System.Drawing.Color.Transparent;
-            this.panelCheckItem.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelCheckItem.Location = new System.Drawing.Point(0, 0);
-            this.panelCheckItem.Name = "panelCheckItem";
-            this.panelCheckItem.Size = new System.Drawing.Size(14, 25);
-            this.panelCheckItem.TabIndex = 1;
             // 
             // toolStrip1
             // 
@@ -382,9 +379,9 @@ namespace TX.Framework.WindowUI.Controls
             this.toolStripSeparator2,
             this.tsbPageSize,
             this.toolStripSeparator5});
-            this.toolStrip1.Location = new System.Drawing.Point(14, 0);
+            this.toolStrip1.Location = new System.Drawing.Point(10, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(683, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(687, 25);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "分页控件";
             // 
@@ -564,6 +561,15 @@ namespace TX.Framework.WindowUI.Controls
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
+            // 
+            // panelCheckItem
+            // 
+            this.panelCheckItem.BackColor = System.Drawing.Color.Transparent;
+            this.panelCheckItem.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelCheckItem.Location = new System.Drawing.Point(0, 0);
+            this.panelCheckItem.Name = "panelCheckItem";
+            this.panelCheckItem.Size = new System.Drawing.Size(10, 25);
+            this.panelCheckItem.TabIndex = 1;
             // 
             // TXPager
             // 

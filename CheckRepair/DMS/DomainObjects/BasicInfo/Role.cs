@@ -118,6 +118,21 @@ namespace DMS.DomainObjects.BasicInfo
             return roleInfoList;
         }
 
+        public static List<Role> GetPageList(int pageSize, int pageIndex, string where)
+        {
+            List<Role> roleInfoList = new List<Role>();
+            foreach (RoleDA roleDA in RoleDA.FindPage(pageSize, pageIndex, where))
+            {
+                Role Role = new Role(roleDA);
+
+                roleInfoList.Add(Role);
+            }
+
+            roleInfoList.Sort();
+
+            return roleInfoList;
+        }
+
         public bool Add(int edition)
         {
             try

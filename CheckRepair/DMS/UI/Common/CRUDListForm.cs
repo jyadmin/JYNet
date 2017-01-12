@@ -85,8 +85,8 @@ namespace DMS.UI.Common
         {
         }
 
-        protected virtual void BindGridData()
-        { }
+        //protected virtual void BindGridData()
+        //{ }
 
         protected virtual void SetSpecialLogicVisible()
         {

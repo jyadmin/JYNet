@@ -31,6 +31,8 @@ namespace DMS.UI.Common
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(514, 364);
+            this.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.Name = "ChildrenForm";
             this.ResumeLayout(false);
 

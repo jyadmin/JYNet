@@ -107,6 +107,21 @@ namespace DMS.DomainObjects.BasicInfo
             return dictionaryList;
         }
 
+        public static List<Dictionary> GetPageList(int pageSize, int pageIndex, string where)
+        {
+            List<Dictionary> dictionaryList = new List<Dictionary>();
+            foreach (DictionaryDA dictionaryDA in DictionaryDA.FindPage(pageSize, pageIndex, where))
+            {
+                Dictionary dictionary = new Dictionary(dictionaryDA);
+
+                dictionaryList.Add(dictionary);
+            }
+
+            dictionaryList.Sort();
+
+            return dictionaryList;
+        }
+
         public bool Add()
         {
             try

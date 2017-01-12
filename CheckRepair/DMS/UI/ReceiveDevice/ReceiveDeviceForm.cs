@@ -14,7 +14,7 @@ using DMS.DomainObjects.BusinessFunctions;
 
 namespace DMS.UI.DeviceReceives
 {
-    public partial class DeviceReceiveForm : BaseForm
+    public partial class DeviceReceiveForm : BaseForm1
     {
         public DeviceReceiveForm()
         {
@@ -63,8 +63,6 @@ namespace DMS.UI.DeviceReceives
                     }
                 }
                 cmbDeviceType.DataSource = strList;
-                //cmbDeviceType.DataBindings.Clear();
-                //cmbDeviceType.DataBindings.Add("Name", strList, "ID");
             }
 
         }
@@ -73,9 +71,8 @@ namespace DMS.UI.DeviceReceives
         {
             //AddRequiredTextItem(cmbEngineType, "车型不能为空!");
             AddRequiredTextItem(tbEngineCode, "车号不能为空!");
-            //AddRequiredTextItem(cmbDeviceType, "设备类型不能为空!");
+            AddRequiredTextItem(cmbDeviceType, "设备类型不能为空!");
             AddRequiredTextItem(tbDeviceCode, "设备编号不能为空!");
-            //AddRequiredTextItem(cmbXc, "修程不能为空!");
         }
 
         private void tbcSave_Commanded(object sender, EventArgs e)
@@ -93,7 +90,7 @@ namespace DMS.UI.DeviceReceives
             dr.Receiver = CurrentUser.Instance.User.UserName;
             dr.ReceiverCode = CurrentUser.Instance.User.ID;
             dr.ReceiveTime = DateTimeHelper.ConvertDataTimeToLong(DateTime.Now);
-            //DateTime dt = DateTimeHelper.ConvertLongToDateTime(dr.ReceiveTime);
+            dr.Status = "0";
             dr.BatchCode = Guid.NewGuid().ToString("N");
             if (dr.Add())
             {
@@ -106,7 +103,12 @@ namespace DMS.UI.DeviceReceives
             }
         }
 
-        private void LoadDeviceTypeInfo()
+        private void CloseForm(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void CloseForm()
         {
 
         }

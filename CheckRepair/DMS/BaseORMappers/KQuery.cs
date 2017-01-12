@@ -61,6 +61,15 @@ namespace DMS.BaseORMappers
 			return List<T>();
 		}
 
+        public List<T> FindPage<T>(int pageSize, int pageIndex, string where)
+        {
+            MetaType metaType = MetaManager.GetMetaType(typeof(T));
+            Command = new Command(
+                String.Format("select top " + pageSize + " * from (select * from {0} {1}) a where id not in (select top " + (pageSize*(pageIndex - 1)) + " id from (select * from {0} {1}) b order by id) order by id ", metaType.TableName, where)
+            );
+            return List<T>();
+        }
+
 		public List<T> FindAll<T>()
 		{
 			MetaType metaType = MetaManager.GetMetaType(typeof(T));

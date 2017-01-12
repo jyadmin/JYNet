@@ -1,11 +1,4 @@
-﻿/*
- *  copyright (c) by potatoproject
- * 
- *  author : potato (nq.wangxiaobo@gmail.com)
- * 
- *  created date : 7/12/2009 10:46:06 AM
- * */
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -107,7 +100,16 @@ namespace DMS.DomainObjects.BusinessFunctions
             set { m_DeviceReceiveDA.ReceiverCode = value; }
         }
 
-         /// <summary>
+        /// <summary>
+        /// 接收时间
+        /// </summary>
+        public string ReceiveTimeStr
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// 接收时间
         /// </summary>
         public long ReceiveTime
@@ -116,7 +118,16 @@ namespace DMS.DomainObjects.BusinessFunctions
             set { m_DeviceReceiveDA.ReceiveTime = value; }
         }
 
-         /// <summary>
+        /// <summary>
+        /// 状态
+        /// </summary>
+        public string Status
+        {
+            get { return m_DeviceReceiveDA.Status; }
+            set { m_DeviceReceiveDA.Status = value; }
+        }
+
+        /// <summary>
         /// 批次号
         /// </summary>
         public string BatchCode
@@ -136,6 +147,21 @@ namespace DMS.DomainObjects.BusinessFunctions
         {
             List<DeviceReceive> deviceReceiveList = new List<DeviceReceive>();
             foreach (DeviceReceiveDA deviceReceiveDA in DeviceReceiveDA.FindAll(where))
+            {
+                DeviceReceive DeviceReceive = new DeviceReceive(deviceReceiveDA);
+
+                deviceReceiveList.Add(DeviceReceive);
+            }
+
+            deviceReceiveList.Sort();
+
+            return deviceReceiveList;
+        }
+
+        public static List<DeviceReceive> GetPageList(int pageSize, int pageIndex, string where)
+        {
+            List<DeviceReceive> deviceReceiveList = new List<DeviceReceive>();
+            foreach (DeviceReceiveDA deviceReceiveDA in DeviceReceiveDA.FindPage(pageSize, pageIndex, where))
             {
                 DeviceReceive DeviceReceive = new DeviceReceive(deviceReceiveDA);
 

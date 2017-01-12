@@ -103,6 +103,16 @@ namespace DMS.ORMappers.BusinessFunctions
         }
 
         /// <summary>
+        /// 状态
+        /// </summary>
+        [Column(IsChangeable = true)]
+        public string Status
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// 批次号
         /// </summary>
         [Column(IsChangeable = true)]

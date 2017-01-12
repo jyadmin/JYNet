@@ -216,6 +216,21 @@ namespace DMS.DomainObjects.BasicInfo
             return userInfoList;
         }
 
+        public static List<UserInfo> GetPageList(int pageSize, int pageIndex, string where)
+        {
+            List<UserInfo> userInfoList = new List<UserInfo>();
+            foreach (UserInfoDA userDA in UserInfoDA.FindPage(pageSize, pageIndex, where))
+            {
+                UserInfo userInfo = new UserInfo(userDA);
+
+                userInfoList.Add(userInfo);
+            }
+
+            userInfoList.Sort();
+
+            return userInfoList;
+        }
+
         public bool Add(out string message)
         {
             try

@@ -57,13 +57,13 @@
             this.txPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txPanel1.Location = new System.Drawing.Point(3, 31);
             this.txPanel1.Name = "txPanel1";
-            this.txPanel1.Size = new System.Drawing.Size(1141, 599);
+            this.txPanel1.Size = new System.Drawing.Size(1157, 637);
             this.txPanel1.TabIndex = 1;
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(329, 64);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(337, 83);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(5);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(5);
@@ -75,11 +75,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CaptionFont = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ClientSize = new System.Drawing.Size(1147, 633);
+            this.ClientSize = new System.Drawing.Size(1163, 671);
             this.Controls.Add(this.txPanel1);
             this.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Location = new System.Drawing.Point(200, 100);
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "MainPage";
             this.ResizeEnable = false;
             this.Text = "检 修 系 统";

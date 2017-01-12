@@ -33,22 +33,25 @@
             // 
             // dgMain
             // 
-            this.dgMain.Margin = new System.Windows.Forms.Padding(4);
-            this.dgMain.Size = new System.Drawing.Size(903, 535);
+            this.dgMain.Margin = new System.Windows.Forms.Padding(3);
+            this.dgMain.Size = new System.Drawing.Size(538, 280);
             // 
             // DictionaryMainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(693, 422);
+            this.CaptionHeight = 0;
+            this.ClientSize = new System.Drawing.Size(544, 319);
+            this.Location = new System.Drawing.Point(0, 0);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DictionaryMainForm";
-            this.Text = "字典管理";
+            this.Text = "";
             ((System.ComponentModel.ISupportInitialize)(this.dgMain)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
+
     }
 }

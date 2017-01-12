@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 
 using DMS.DomainObjects.BasicInfo;
+using DMS.DomainObjects.BusinessFunctions;
 
 namespace DMS.UI.Common
 {

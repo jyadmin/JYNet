@@ -33,11 +33,10 @@ namespace DMS.UI.SystemManage.EditionManage
             this.SetPermission(new ToolBarCommand[] { this.tbcAdd, this.tbcModify, this.tbcDelete }, new int[] { EditionFunctions.AddEdition, EditionFunctions.EditEdition, EditionFunctions.DeleteEdition });
         }
 
-        protected override void BindGridData()
+        public override void BindGridData()
         {
             this.dgMain.DataSource = new SortList(Edition.GetList());
             DataGridStyleHelper.SetStyle(this.dgMain, typeof(Edition));
-            SetRecordsCount((dgMain.DataSource as SortList).Count);
             SetLogic();
         }
 

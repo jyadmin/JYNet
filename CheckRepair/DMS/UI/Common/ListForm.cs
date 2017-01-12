@@ -50,10 +50,5 @@ namespace DMS.UI.Common
         {
 
         }
-
-        protected void SetRecordsCount(int recordCount)
-        {
-            lblRecord.Text = string.Format("当前一共检索出 {0} 条记录", recordCount);
-        }
     }
 }

@@ -143,6 +143,21 @@ namespace DMS.DomainObjects.BasicInfo
             return moduleInfoList;
         }
 
+        public static List<Module> GetPageList(int pageSize, int pageIndex, string where)
+        {
+            List<Module> moduleInfoList = new List<Module>();
+            foreach (ModuleDA moduleDA in ModuleDA.FindPage(pageSize, pageIndex, where))
+            {
+                Module module = new Module(moduleDA);
+
+                moduleInfoList.Add(module);
+            }
+
+            moduleInfoList.Sort();
+
+            return moduleInfoList;
+        }
+
         public bool Add()
         {
             try

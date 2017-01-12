@@ -47,10 +47,10 @@ namespace DMS.DomainObjects.BusinessFunctions
         /// <summary>
         /// 排序
         /// </summary>
-        public int DispalyOrder
+        public int DisplayOrder
         {
-            get { return m_FlowTemplateMainDA.DispalyOrder; }
-            set { m_FlowTemplateMainDA.DispalyOrder = value; }
+            get { return m_FlowTemplateMainDA.DisplayOrder; }
+            set { m_FlowTemplateMainDA.DisplayOrder = value; }
         }
 
         /// <summary>
@@ -218,7 +218,7 @@ namespace DMS.DomainObjects.BusinessFunctions
         /// <summary>
         /// 上次检查人编号
         /// </summary>
-        public int LastCheckerCode
+        public string LastCheckerCode
         {
             get { return m_FlowTemplateMainDA.LastCheckerCode; }
             set { m_FlowTemplateMainDA.LastCheckerCode = value; }
@@ -241,7 +241,7 @@ namespace DMS.DomainObjects.BusinessFunctions
                 flowTemplateMainList.Add(FlowTemplateMain);
             }
 
-            flowTemplateMainList.Sort();
+            //flowTemplateMainList.Sort();
 
             return flowTemplateMainList;
         }

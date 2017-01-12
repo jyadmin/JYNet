@@ -154,6 +154,19 @@
     <Compile Include="ORMappers\BusinessFunctions\DeviceReceiveDA.cs" />
     <Compile Include="ORMappers\BusinessFunctions\FlowTemplateMainDA.cs" />
     <Compile Include="TestData.cs" />
+    <Compile Include="UI\AssignTask\AssignTaskRunner.cs" />
+    <Compile Include="UI\AssignTask\TaskListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AssignTask\TaskListForm.Designer.cs">
+      <DependentUpon>TaskListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AssignTask\TaskListForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AssignTask\TaskListForm1.Designer.cs">
+      <DependentUpon>TaskListForm1.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\FileManage\FileManageMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,11 +174,11 @@
       <DependentUpon>FileManageMainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\FileManage\AffairsOpenMainFormRunner.cs" />
-    <Compile Include="UI\Common\BaseForm.cs">
+    <Compile Include="UI\Common\BaseForm1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Common\BaseForm.Designer.cs">
-      <DependentUpon>BaseForm.cs</DependentUpon>
+    <Compile Include="UI\Common\BaseForm1.Designer.cs">
+      <DependentUpon>BaseForm1.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Common\ChildrenForm.cs">
       <SubType>Form</SubType>
@@ -437,14 +450,20 @@
     <EmbeddedResource Include="frmList.resx">
       <DependentUpon>frmList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\AssignTask\TaskListForm.resx">
+      <DependentUpon>TaskListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AssignTask\TaskListForm1.resx">
+      <DependentUpon>TaskListForm1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Common\CommandsForm.resx">
       <DependentUpon>CommandsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FileManage\FileManageMainForm.resx">
       <DependentUpon>FileManageMainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Common\BaseForm.resx">
-      <DependentUpon>BaseForm.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Common\BaseForm1.resx">
+      <DependentUpon>BaseForm1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Common\ChildrenForm.resx">
       <DependentUpon>ChildrenForm.cs</DependentUpon>

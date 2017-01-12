@@ -38,7 +38,7 @@ namespace DMS.UI.Common
         public static void SetStyle(DataGrid grid, object dataSource, string[] displayPropertyNames, Type objectType)
         {
             DataGridTableStyle dgts = QMDataGrid.GenerateCommonDataGridTableStyle();
-            dgts.SelectionBackColor = System.Drawing.Color.Orange;
+            dgts.SelectionBackColor = System.Drawing.Color.Blue;
             dgts.SelectionForeColor = System.Drawing.Color.White;
             dgts.RowHeadersVisible = false;
             grid.TableStyles.Clear();

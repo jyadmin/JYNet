@@ -25,6 +25,7 @@ namespace DMS.UI.SystemManage.DictionaryManage
         public DictionaryMainForm()
         {
             InitializeComponent();
+            txPager1.formsId = this;
         }
 
         #region override
@@ -33,12 +34,15 @@ namespace DMS.UI.SystemManage.DictionaryManage
             this.SetPermission(new ToolBarCommand[] { this.tbcAdd, this.tbcModify, this.tbcDelete }, new int[] { DictionaryFunctions.AddDataItem, DictionaryFunctions.EditDataItem, DictionaryFunctions.DeleteDataItem });
         }
 
-        protected override void BindGridData()
+        public override void BindGridData()
         {
-            this.dgMain.DataSource = new SortList(Dictionary.GetList());
+            string where = String.Empty;
+            List<Dictionary> list = Dictionary.GetList();
+            txPager1.Total = list.Count;
+            this.dgMain.DataSource = new SortList(Dictionary.GetPageList(txPager1.PageSize, txPager1.PageIndex, where));
             DataGridStyleHelper.SetStyle(this.dgMain, typeof(Dictionary));
-            SetRecordsCount((dgMain.DataSource as SortList).Count);
-            SetLogic();
+            //SetRecordsCount((dgMain.DataSource as SortList).Count);
+            //SetLogic();
         }
         #endregion
 

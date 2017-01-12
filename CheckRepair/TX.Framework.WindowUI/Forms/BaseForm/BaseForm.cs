@@ -74,6 +74,11 @@ namespace TX.Framework.WindowUI.Forms
         private Image _CapitionLogo;
 
         private bool _inPosChanged;
+        public virtual void BindGridData()
+        {
+
+        }
+
 
         /// <summary>
         /// 窗体控制按钮绘制对象

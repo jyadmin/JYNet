@@ -43,6 +43,8 @@
             this.dmsLabel7 = new DMS.UI.CustomerControl.DMSLabel();
             this.tbReceiver = new DMS.UI.CustomerControl.DMSTextBox();
             this.btnSave = new TX.Framework.WindowUI.Controls.TXButton();
+            this.txButton1 = new TX.Framework.WindowUI.Controls.TXButton();
+            this.txButton2 = new TX.Framework.WindowUI.Controls.TXButton();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -145,7 +147,7 @@
             this.cmbEngineType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbEngineType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEngineType.FormattingEnabled = true;
-            this.cmbEngineType.Location = new System.Drawing.Point(99, 16);
+            this.cmbEngineType.Location = new System.Drawing.Point(99, 18);
             this.cmbEngineType.Margin = new System.Windows.Forms.Padding(0);
             this.cmbEngineType.Name = "cmbEngineType";
             this.cmbEngineType.Size = new System.Drawing.Size(297, 24);
@@ -157,7 +159,7 @@
             this.cmbDeviceType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbDeviceType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDeviceType.FormattingEnabled = true;
-            this.cmbDeviceType.Location = new System.Drawing.Point(99, 184);
+            this.cmbDeviceType.Location = new System.Drawing.Point(99, 186);
             this.cmbDeviceType.Margin = new System.Windows.Forms.Padding(0);
             this.cmbDeviceType.Name = "cmbDeviceType";
             this.cmbDeviceType.Size = new System.Drawing.Size(297, 24);
@@ -168,7 +170,7 @@
             this.cmbXc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbXc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbXc.FormattingEnabled = true;
-            this.cmbXc.Location = new System.Drawing.Point(99, 128);
+            this.cmbXc.Location = new System.Drawing.Point(99, 130);
             this.cmbXc.Margin = new System.Windows.Forms.Padding(0);
             this.cmbXc.Name = "cmbXc";
             this.cmbXc.Size = new System.Drawing.Size(297, 24);
@@ -215,7 +217,7 @@
             // btnSave
             // 
             this.btnSave.Image = null;
-            this.btnSave.Location = new System.Drawing.Point(318, 414);
+            this.btnSave.Location = new System.Drawing.Point(37, 427);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(88, 28);
             this.btnSave.TabIndex = 1;
@@ -223,11 +225,35 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.tbcSave_Commanded);
             // 
+            // txButton1
+            // 
+            this.txButton1.Image = null;
+            this.txButton1.Location = new System.Drawing.Point(287, 427);
+            this.txButton1.Name = "txButton1";
+            this.txButton1.Size = new System.Drawing.Size(88, 28);
+            this.txButton1.TabIndex = 1;
+            this.txButton1.Text = "取  消";
+            this.txButton1.UseVisualStyleBackColor = true;
+            this.txButton1.Click += new System.EventHandler(this.CloseForm);
+            // 
+            // txButton2
+            // 
+            this.txButton2.Image = null;
+            this.txButton2.Location = new System.Drawing.Point(161, 427);
+            this.txButton2.Name = "txButton2";
+            this.txButton2.Size = new System.Drawing.Size(88, 28);
+            this.txButton2.TabIndex = 1;
+            this.txButton2.Text = "派  工";
+            this.txButton2.UseVisualStyleBackColor = true;
+            this.txButton2.Click += new System.EventHandler(this.CloseForm);
+            // 
             // DeviceReceiveForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(412, 467);
+            this.Controls.Add(this.txButton2);
+            this.Controls.Add(this.txButton1);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.groupBox1);
             this.Name = "DeviceReceiveForm";
@@ -256,5 +282,7 @@
         private CustomerControl.DMSLabel dmsLabel7;
         private CustomerControl.DMSTextBox tbReceiver;
         private TX.Framework.WindowUI.Controls.TXButton btnSave;
+        private TX.Framework.WindowUI.Controls.TXButton txButton1;
+        private TX.Framework.WindowUI.Controls.TXButton txButton2;
     }
 }

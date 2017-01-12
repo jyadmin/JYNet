@@ -17,6 +17,7 @@ using System.Windows.Forms;
 using DMS.Common;
 using DMS.UI.Common;
 using DMS.DomainObjects.BasicInfo;
+using DMS.DomainObjects;
 
 namespace DMS.UI.SystemManage.UserManage
 {
@@ -25,6 +26,7 @@ namespace DMS.UI.SystemManage.UserManage
         public UserMainForm()
         {
             InitializeComponent();
+            txPager1.formsId = this;
         }
 
         #region override method
@@ -38,11 +40,14 @@ namespace DMS.UI.SystemManage.UserManage
             this.SetLogicVisible(new ToolBarCommand[] { this.tbcAdd, this.tbcModify, this.tbcDelete, this.tbcView }, new bool[] { true, true, !((m_CurrentNode as UserInfo).IsDefault == 1), true });
         }
 
-        protected override void BindGridData()
+        public override void BindGridData()
         {
-            this.dgMain.DataSource = new SortList(UserInfo.GetList());
+            string where = string.Format("where ([Edition] <> {0} and [IsDefault] = -1) or  ([Edition]= {0} and [IsDefault] = 0)", CurrentUser.Instance.User.Edition);
+            
+            List<UserInfo> list = UserInfo.GetList();
+            txPager1.Total = list.Count;
+            this.dgMain.DataSource = new SortList(UserInfo.GetPageList(txPager1.PageSize, txPager1.PageIndex, where));
             DataGridStyleHelper.SetStyle(this.dgMain, typeof(UserInfo));
-            SetRecordsCount((dgMain.DataSource as SortList).Count);
             SetLogic();
         }
         #endregion
