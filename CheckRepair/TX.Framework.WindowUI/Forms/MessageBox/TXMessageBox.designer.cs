@@ -169,12 +169,13 @@ namespace TX.Framework.WindowUI.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BorderWidth = 1;
             this.CancelButton = this.btnCancel;
-            this.CaptionFont = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CapitionLogo = null;
+            this.CaptionFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClientSize = new System.Drawing.Size(383, 188);
             this.ControlBoxSize = new System.Drawing.Size(35, 16);
             this.Controls.Add(this.tableLayoutPanel1);
             this.CornerRadius = 2;
-            this.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Location = new System.Drawing.Point(0, 0);
             this.MaximizeBox = false;
             this.MinimizeBox = false;

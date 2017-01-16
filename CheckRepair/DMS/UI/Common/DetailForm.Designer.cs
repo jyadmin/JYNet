@@ -34,9 +34,10 @@
             // 
             // tsTool
             // 
-            this.tsTool.Location = new System.Drawing.Point(0, 0);
+            this.tsTool.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tsTool.Location = new System.Drawing.Point(3, 27);
             this.tsTool.Name = "tsTool";
-            this.tsTool.Size = new System.Drawing.Size(389, 25);
+            this.tsTool.Size = new System.Drawing.Size(469, 25);
             this.tsTool.TabIndex = 0;
             this.tsTool.Text = "toolStrip1";
             // 
@@ -54,10 +55,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(389, 355);
+            this.ClientSize = new System.Drawing.Size(475, 558);
             this.Controls.Add(this.tsTool);
+            this.DockAreas = ((TX.Framework.WindowUI.Controls.Docking.DockAreas)((((((TX.Framework.WindowUI.Controls.Docking.DockAreas.Float | TX.Framework.WindowUI.Controls.Docking.DockAreas.DockLeft) 
+            | TX.Framework.WindowUI.Controls.Docking.DockAreas.DockRight) 
+            | TX.Framework.WindowUI.Controls.Docking.DockAreas.DockTop) 
+            | TX.Framework.WindowUI.Controls.Docking.DockAreas.DockBottom) 
+            | TX.Framework.WindowUI.Controls.Docking.DockAreas.Document)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.Name = "DetailForm";
+            this.ShowHint = TX.Framework.WindowUI.Controls.Docking.DockState.Unknown;
             this.Text = "DetailForm";
             this.Load += new System.EventHandler(this.DetailForm_Load);
             this.ResumeLayout(false);

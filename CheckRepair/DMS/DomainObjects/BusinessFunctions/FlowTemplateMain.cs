@@ -207,12 +207,12 @@ namespace DMS.DomainObjects.BusinessFunctions
         }
 
         /// <summary>
-        /// 上次检查人
+        /// 临时存放TaskAssign的ID，关闭分配界面时置零
         /// </summary>
-        public string LastChecker
+        public int TaskAssignID
         {
-            get { return m_FlowTemplateMainDA.LastChecker; }
-            set { m_FlowTemplateMainDA.LastChecker = value; }
+            get { return m_FlowTemplateMainDA.TaskAssignID; }
+            set { m_FlowTemplateMainDA.TaskAssignID = value; }
         }
 
         /// <summary>

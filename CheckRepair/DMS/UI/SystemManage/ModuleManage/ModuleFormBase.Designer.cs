@@ -55,7 +55,8 @@
             // gbDetail
             // 
             this.gbDetail.Controls.Add(this.tableLayoutPanel1);
-            this.gbDetail.Location = new System.Drawing.Point(8, 51);
+            this.gbDetail.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gbDetail.Location = new System.Drawing.Point(8, 82);
             this.gbDetail.Name = "gbDetail";
             this.gbDetail.Size = new System.Drawing.Size(356, 370);
             this.gbDetail.TabIndex = 1;
@@ -104,9 +105,9 @@
             // 
             this.dmsLabel1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.dmsLabel1.AutoSize = true;
-            this.dmsLabel1.Location = new System.Drawing.Point(16, 6);
+            this.dmsLabel1.Location = new System.Drawing.Point(17, 0);
             this.dmsLabel1.Name = "dmsLabel1";
-            this.dmsLabel1.Size = new System.Drawing.Size(41, 12);
+            this.dmsLabel1.Size = new System.Drawing.Size(40, 25);
             this.dmsLabel1.TabIndex = 0;
             this.dmsLabel1.Text = "模块ID";
             // 
@@ -114,9 +115,9 @@
             // 
             this.dmsLabel2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.dmsLabel2.AutoSize = true;
-            this.dmsLabel2.Location = new System.Drawing.Point(4, 31);
+            this.dmsLabel2.Location = new System.Drawing.Point(17, 25);
             this.dmsLabel2.Name = "dmsLabel2";
-            this.dmsLabel2.Size = new System.Drawing.Size(53, 12);
+            this.dmsLabel2.Size = new System.Drawing.Size(40, 25);
             this.dmsLabel2.TabIndex = 1;
             this.dmsLabel2.Text = "模块名称";
             // 
@@ -124,9 +125,9 @@
             // 
             this.dmsLabel3.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.dmsLabel3.AutoSize = true;
-            this.dmsLabel3.Location = new System.Drawing.Point(16, 56);
+            this.dmsLabel3.Location = new System.Drawing.Point(17, 50);
             this.dmsLabel3.Name = "dmsLabel3";
-            this.dmsLabel3.Size = new System.Drawing.Size(41, 12);
+            this.dmsLabel3.Size = new System.Drawing.Size(40, 25);
             this.dmsLabel3.TabIndex = 2;
             this.dmsLabel3.Text = "启动类";
             // 
@@ -134,9 +135,9 @@
             // 
             this.dmsLabel4.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.dmsLabel4.AutoSize = true;
-            this.dmsLabel4.Location = new System.Drawing.Point(4, 81);
+            this.dmsLabel4.Location = new System.Drawing.Point(17, 75);
             this.dmsLabel4.Name = "dmsLabel4";
-            this.dmsLabel4.Size = new System.Drawing.Size(53, 12);
+            this.dmsLabel4.Size = new System.Drawing.Size(40, 25);
             this.dmsLabel4.TabIndex = 2;
             this.dmsLabel4.Text = "上级模块";
             // 
@@ -144,9 +145,9 @@
             // 
             this.dmsLabel5.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.dmsLabel5.AutoSize = true;
-            this.dmsLabel5.Location = new System.Drawing.Point(4, 106);
+            this.dmsLabel5.Location = new System.Drawing.Point(17, 100);
             this.dmsLabel5.Name = "dmsLabel5";
-            this.dmsLabel5.Size = new System.Drawing.Size(53, 12);
+            this.dmsLabel5.Size = new System.Drawing.Size(40, 25);
             this.dmsLabel5.TabIndex = 2;
             this.dmsLabel5.Text = "是否显示";
             // 
@@ -154,9 +155,9 @@
             // 
             this.dmsLabel6.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.dmsLabel6.AutoSize = true;
-            this.dmsLabel6.Location = new System.Drawing.Point(4, 131);
+            this.dmsLabel6.Location = new System.Drawing.Point(17, 125);
             this.dmsLabel6.Name = "dmsLabel6";
-            this.dmsLabel6.Size = new System.Drawing.Size(53, 12);
+            this.dmsLabel6.Size = new System.Drawing.Size(40, 25);
             this.dmsLabel6.TabIndex = 2;
             this.dmsLabel6.Text = "显示顺序";
             // 
@@ -164,9 +165,9 @@
             // 
             this.dmsLabel7.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.dmsLabel7.AutoSize = true;
-            this.dmsLabel7.Location = new System.Drawing.Point(28, 266);
+            this.dmsLabel7.Location = new System.Drawing.Point(17, 264);
             this.dmsLabel7.Name = "dmsLabel7";
-            this.dmsLabel7.Size = new System.Drawing.Size(29, 12);
+            this.dmsLabel7.Size = new System.Drawing.Size(40, 16);
             this.dmsLabel7.TabIndex = 2;
             this.dmsLabel7.Text = "备注";
             // 
@@ -186,41 +187,41 @@
             // 
             this.txtModuleId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtModuleId.BackColor = System.Drawing.Color.White;
-            this.txtModuleId.Location = new System.Drawing.Point(60, 2);
+            this.txtModuleId.Location = new System.Drawing.Point(60, 0);
             this.txtModuleId.Margin = new System.Windows.Forms.Padding(0);
             this.txtModuleId.Name = "txtModuleId";
             this.txtModuleId.ReadOnly = true;
-            this.txtModuleId.Size = new System.Drawing.Size(284, 21);
+            this.txtModuleId.Size = new System.Drawing.Size(284, 26);
             this.txtModuleId.TabIndex = 4;
             // 
             // txtName
             // 
             this.txtName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtName.Location = new System.Drawing.Point(60, 27);
+            this.txtName.Location = new System.Drawing.Point(60, 25);
             this.txtName.Margin = new System.Windows.Forms.Padding(0);
             this.txtName.MaxLength = 50;
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(284, 21);
+            this.txtName.Size = new System.Drawing.Size(284, 26);
             this.txtName.TabIndex = 4;
             // 
             // txtRunner
             // 
             this.txtRunner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtRunner.Location = new System.Drawing.Point(60, 52);
+            this.txtRunner.Location = new System.Drawing.Point(60, 50);
             this.txtRunner.Margin = new System.Windows.Forms.Padding(0);
             this.txtRunner.MaxLength = 200;
             this.txtRunner.Name = "txtRunner";
-            this.txtRunner.Size = new System.Drawing.Size(284, 21);
+            this.txtRunner.Size = new System.Drawing.Size(284, 26);
             this.txtRunner.TabIndex = 4;
             // 
             // txtPriorModule
             // 
             this.txtPriorModule.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPriorModule.Location = new System.Drawing.Point(60, 77);
+            this.txtPriorModule.Location = new System.Drawing.Point(60, 75);
             this.txtPriorModule.Margin = new System.Windows.Forms.Padding(0);
             this.txtPriorModule.MaxLength = 5;
             this.txtPriorModule.Name = "txtPriorModule";
-            this.txtPriorModule.Size = new System.Drawing.Size(284, 21);
+            this.txtPriorModule.Size = new System.Drawing.Size(284, 26);
             this.txtPriorModule.TabIndex = 4;
             this.txtPriorModule.Text = "1";
             // 
@@ -236,20 +237,20 @@
             // txtDisplayOrder
             // 
             this.txtDisplayOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDisplayOrder.Location = new System.Drawing.Point(60, 127);
+            this.txtDisplayOrder.Location = new System.Drawing.Point(60, 125);
             this.txtDisplayOrder.Margin = new System.Windows.Forms.Padding(0);
             this.txtDisplayOrder.MaxLength = 5;
             this.txtDisplayOrder.Name = "txtDisplayOrder";
-            this.txtDisplayOrder.Size = new System.Drawing.Size(284, 21);
+            this.txtDisplayOrder.Size = new System.Drawing.Size(284, 26);
             this.txtDisplayOrder.TabIndex = 4;
             // 
             // dmsLabel8
             // 
             this.dmsLabel8.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.dmsLabel8.AutoSize = true;
-            this.dmsLabel8.Location = new System.Drawing.Point(4, 156);
+            this.dmsLabel8.Location = new System.Drawing.Point(17, 150);
             this.dmsLabel8.Name = "dmsLabel8";
-            this.dmsLabel8.Size = new System.Drawing.Size(53, 12);
+            this.dmsLabel8.Size = new System.Drawing.Size(40, 25);
             this.dmsLabel8.TabIndex = 2;
             this.dmsLabel8.Text = "模块等级";
             // 
@@ -257,37 +258,39 @@
             // 
             this.dmsLabel9.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.dmsLabel9.AutoSize = true;
-            this.dmsLabel9.Location = new System.Drawing.Point(4, 181);
+            this.dmsLabel9.Location = new System.Drawing.Point(17, 175);
             this.dmsLabel9.Name = "dmsLabel9";
-            this.dmsLabel9.Size = new System.Drawing.Size(53, 12);
+            this.dmsLabel9.Size = new System.Drawing.Size(40, 25);
             this.dmsLabel9.TabIndex = 2;
             this.dmsLabel9.Text = "模块大小";
             // 
             // txtLevel
             // 
             this.txtLevel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtLevel.Location = new System.Drawing.Point(60, 152);
+            this.txtLevel.Location = new System.Drawing.Point(60, 150);
             this.txtLevel.Margin = new System.Windows.Forms.Padding(0);
             this.txtLevel.MaxLength = 5;
             this.txtLevel.Name = "txtLevel";
-            this.txtLevel.Size = new System.Drawing.Size(284, 21);
+            this.txtLevel.Size = new System.Drawing.Size(284, 26);
             this.txtLevel.TabIndex = 4;
             // 
             // txtSize
             // 
             this.txtSize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSize.Location = new System.Drawing.Point(60, 177);
+            this.txtSize.Location = new System.Drawing.Point(60, 175);
             this.txtSize.Margin = new System.Windows.Forms.Padding(0);
             this.txtSize.MaxLength = 5;
             this.txtSize.Name = "txtSize";
-            this.txtSize.Size = new System.Drawing.Size(284, 21);
+            this.txtSize.Size = new System.Drawing.Size(284, 26);
             this.txtSize.TabIndex = 4;
             // 
             // ModuleFormBase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.ClientSize = new System.Drawing.Size(371, 427);
+            this.ClientSize = new System.Drawing.Size(374, 472);
             this.Controls.Add(this.gbDetail);
+            this.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ModuleFormBase";
             this.Load += new System.EventHandler(this.ModuleFormBase_Load);
             this.Controls.SetChildIndex(this.gbDetail, 0);

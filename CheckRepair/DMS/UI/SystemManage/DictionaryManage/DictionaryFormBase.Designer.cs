@@ -48,7 +48,7 @@
             // 
             this.gbDetail.Controls.Add(this.tableLayoutPanel1);
             this.gbDetail.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gbDetail.Location = new System.Drawing.Point(8, 51);
+            this.gbDetail.Location = new System.Drawing.Point(8, 83);
             this.gbDetail.Name = "gbDetail";
             this.gbDetail.Size = new System.Drawing.Size(351, 152);
             this.gbDetail.TabIndex = 2;
@@ -187,10 +187,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(385, 228);
+            this.ClientSize = new System.Drawing.Size(368, 254);
             this.Controls.Add(this.gbDetail);
             this.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Margin = new System.Windows.Forms.Padding(3);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "DictionaryFormBase";
             this.Text = "DictionaryFormBase";
             this.Load += new System.EventHandler(this.DictionaryFormBase_Load);

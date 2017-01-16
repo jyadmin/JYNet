@@ -136,6 +136,7 @@
     <Compile Include="DomainObjects\BasicInfo\UserInfo.cs" />
     <Compile Include="DomainObjects\BusinessFunctions\DeviceReceive.cs" />
     <Compile Include="DomainObjects\BusinessFunctions\FlowTemplateMain.cs" />
+    <Compile Include="DomainObjects\BusinessFunctions\AssignedTask.cs" />
     <Compile Include="DomainObjects\CurrentUser.cs" />
     <Compile Include="DomainObjects\DomainObject.cs" />
     <Compile Include="ORMappers\BasicInfo\DictionaryDA.cs" />
@@ -153,6 +154,7 @@
     </Compile>
     <Compile Include="ORMappers\BusinessFunctions\DeviceReceiveDA.cs" />
     <Compile Include="ORMappers\BusinessFunctions\FlowTemplateMainDA.cs" />
+    <Compile Include="ORMappers\BusinessFunctions\AssignedTaskDA.cs" />
     <Compile Include="TestData.cs" />
     <Compile Include="UI\AssignTask\AssignTaskRunner.cs" />
     <Compile Include="UI\AssignTask\TaskListForm.cs">

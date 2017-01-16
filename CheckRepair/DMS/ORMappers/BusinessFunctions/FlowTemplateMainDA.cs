@@ -204,10 +204,10 @@ namespace DMS.ORMappers.BusinessFunctions
         }
 
         /// <summary>
-        /// 上次检查人
+        /// 临时存放TaskAssign的ID，关闭分配界面时置零
         /// </summary>
         [Column(IsChangeable = true)]
-        public string LastChecker
+        public int TaskAssignID
         {
             get;
             set;

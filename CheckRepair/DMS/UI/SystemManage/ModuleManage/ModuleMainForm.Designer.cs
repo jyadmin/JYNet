@@ -34,7 +34,7 @@
             // dgMain
             // 
             this.dgMain.Margin = new System.Windows.Forms.Padding(3);
-            this.dgMain.Size = new System.Drawing.Size(597, 354);
+            this.dgMain.Size = new System.Drawing.Size(597, 381);
             // 
             // txPager1
             // 
@@ -43,7 +43,7 @@
             // ModuleMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.CaptionHeight = 0;
+            this.CaptionHeight = 3;
             this.ClientSize = new System.Drawing.Size(603, 405);
             this.Location = new System.Drawing.Point(0, 0);
             this.Margin = new System.Windows.Forms.Padding(4);

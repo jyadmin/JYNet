@@ -118,8 +118,8 @@ namespace DMS.UI.Common
             // CommandsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.ClientSize = new System.Drawing.Size(500, 350);
-            this.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ClientSize = new System.Drawing.Size(500, 349);
+            this.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.Name = "CommandsForm";
             this.ResumeLayout(false);
 

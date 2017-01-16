@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            TX.Framework.WindowUI.Controls.TreeListViewItemCollection.TreeListViewItemCollectionComparer treeListViewItemCollectionComparer2 = new TX.Framework.WindowUI.Controls.TreeListViewItemCollection.TreeListViewItemCollectionComparer();
+            TX.Framework.WindowUI.Controls.TreeListViewItemCollection.TreeListViewItemCollectionComparer treeListViewItemCollectionComparer1 = new TX.Framework.WindowUI.Controls.TreeListViewItemCollection.TreeListViewItemCollectionComparer();
             this.btnHXD1DC5 = new System.Windows.Forms.Button();
             this.txPanelCenter = new TX.Framework.WindowUI.Controls.TXPanel();
             this.treeListView1 = new TX.Framework.WindowUI.Controls.TreeListView();
@@ -36,6 +36,7 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnHXD1BC5 = new System.Windows.Forms.Button();
             this.btnHXD1C5 = new System.Windows.Forms.Button();
             this.btnHXD3C5 = new System.Windows.Forms.Button();
@@ -43,13 +44,14 @@
             this.tvEngineCode = new System.Windows.Forms.TreeView();
             this.btnHXD3CC4 = new System.Windows.Forms.Button();
             this.txPanelBottom = new TX.Framework.WindowUI.Controls.TXPanel();
+            this.btnAssign = new System.Windows.Forms.Button();
             this.txPanelLeft = new TX.Framework.WindowUI.Controls.TXPanel();
             this.txPanelTop = new TX.Framework.WindowUI.Controls.TXPanel();
             this.txPanel3 = new TX.Framework.WindowUI.Controls.TXPanel();
             this.txPanelUser = new TX.Framework.WindowUI.Controls.TXPanel();
             this.txGroupBox1 = new TX.Framework.WindowUI.Controls.TXGroupBox();
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.txPanelCenter.SuspendLayout();
+            this.txPanelBottom.SuspendLayout();
             this.txPanelLeft.SuspendLayout();
             this.txPanelTop.SuspendLayout();
             this.txPanel3.SuspendLayout();
@@ -89,9 +91,9 @@
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5});
-            treeListViewItemCollectionComparer2.Column = 0;
-            treeListViewItemCollectionComparer2.SortOrder = System.Windows.Forms.SortOrder.None;
-            this.treeListView1.Comparer = treeListViewItemCollectionComparer2;
+            treeListViewItemCollectionComparer1.Column = 0;
+            treeListViewItemCollectionComparer1.SortOrder = System.Windows.Forms.SortOrder.None;
+            this.treeListView1.Comparer = treeListViewItemCollectionComparer1;
             this.treeListView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeListView1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.treeListView1.HeaderBeginColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
@@ -132,6 +134,11 @@
             this.columnHeader4.Text = "时间";
             this.columnHeader4.Width = 78;
             // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "分配人员";
+            this.columnHeader5.Width = 353;
+            // 
             // btnHXD1BC5
             // 
             this.btnHXD1BC5.Location = new System.Drawing.Point(32, 11);
@@ -145,13 +152,14 @@
             // 
             // btnHXD1C5
             // 
+            this.btnHXD1C5.BackColor = System.Drawing.Color.Transparent;
             this.btnHXD1C5.Location = new System.Drawing.Point(449, 11);
             this.btnHXD1C5.Margin = new System.Windows.Forms.Padding(4);
             this.btnHXD1C5.Name = "btnHXD1C5";
             this.btnHXD1C5.Size = new System.Drawing.Size(123, 37);
             this.btnHXD1C5.TabIndex = 6;
             this.btnHXD1C5.Text = "HXD1-C5";
-            this.btnHXD1C5.UseVisualStyleBackColor = true;
+            this.btnHXD1C5.UseVisualStyleBackColor = false;
             this.btnHXD1C5.Click += new System.EventHandler(this.btnEngineType_Click);
             // 
             // btnHXD3C5
@@ -179,8 +187,9 @@
             // 
             // tvEngineCode
             // 
+            this.tvEngineCode.BackColor = System.Drawing.SystemColors.Window;
             this.tvEngineCode.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tvEngineCode.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.tvEngineCode.ForeColor = System.Drawing.SystemColors.WindowText;
             this.tvEngineCode.Location = new System.Drawing.Point(0, 0);
             this.tvEngineCode.Margin = new System.Windows.Forms.Padding(4);
             this.tvEngineCode.Name = "tvEngineCode";
@@ -203,12 +212,25 @@
             // 
             this.txPanelBottom.BackColor = System.Drawing.Color.Transparent;
             this.txPanelBottom.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(168)))), ((int)(((byte)(192)))));
+            this.txPanelBottom.Controls.Add(this.btnAssign);
             this.txPanelBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.txPanelBottom.Location = new System.Drawing.Point(261, 559);
             this.txPanelBottom.Margin = new System.Windows.Forms.Padding(4);
             this.txPanelBottom.Name = "txPanelBottom";
             this.txPanelBottom.Size = new System.Drawing.Size(1117, 56);
             this.txPanelBottom.TabIndex = 5;
+            // 
+            // btnAssign
+            // 
+            this.btnAssign.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnAssign.Location = new System.Drawing.Point(8, 8);
+            this.btnAssign.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAssign.Name = "btnAssign";
+            this.btnAssign.Size = new System.Drawing.Size(78, 37);
+            this.btnAssign.TabIndex = 7;
+            this.btnAssign.Text = "分  配";
+            this.btnAssign.UseVisualStyleBackColor = false;
+            this.btnAssign.Click += new System.EventHandler(this.btnAssign_Click);
             // 
             // txPanelLeft
             // 
@@ -281,11 +303,6 @@
             this.txGroupBox1.Text = "人员：";
             this.txGroupBox1.TextMargin = 6;
             // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "分配人员";
-            this.columnHeader5.Width = 353;
-            // 
             // TaskListForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -301,6 +318,7 @@
             this.Text = "TaskListForm1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.txPanelCenter.ResumeLayout(false);
+            this.txPanelBottom.ResumeLayout(false);
             this.txPanelLeft.ResumeLayout(false);
             this.txPanelTop.ResumeLayout(false);
             this.txPanel3.ResumeLayout(false);
@@ -331,5 +349,6 @@
         private TX.Framework.WindowUI.Controls.TXPanel txPanelUser;
         private TX.Framework.WindowUI.Controls.TXGroupBox txGroupBox1;
         private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.Button btnAssign;
     }
 }

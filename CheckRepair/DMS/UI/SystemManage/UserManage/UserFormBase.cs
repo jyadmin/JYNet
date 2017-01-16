@@ -26,7 +26,7 @@ namespace DMS.UI.SystemManage.UserManage
     public partial class UserFormBase : DetailForm
     {
         protected UserInfo m_UserInfo;
-        protected byte[] byteFile;
+        protected byte[] byteFile = {0};
 
         public UserFormBase()
         {
@@ -109,10 +109,14 @@ namespace DMS.UI.SystemManage.UserManage
             txtDescript.Text = m_UserInfo.Description;
             try
             {
-                MemoryStream buf = new MemoryStream((byte[])m_UserInfo.Photo);
-                Image image = Image.FromStream(buf, true);
-                userPhoto.Image = image;
-                byteFile = m_UserInfo.Photo;
+                byte[] b = (byte[])m_UserInfo.Photo;
+                if (b.Length > 1)
+                {
+                    MemoryStream buf = new MemoryStream((byte[])m_UserInfo.Photo);
+                    Image image = Image.FromStream(buf, true);
+                    userPhoto.Image = image;
+                    byteFile = m_UserInfo.Photo;
+                }
             }
             catch(Exception e)
             {
