@@ -164,6 +164,7 @@ namespace DMS.UI.SystemManage.UserManage
         }
 
         public string PhotoPathStr = "";
+        public string dialogResult = "";
         private void choosePhoto_Click(object sender, EventArgs e)
         {
             
@@ -174,18 +175,21 @@ namespace DMS.UI.SystemManage.UserManage
             //判断照片文件格式：.jpg/.JPG
             Regex regex = new Regex(@"^([a-zA-Z]\:[\\a-zA-Z0-9_\\]*)([a-zA-Z0-9_\u4E00-\u9FA5]+)[\.]((jpg)|(JPG)|(png)|(PNG)|(bmp)|(BMP))$");
             Match m = regex.Match(PhotoPathStr);
-            if (m.Success)
+            if (dialogResult == "OK")
             {
-                //读取照片文件
-                FileStream fs = new FileStream(PhotoPathStr, FileMode.Open, FileAccess.Read);
-                byteFile = new byte[fs.Length];
-                fs.Read(byteFile, 0, (int)fs.Length);
-                fs.Close();
-                userPhoto.ImageLocation = PhotoPathStr;
-            }
-            else
-            {
-                MessageBox.Show("只能选择jpg、png、bmp格式的图片文件！");
+                if (m.Success)
+                {
+                    //读取照片文件
+                    FileStream fs = new FileStream(PhotoPathStr, FileMode.Open, FileAccess.Read);
+                    byteFile = new byte[fs.Length];
+                    fs.Read(byteFile, 0, (int)fs.Length);
+                    fs.Close();
+                    userPhoto.ImageLocation = PhotoPathStr;
+                }
+                else
+                {
+                    MessageBox.Show("只能选择jpg、png、bmp格式的图片文件！");
+                }
             }
         }
         private void InvokeMethod()
@@ -194,6 +198,7 @@ namespace DMS.UI.SystemManage.UserManage
             if (InvokeDialog.ShowDialog() == DialogResult.OK)
             {
                 PhotoPathStr = InvokeDialog.FileName;
+                dialogResult = "OK";
             }
         }
 

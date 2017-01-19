@@ -33,7 +33,7 @@ namespace TX.Framework.WindowUI
             Random random = new Random(DateTime.Now.Millisecond);
             int n = random.Next(0, loadImages.Length);
             var img = loadImages[n];
-            return img == null ? Properties.Resources.loader : img;
+            return img = Properties.Resources.loader;//null ? Properties.Resources.loader : img;
         }
     }
 }

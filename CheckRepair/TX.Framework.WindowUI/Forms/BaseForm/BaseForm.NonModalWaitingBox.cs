@@ -121,7 +121,7 @@ namespace TX.Framework.WindowUI.Forms
         /// User:Ryan  CreateTime:2011-10-24 11:28.
         public void Waiting(MethodInvoker method)
         {
-            this.Waiting(method, string.Empty);
+            this.Waiting(method, "正在提交，请稍偏后…");
         }
 
         #endregion

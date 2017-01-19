@@ -53,12 +53,12 @@ namespace DMS.UI.AssignTask
             if (txDateTimePicker1.Value.ToString() != "" && txDateTimePicker1.Value.ToString() != null)
             {
                 dt = (DateTime)txDateTimePicker1.Value;
-                dtStart = DateTimeHelper.ConvertDataTimeToLong(dt);
+                dtStart = DateTimeHelper.ConvertDataTimeToLong(dt.Date);
                 dtEnd = dtStart + 24 * 60 * 60 * 1000;
             }
             else
             {
-                dtStart = DateTimeHelper.ConvertDataTimeToLong(dt);
+                dtStart = DateTimeHelper.ConvertDataTimeToLong(dt.Date);
                 dtEnd = dtStart + 24 * 60 * 60 * 1000;
             }
 
@@ -423,14 +423,26 @@ namespace DMS.UI.AssignTask
             }
         }
 
+        delegate void Method();//代理
+
         //一次全部分配
         private void btnAssign_Click(object sender, EventArgs e)
         {
-           
+            //通过代理调用方法
+            Action taskAssignDelegate = () => { TaskAssign(); };
+            this.Waiting(() =>
+            {
+                this.Invoke(taskAssignDelegate);
+                this.Info("分配完成！");
+            });
+        }
+        
+        private void TaskAssign()
+        {
             for (int i = 0; i < treeListView1.ItemsCount; i++)
             {
                 TreeListViewItem itm = treeListView1.GetTreeListViewItemFromIndex(i);
-                //TreeListViewItem itm = treeListView1.SelectedItems[0];
+                
                 if (itm.Name != "" && itm.Name != null)
                 {
                     //选中的分配人员id
@@ -468,20 +480,7 @@ namespace DMS.UI.AssignTask
                         {
                             at.Status = "0";
                         }
-                        if (itm.SubItems[3].Name == "" || itm.SubItems[3].Name == null)
-                        {
-                            at.Add();
-                            //添加完成后拿回新增数据的ID，通过long型时间拿回，放在操作时长字段的Name中
-                            //分配时，需要判断该字段是否为空，为空则调用Add，否则调用Update
-                            List<AssignedTask> atList = AssignedTask.GetList("where ArrangedStartTime = " + at.ArrangedStartTime);
-                            int ID = atList[0].ID;
-                            itm.SubItems[3].Name = ID.ToString();
-                        }
-                        else
-                        {
-                            at.ID = int.Parse(itm.SubItems[3].Name);
-                            at.Update();
-                        }
+                        at.Add();
                         template.LastCheckerCode = checkerIDs;
                         template.Update();
                     }
@@ -493,13 +492,12 @@ namespace DMS.UI.AssignTask
             devReceive.Retrieve(DeviceReceiveID);
             devReceive.Status = "1";
             devReceive.Update();
-            this.Info("分配完成！");
+            
             //重新加载车号车型树形结构
             tvEngineCode.SelectedNode.Remove();
             treeListView1.Items.Clear();
             txGroupBox1.Controls.Clear();
             IsUsersLoaded = 1;
-
         }
 
         private bool validateAssignedUsers()
