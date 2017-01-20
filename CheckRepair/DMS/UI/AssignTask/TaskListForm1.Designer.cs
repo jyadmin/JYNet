@@ -1,6 +1,6 @@
 ﻿namespace DMS.UI.AssignTask
 {
-    partial class TaskListForm1
+    partial class UserAssignedTaskListForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            TX.Framework.WindowUI.Controls.TreeListViewItemCollection.TreeListViewItemCollectionComparer treeListViewItemCollectionComparer6 = new TX.Framework.WindowUI.Controls.TreeListViewItemCollection.TreeListViewItemCollectionComparer();
+            TX.Framework.WindowUI.Controls.TreeListViewItemCollection.TreeListViewItemCollectionComparer treeListViewItemCollectionComparer2 = new TX.Framework.WindowUI.Controls.TreeListViewItemCollection.TreeListViewItemCollectionComparer();
             this.btnHXD1DC5 = new System.Windows.Forms.Button();
             this.txPanelCenter = new TX.Framework.WindowUI.Controls.TXPanel();
             this.txPanelTreeListView = new TX.Framework.WindowUI.Controls.TXPanel();
@@ -51,12 +51,15 @@
             this.btnAssign = new System.Windows.Forms.Button();
             this.txPanelTop = new TX.Framework.WindowUI.Controls.TXPanel();
             this.txPanel1 = new TX.Framework.WindowUI.Controls.TXPanel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txDateTimePicker2 = new TX.Framework.WindowUI.Controls.TXDateTimePicker();
             this.txDateTimePicker1 = new TX.Framework.WindowUI.Controls.TXDateTimePicker();
             this.txCbbStatus = new TX.Framework.WindowUI.Controls.TXComboBox();
             this.txPanelBtn = new TX.Framework.WindowUI.Controls.TXPanel();
             this.txPanel3 = new TX.Framework.WindowUI.Controls.TXPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.txPanelCenter.SuspendLayout();
             this.txPanelTreeListView.SuspendLayout();
             this.txPanelUser.SuspendLayout();
@@ -114,9 +117,9 @@
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5});
-            treeListViewItemCollectionComparer6.Column = 0;
-            treeListViewItemCollectionComparer6.SortOrder = System.Windows.Forms.SortOrder.None;
-            this.treeListView1.Comparer = treeListViewItemCollectionComparer6;
+            treeListViewItemCollectionComparer2.Column = 0;
+            treeListViewItemCollectionComparer2.SortOrder = System.Windows.Forms.SortOrder.None;
+            this.treeListView1.Comparer = treeListViewItemCollectionComparer2;
             this.treeListView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeListView1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.treeListView1.HeaderBeginColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
@@ -311,8 +314,10 @@
             // 
             this.txPanel1.BackColor = System.Drawing.Color.Transparent;
             this.txPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(168)))), ((int)(((byte)(192)))));
+            this.txPanel1.Controls.Add(this.label3);
             this.txPanel1.Controls.Add(this.label2);
             this.txPanel1.Controls.Add(this.label1);
+            this.txPanel1.Controls.Add(this.txDateTimePicker2);
             this.txPanel1.Controls.Add(this.txDateTimePicker1);
             this.txPanel1.Controls.Add(this.txCbbStatus);
             this.txPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -320,6 +325,47 @@
             this.txPanel1.Name = "txPanel1";
             this.txPanel1.Size = new System.Drawing.Size(1378, 45);
             this.txPanel1.TabIndex = 8;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(563, 14);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(24, 16);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "—";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(295, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(120, 16);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "设备接收时间：";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(14, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(88, 16);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "分配状态：";
+            // 
+            // txDateTimePicker2
+            // 
+            this.txDateTimePicker2.CalendarForeColor = System.Drawing.Color.Blue;
+            this.txDateTimePicker2.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.txDateTimePicker2.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(74)))), ((int)(((byte)(181)))), ((int)(((byte)(237)))));
+            this.txDateTimePicker2.CalendarTrailingForeColor = System.Drawing.Color.CadetBlue;
+            this.txDateTimePicker2.Checked = false;
+            this.txDateTimePicker2.Location = new System.Drawing.Point(592, 9);
+            this.txDateTimePicker2.Name = "txDateTimePicker2";
+            this.txDateTimePicker2.ShowCheckBox = true;
+            this.txDateTimePicker2.Size = new System.Drawing.Size(140, 26);
+            this.txDateTimePicker2.TabIndex = 1;
+            this.txDateTimePicker2.Value = null;
             // 
             // txDateTimePicker1
             // 
@@ -330,6 +376,7 @@
             this.txDateTimePicker1.Checked = false;
             this.txDateTimePicker1.Location = new System.Drawing.Point(416, 9);
             this.txDateTimePicker1.Name = "txDateTimePicker1";
+            this.txDateTimePicker1.ShowCheckBox = true;
             this.txDateTimePicker1.Size = new System.Drawing.Size(140, 26);
             this.txDateTimePicker1.TabIndex = 1;
             this.txDateTimePicker1.Value = null;
@@ -376,25 +423,12 @@
             this.txPanel3.Size = new System.Drawing.Size(1378, 615);
             this.txPanel3.TabIndex = 5;
             // 
-            // label1
+            // backgroundWorker1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 16);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "分配状态：";
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(295, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 16);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "设备接收时间：";
-            // 
-            // TaskListForm1
+            // UserAssignedTaskListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -404,9 +438,9 @@
             this.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Location = new System.Drawing.Point(0, 0);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "TaskListForm1";
+            this.Name = "UserAssignedTaskListForm";
             this.ResizeEnable = false;
-            this.Text = "TaskListForm1";
+            this.Text = "工长派工";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.txPanelCenter.ResumeLayout(false);
             this.txPanelTreeListView.ResumeLayout(false);
@@ -452,5 +486,8 @@
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private TX.Framework.WindowUI.Controls.TXDateTimePicker txDateTimePicker2;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

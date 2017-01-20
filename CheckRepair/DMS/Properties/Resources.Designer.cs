@@ -173,16 +173,6 @@ namespace DMS.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        public static System.Drawing.Bitmap ToolButton_Download {
-            get {
-                object obj = ResourceManager.GetObject("ToolButton_Download", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
         public static System.Drawing.Bitmap ToolButton_ErrorImage {
             get {
                 object obj = ResourceManager.GetObject("ToolButton_ErrorImage", resourceCulture);
@@ -376,6 +366,16 @@ namespace DMS.Properties {
         public static System.Drawing.Bitmap ToolButton_View {
             get {
                 object obj = ResourceManager.GetObject("ToolButton_View", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        public static System.Drawing.Bitmap waiting {
+            get {
+                object obj = ResourceManager.GetObject("waiting", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

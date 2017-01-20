@@ -13,26 +13,32 @@ using DMS.UI.Common;
 using TX.Framework.WindowUI.Controls;
 using TX.Framework.WindowUI.Forms;
 using DMS.DomainObjects.BasicInfo;
+using System.Threading;
 
 namespace DMS.UI.AssignTask
 {
-    public partial class TaskListForm1 :  TX.Framework.WindowUI.Forms.BaseForm
+    public partial class UserAssignedTaskListForm :  TX.Framework.WindowUI.Forms.BaseForm
     {
         protected int ItemIndex;
         protected string selectedCheckerCodes;
         protected int templateID;
         protected int IsUsersLoaded = 0;
         protected List<UserInfo> userList;
+        protected List<AssignedTask> assignedTaskList = new List<AssignedTask>();
+        protected List<FlowTemplateMain> templateList = new List<FlowTemplateMain>();
+        protected DeviceReceive devReceive = new DeviceReceive();
         protected string btnName;
         protected string status = "0";
+        protected bool HasAssigned = false;
 
-        public TaskListForm1()
+        public UserAssignedTaskListForm()
         {
             InitializeComponent();
             //查询所有人员
             userList = UserInfo.GetList();
             //设置时间选择器
             this.txDateTimePicker1.ShowCheckBox = false;
+            this.txDateTimePicker2.ShowCheckBox = false;
         }
         private void btnEngineType_Click(object sender, EventArgs e)
         {
@@ -54,25 +60,31 @@ namespace DMS.UI.AssignTask
             {
                 dt = (DateTime)txDateTimePicker1.Value;
                 dtStart = DateTimeHelper.ConvertDataTimeToLong(dt.Date);
-                dtEnd = dtStart + 24 * 60 * 60 * 1000;
             }
             else
             {
                 dtStart = DateTimeHelper.ConvertDataTimeToLong(dt.Date);
-                dtEnd = dtStart + 24 * 60 * 60 * 1000;
             }
+            if (txDateTimePicker2.Value.ToString() != "" && txDateTimePicker2.Value.ToString() != null)
+            {
+                dt = (DateTime)txDateTimePicker2.Value;
+                dtEnd = DateTimeHelper.ConvertDataTimeToLong(dt.Date) + 24 * 60 * 60 * 1000 - 1;
+            }
+            else
+            {
+                dtEnd = DateTimeHelper.ConvertDataTimeToLong(dt.Date) + 24 * 60 * 60 * 1000 - 1;
+            }
+
 
             //获取状态
 
             if (txCbbStatus.Text == "已分配")
             {
                 status = "1";
-                
             }
             else
             {
                 status = "0";
-                
             }
             switch (btnName)
             {
@@ -177,13 +189,11 @@ namespace DMS.UI.AssignTask
             IsUsersLoaded = 0;
             TreeView treeView = sender as TreeView;
             TreeNode selectedNode = treeView.SelectedNode;
-            
-            if (selectedNode.Level != 1)
-            {
-                return;
-            }
             //选中的树节点改变背景颜色
-            foreach(TreeNode tn in treeView.Nodes){
+            foreach (TreeNode tn in treeView.Nodes)
+            {
+                tn.BackColor = Color.White;
+                tn.ForeColor = Color.Black;
                 foreach (TreeNode t in tn.Nodes)
                 {
                     t.BackColor = Color.White;
@@ -192,39 +202,66 @@ namespace DMS.UI.AssignTask
             }
             selectedNode.BackColor = Color.DodgerBlue;
             selectedNode.ForeColor = Color.White;
-
-            string[] parameters = selectedNode.Name.Split(',');
-            string where = "where Enginetype = \'" + parameters[0] + "\' and XC = \'" + parameters[1] + "\' and DeviceType = \'" + parameters[2] + "\' order by Component ASC, DisplayOrder DESC";
-            List<FlowTemplateMain> flowTemplateMainList = FlowTemplateMain.GetList(where);
-            string temp = "";
-            TreeListViewItem itemA = new TreeListViewItem();;
-            TreeListViewItem itemA0;
-            for (int i = 0; i < flowTemplateMainList.Count; i++)
+            if (selectedNode.Level == 1)
             {
-                if (flowTemplateMainList[i].Component != temp)
-                {
-                    temp = flowTemplateMainList[i].Component;
-                    treeListView1.Items.Add(itemA);
-                    itemA = new TreeListViewItem(temp);
-                    itemA.Expand();//展开
-                }
-                itemA0 = new TreeListViewItem();
-                itemA0.SubItems.Add(flowTemplateMainList[i].DisplayOrder.ToString());
-                TreeListViewItem.ListViewSubItem subItem0 = new TreeListViewItem.ListViewSubItem();
-                subItem0.Text = flowTemplateMainList[i].ProcedureName;
-                subItem0.Name = flowTemplateMainList[i].TaskAssignID.ToString();
-                itemA0.SubItems.Add(subItem0);
+                string[] parameters = selectedNode.Name.Split(',');
+                string where = "where Enginetype = \'" + parameters[0] + "\' and XC = \'" + parameters[1] + "\' and DeviceType = \'" + parameters[2] + "\' order by Component ASC, DisplayOrder DESC";
+                List<FlowTemplateMain> flowTemplateMainList = FlowTemplateMain.GetList(where);
+                string temp = "";
+                TreeListViewItem itemA = new TreeListViewItem();
+                TreeListViewItem itemA0;
                 
-                itemA0.SubItems.Add(flowTemplateMainList[i].OperateTime.ToString() + " min");
-
-                TreeListViewItem.ListViewSubItem subItem1 = new TreeListViewItem.ListViewSubItem();
-                string userNames = "";
-                if (status == "0")
+                for (int i = 0; i < flowTemplateMainList.Count; i++)
                 {
-                    //获取上次分配人员
-                    if (flowTemplateMainList[i].LastCheckerCode != "" && flowTemplateMainList[i].LastCheckerCode != null)
+                    if (flowTemplateMainList[i].Component != temp)
                     {
-                        string[] str = flowTemplateMainList[i].LastCheckerCode.Split(',');
+                        temp = flowTemplateMainList[i].Component;
+                        if (i > 0)
+                        {
+                            treeListView1.Items.Add(itemA);
+                        }
+                        itemA = new TreeListViewItem(temp);
+                        itemA.Expand();//展开
+                    }
+                    itemA0 = new TreeListViewItem();
+                    itemA0.SubItems.Add(flowTemplateMainList[i].DisplayOrder.ToString());
+                    TreeListViewItem.ListViewSubItem subItem0 = new TreeListViewItem.ListViewSubItem();
+                    subItem0.Text = flowTemplateMainList[i].ProcedureName;
+                    subItem0.Name = flowTemplateMainList[i].TaskAssignID.ToString();
+                    itemA0.SubItems.Add(subItem0);
+
+                    itemA0.SubItems.Add(flowTemplateMainList[i].OperateTime.ToString() + " min");
+
+                    TreeListViewItem.ListViewSubItem subItem1 = new TreeListViewItem.ListViewSubItem();
+                    string userNames = "";
+                    if (status == "0")
+                    {
+                        //获取上次分配人员
+                        if (flowTemplateMainList[i].LastCheckerCode != "" && flowTemplateMainList[i].LastCheckerCode != null)
+                        {
+                            string[] str = flowTemplateMainList[i].LastCheckerCode.Split(',');
+                            List<UserInfo> userList = new List<UserInfo>();
+
+                            for (int j = 0; j < str.Length; j++)
+                            {
+                                UserInfo user = new UserInfo();
+                                user.Retrieve(int.Parse(str[j]));
+                                userList.Add(user);
+                                userNames = userNames + user.UserName + ",";
+                            }
+                            userNames = userNames.Substring(0, userNames.Length - 1);
+                            subItem1.Name = flowTemplateMainList[i].LastCheckerCode;
+                            subItem1.Text = userNames;
+                        }
+                    }
+                    else
+                    {
+                        //获取已分配人员
+                        int temId = flowTemplateMainList[i].ID;//模板ID
+                        int DevReceiveID = int.Parse(selectedNode.Name.Split(',').Last().ToString());//DeviceReceive的ID
+                        //查询已分配AssignedTask的CheckerIDs
+                        List<AssignedTask> atList = AssignedTask.GetList("where LinkIdToDeviceReceive = " + DevReceiveID + " and TemplateID = " + temId);
+                        string[] str = atList[0].CheckerIDs.Split(',');
                         List<UserInfo> userList = new List<UserInfo>();
 
                         for (int j = 0; j < str.Length; j++)
@@ -235,39 +272,19 @@ namespace DMS.UI.AssignTask
                             userNames = userNames + user.UserName + ",";
                         }
                         userNames = userNames.Substring(0, userNames.Length - 1);
-                        subItem1.Name = flowTemplateMainList[i].LastCheckerCode;
+                        subItem1.Name = atList[0].CheckerIDs;
                         subItem1.Text = userNames;
                     }
+                    itemA0.SubItems.Add(subItem1);
+                    //将模板ID存入Name属性中，点击时取出
+                    itemA0.Name = flowTemplateMainList[i].ID.ToString();
+                    itemA.Items.Add(itemA0);
                 }
-                else
-                {
-                    //获取已分配人员
-                    int temId = flowTemplateMainList[i].ID;//模板ID
-                    int DevReceiveID = int.Parse(selectedNode.Name.Split(',').Last().ToString());//DeviceReceive的ID
-                    //查询已分配AssignedTask的CheckerIDs
-                    List<AssignedTask> atList = AssignedTask.GetList("where LinkIdToDeviceReceive = " + DevReceiveID + " and TemplateID = " + temId);
-                    string[] str = atList[0].CheckerIDs.Split(',');
-                    List<UserInfo> userList = new List<UserInfo>();
-
-                    for (int j = 0; j < str.Length; j++)
-                    {
-                        UserInfo user = new UserInfo();
-                        user.Retrieve(int.Parse(str[j]));
-                        userList.Add(user);
-                        userNames = userNames + user.UserName + ",";
-                    }
-                    userNames = userNames.Substring(0, userNames.Length - 1);
-                    subItem1.Name = atList[0].CheckerIDs;
-                    subItem1.Text = userNames;
-                }
-                itemA0.SubItems.Add(subItem1);
-                //将模板ID存入Name属性中，点击时取出
-                itemA0.Name = flowTemplateMainList[i].ID.ToString();
-                itemA.Items.Add(itemA0);
+                treeListView1.Items.Add(itemA);
             }
-            treeListView1.Items.Add(itemA);
             //验证是否所有任务都已指定人员
             validateAssignedUsers();
+            
         }
 
         private void treeListView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -423,78 +440,103 @@ namespace DMS.UI.AssignTask
             }
         }
 
-        delegate void Method();//代理
-
         //一次全部分配
         private void btnAssign_Click(object sender, EventArgs e)
         {
+            Button btn = sender as Button;
+            btn.Enabled = false;
             //通过代理调用方法
-            Action taskAssignDelegate = () => { TaskAssign(); };
+            //Action taskAssignDelegate = () => { TaskAssign(); };
+            TaskAssign();
+            //操作数据库
+            this.backgroundWorker1.RunWorkerAsync();
+
             this.Waiting(() =>
             {
-                this.Invoke(taskAssignDelegate);
+                while (!HasAssigned)
+                {
+                    Thread.Sleep(1000);
+                }
+                //Thread.Sleep(100);
+                //this.Invoke(taskAssignDelegate);
                 this.Info("分配完成！");
             });
         }
-        
+
         private void TaskAssign()
         {
+            //系统时间
+            System.DateTime arrangedStartTime = DateTime.Now;
+            long arrangedStartTimeLong = DateTimeHelper.ConvertDataTimeToLong(arrangedStartTime);
+            //累计时间
+            long startTime = 0;
             for (int i = 0; i < treeListView1.ItemsCount; i++)
             {
                 TreeListViewItem itm = treeListView1.GetTreeListViewItemFromIndex(i);
-                
-                if (itm.Name != "" && itm.Name != null)
+
+                if (itm.Name != "" && itm.Name != null && tvEngineCode.SelectedNode.Level == 1)
                 {
                     //选中的分配人员id
                     string checkerIDs = itm.SubItems[4].Name;
                     //模板id
                     int templateID = int.Parse(itm.Name);
+                    AssignedTask at = new AssignedTask();
+                    string[] st = tvEngineCode.SelectedNode.Name.Split(',');
+                    //设备接收ID
+                    string deviceReceiveID = st.Last();
+                    at.LinkIdToDeviceReceive = int.Parse(deviceReceiveID);
+                    DeviceReceive deviceReceive = new DeviceReceive();
+                    deviceReceive.Retrieve(at.LinkIdToDeviceReceive);
+                    at.BatchCode = deviceReceive.BatchCode;
+                    at.TemplateID = templateID;
+                    at.CheckerIDs = checkerIDs;
+                    //处理计划开始时间
 
-                    //时间
-                    System.DateTime arrangedStartTime = DateTime.Now;
-                    long arrangedStartTimeLong = DateTimeHelper.ConvertDataTimeToLong(arrangedStartTime);
-
-                    if (tvEngineCode.SelectedNode.Level == 1)
+                    at.ArrangedStartTime = arrangedStartTimeLong + startTime;
+                    FlowTemplateMain template = new FlowTemplateMain();
+                    template.Retrieve(templateID);
+                    if (template.DisplayOrder == 1)
                     {
-                        AssignedTask at = new AssignedTask();
-                        string[] st = tvEngineCode.SelectedNode.Name.Split(',');
-                        //设备接收ID
-                        string deviceReceiveID = st.Last();
-                        at.LinkIdToDeviceReceive = int.Parse(deviceReceiveID);
-                        DeviceReceive deviceReceive = new DeviceReceive();
-                        deviceReceive.Retrieve(at.LinkIdToDeviceReceive);
-                        at.BatchCode = deviceReceive.BatchCode;
-                        at.TemplateID = templateID;
-                        at.CheckerIDs = checkerIDs;
-                        at.ArrangedStartTime = arrangedStartTimeLong;
-                        FlowTemplateMain template = new FlowTemplateMain();
-                        template.Retrieve(templateID);
-                        if (template.DisplayOrder == 1)
-                        {
-                            //开始
-                            at.Status = "1";
-                            //计划结束时间
-                            at.ArrangedEndTime = arrangedStartTimeLong + template.OperateTime * 60 * 1000;
-                        }
-                        else
-                        {
-                            at.Status = "0";
-                        }
-                        at.Add();
-                        template.LastCheckerCode = checkerIDs;
-                        template.Update();
+                        //开始
+                        at.Status = "1";
+                        //计划结束时间
+                        at.ArrangedEndTime = arrangedStartTimeLong + startTime;
                     }
+                    else
+                    {
+                        at.Status = "0";
+                    }
+                    startTime += template.OperateTime * 60 * 1000;
+                    assignedTaskList.Add(at);
+                    //at.Add();
+                    
+                    template.LastCheckerCode = checkerIDs;
+                    //template.Update();
+                    templateList.Add(template);
+                }
+                else
+                {
+                    //新部件，累计时间置零
+                    startTime = 0;
                 }
             }
             //将设备接收数据状态置为1
             int DeviceReceiveID = int.Parse(tvEngineCode.SelectedNode.Name.Split(',').GetValue(4).ToString());
-            DeviceReceive devReceive = new DeviceReceive();
+            
             devReceive.Retrieve(DeviceReceiveID);
             devReceive.Status = "1";
-            devReceive.Update();
+            //devReceive.Update();
             
             //重新加载车号车型树形结构
-            tvEngineCode.SelectedNode.Remove();
+            if (tvEngineCode.SelectedNode.Parent.Nodes.Count == 1)
+            {
+                tvEngineCode.SelectedNode.Parent.Remove();
+            }
+            else
+            {
+                tvEngineCode.SelectedNode.Remove();
+            }
+            tvEngineCode.SelectedNode = null;
             treeListView1.Items.Clear();
             txGroupBox1.Controls.Clear();
             IsUsersLoaded = 1;
@@ -502,27 +544,67 @@ namespace DMS.UI.AssignTask
 
         private bool validateAssignedUsers()
         {
-            //验证所有任务是否已经分配人员
-            for (int i = 0; i < treeListView1.ItemsCount; i++)
+            if (tvEngineCode.SelectedNode.Level == 1)
             {
-                TreeListViewItem itm = treeListView1.GetTreeListViewItemFromIndex(i);
-                if (itm.Name != "" && itm.Name != null)
+                //验证所有任务是否已经分配人员
+                for (int i = 0; i < treeListView1.ItemsCount; i++)
                 {
-                    //选中的分配人员id
-                    string checkerIDs = itm.SubItems[4].Name;
-                    if (checkerIDs == "" || checkerIDs == null)
+                    TreeListViewItem itm = treeListView1.GetTreeListViewItemFromIndex(i);
+                    if (itm.Name != "" && itm.Name != null)
                     {
-                        //this.Error("\"" + itm.Parent.Text + "-" + itm.SubItems[1].Text + "-" + itm.SubItems[2].Text + "\" 未指定人员，所有任务指定人员后才能分配！");
-                        btnAssign.Enabled = false;
-                        btnAssign.BackColor = Color.Gray;
-                        return false;
+                        //选中的分配人员id
+                        string checkerIDs = itm.SubItems[4].Name;
+                        if (checkerIDs == "" || checkerIDs == null)
+                        {
+                            //this.Error("\"" + itm.Parent.Text + "-" + itm.SubItems[1].Text + "-" + itm.SubItems[2].Text + "\" 未指定人员，所有任务指定人员后才能分配！");
+                            btnAssign.Enabled = false;
+                            btnAssign.BackColor = Color.Gray;
+                            return false;
+                        }
                     }
                 }
+                //所有任务都已分配人员后，分配按钮可用
+                btnAssign.Enabled = true;
+                btnAssign.BackColor = Color.DodgerBlue;
+                return true;
             }
-            //所有任务都已分配人员后，分配按钮可用
-            btnAssign.Enabled = true;
-            btnAssign.BackColor = Color.DodgerBlue;
-            return true;
+            else
+            {
+                btnAssign.Enabled = false;
+                btnAssign.BackColor = Color.Gray;
+                return false;
+            }
         }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            
+            foreach(AssignedTask at in assignedTaskList){
+                at.Add();
+            }
+            foreach (FlowTemplateMain tmplt in templateList)
+            {
+                tmplt.Update();
+            }
+            devReceive.Update();
+            //TaskAssign();
+            //MessageBox.Show(treeListView1.Name);
+            //treeListView1.Name = "AAA";
+            //MessageBox.Show(treeListView1.Name);
+            
+            //MessageBox.Show(treeListView1.Items[1].Items[0].SubItems[2].Text);
+            ////treeListView1.Items[1].Items[0].SubItems[1].Text = "BBB";
+
+            //MessageBox.Show(treeListView1.Items[1].Items[0].SubItems[4].Name);
+            ////treeListView1.Items[1].Items[0].SubItems[4].Name = "CCC";
+            //MessageBox.Show(treeListView1.ItemsCount.ToString());
+            
+        }
+
+        private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            HasAssigned = true;
+        }
+
     }
 }

@@ -19,7 +19,7 @@ namespace DMS.UI.AssignTask
     {
         public void Run()
         {
-            new TaskListForm1().ShowDialog();
+            new UserAssignedTaskListForm().ShowDialog();
         }
     }
 }

@@ -151,9 +151,6 @@
   <data name="ToolButton_Descend" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new_21a.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ToolButton_Download" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\download.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="ToolButton_ErrorImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new_27.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -213,5 +210,8 @@
   </data>
   <data name="ToolButton_View" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new_03.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waiting" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\waiting.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

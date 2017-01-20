@@ -137,6 +137,7 @@
     <Compile Include="DomainObjects\BusinessFunctions\DeviceReceive.cs" />
     <Compile Include="DomainObjects\BusinessFunctions\FlowTemplateMain.cs" />
     <Compile Include="DomainObjects\BusinessFunctions\AssignedTask.cs" />
+    <Compile Include="DomainObjects\BusinessFunctions\UserTask.cs" />
     <Compile Include="DomainObjects\CurrentUser.cs" />
     <Compile Include="DomainObjects\DomainObject.cs" />
     <Compile Include="ORMappers\BasicInfo\DictionaryDA.cs" />
@@ -155,6 +156,12 @@
     <Compile Include="ORMappers\BusinessFunctions\DeviceReceiveDA.cs" />
     <Compile Include="ORMappers\BusinessFunctions\FlowTemplateMainDA.cs" />
     <Compile Include="ORMappers\BusinessFunctions\AssignedTaskDA.cs" />
+    <Compile Include="ORMappers\BusinessFunctions\UserTaskDA.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="TestData.cs" />
     <Compile Include="UI\AssignTask\AssignTaskRunner.cs" />
     <Compile Include="UI\AssignTask\TaskListForm.cs">
@@ -249,6 +256,12 @@
     </Compile>
     <Compile Include="UI\FileManage\TeamMienMainFormRunner.cs" />
     <Compile Include="UI\FileManage\8SManageMainFormRunner.cs" />
+    <Compile Include="UI\Forms\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Login\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -441,6 +454,13 @@
     <Compile Include="UI\SystemManage\UserManage\ViewUserForm.Designer.cs">
       <DependentUpon>ViewUserForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\UserAssignedTask\UserAssignedTaskListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UserAssignedTask\UserAssignedTaskListForm.Designer.cs">
+      <DependentUpon>UserAssignedTaskListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserAssignedTask\UserAssignedTaskRunner.cs" />
     <Compile Include="winMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -481,6 +501,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FileManage\PictureShowForm.resx">
       <DependentUpon>PictureShowForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ReceiveDevice\ReceiveDeviceForm.resx">
       <DependentUpon>ReceiveDeviceForm.cs</DependentUpon>
@@ -569,19 +592,17 @@
     <EmbeddedResource Include="UI\SystemManage\UserManage\UserMainForm.resx">
       <DependentUpon>UserMainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserAssignedTask\UserAssignedTaskListForm.resx">
+      <DependentUpon>UserAssignedTaskListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="winMain.resx">
       <DependentUpon>winMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="App.config" />
     <None Include="CheckRepairDBDataSet.xsc">
       <DependentUpon>CheckRepairDBDataSet.xsd</DependentUpon>
@@ -629,115 +650,51 @@
   <ItemGroup>
     <None Include="Resources\2.gif" />
     <None Include="Resources\background.jpg" />
-    <None Include="Resources\background1.jpg" />
-    <None Include="Resources\21.gif" />
-    <None Include="Resources\background2.jpg" />
-    <None Include="Resources\22.gif" />
     <None Include="Resources\clearshuju.gif" />
-    <None Include="Resources\clearshuju1.gif" />
-    <None Include="Resources\clearshuju2.gif" />
     <None Include="Resources\daochumoban.gif" />
-    <None Include="Resources\daochumoban1.gif" />
-    <None Include="Resources\daochumoban2.gif" />
     <None Include="Resources\daorushuju.gif" />
-    <None Include="Resources\daorushuju1.gif" />
-    <None Include="Resources\daorushuju2.gif" />
-    <None Include="Resources\download.gif" />
     <None Include="Resources\Image1.jpg" />
-    <None Include="Resources\download1.gif" />
-    <None Include="Resources\download2.gif" />
     <EmbeddedResource Include="DatabaseConnection.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <Content Include="Resources\m01_0021.gif" />
     <None Include="Resources\module.gif" />
-    <None Include="Resources\module1.gif" />
-    <None Include="Resources\module2.gif" />
     <None Include="Resources\module_select.gif" />
-    <None Include="Resources\module_select1.gif" />
-    <None Include="Resources\module_select2.gif" />
     <None Include="Resources\new_01.gif" />
-    <None Include="Resources\new_011.gif" />
-    <None Include="Resources\new_012.gif" />
     <None Include="Resources\new_02.gif" />
-    <None Include="Resources\new_021.gif" />
-    <None Include="Resources\new_022.gif" />
     <None Include="Resources\new_03.gif" />
-    <None Include="Resources\new_031.gif" />
-    <None Include="Resources\new_032.gif" />
     <None Include="Resources\new_04.gif" />
-    <None Include="Resources\new_041.gif" />
-    <None Include="Resources\new_042.gif" />
     <None Include="Resources\new_05.gif" />
-    <None Include="Resources\new_051.gif" />
-    <None Include="Resources\new_052.gif" />
     <None Include="Resources\new_06.gif" />
-    <None Include="Resources\new_061.gif" />
-    <None Include="Resources\new_062.gif" />
     <None Include="Resources\new_07.gif" />
-    <None Include="Resources\new_071.gif" />
-    <None Include="Resources\new_072.gif" />
     <None Include="Resources\new_08.gif" />
-    <None Include="Resources\new_081.gif" />
-    <None Include="Resources\new_082.gif" />
     <Content Include="Resources\new_09.gif" />
     <None Include="Resources\new_10.gif" />
-    <None Include="Resources\new_101.gif" />
-    <None Include="Resources\new_102.gif" />
     <Content Include="Resources\new_11.gif" />
     <Content Include="Resources\new_12.gif" />
     <None Include="Resources\new_13.gif" />
-    <None Include="Resources\new_131.gif" />
-    <None Include="Resources\new_132.gif" />
     <None Include="Resources\new_14.gif" />
-    <None Include="Resources\new_141.gif" />
-    <None Include="Resources\new_142.gif" />
     <None Include="Resources\new_15.gif" />
-    <None Include="Resources\new_151.gif" />
-    <None Include="Resources\new_152.gif" />
     <Content Include="Resources\new_16.gif" />
     <None Include="Resources\new_17.gif" />
-    <None Include="Resources\new_171.gif" />
-    <None Include="Resources\new_172.gif" />
     <None Include="Resources\new_18.gif" />
-    <None Include="Resources\new_181.gif" />
-    <None Include="Resources\new_182.gif" />
     <None Include="Resources\new_19.gif" />
-    <None Include="Resources\new_191.gif" />
-    <None Include="Resources\new_192.gif" />
     <None Include="Resources\new_20.gif" />
-    <None Include="Resources\new_201.gif" />
-    <None Include="Resources\new_202.gif" />
     <None Include="Resources\new_21a.gif" />
-    <None Include="Resources\new_21a1.gif" />
-    <None Include="Resources\new_21a2.gif" />
     <None Include="Resources\new_22.gif" />
-    <None Include="Resources\new_221.gif" />
-    <None Include="Resources\new_222.gif" />
     <None Include="Resources\new_23.gif" />
-    <None Include="Resources\new_231.gif" />
-    <None Include="Resources\new_232.gif" />
     <None Include="Resources\new_24a.gif" />
-    <None Include="Resources\new_24a1.gif" />
-    <None Include="Resources\new_24a2.gif" />
     <Content Include="Resources\new_25.gif" />
     <Content Include="Resources\new_26.gif" />
     <None Include="Resources\new_27.gif" />
-    <None Include="Resources\new_271.gif" />
-    <None Include="Resources\new_272.gif" />
     <None Include="Resources\new_28.gif" />
-    <None Include="Resources\new_281.gif" />
-    <None Include="Resources\new_282.gif" />
     <None Include="Resources\new_29.gif" />
-    <None Include="Resources\new_291.gif" />
-    <None Include="Resources\new_292.gif" />
     <None Include="Resources\new_30.gif" />
-    <None Include="Resources\new_301.gif" />
-    <None Include="Resources\new_302.gif" />
     <Content Include="Resources\taskFormOne.bmp" />
     <Content Include="Resources\template.gif" />
     <Content Include="Resources\ToolButton_ExportExcel.bmp" />
     <Content Include="Resources\tubiao.gif" />
+    <Content Include="Resources\waiting.gif" />
     <Content Include="UI\Login\gotoo32X32.ico" />
   </ItemGroup>
   <ItemGroup>

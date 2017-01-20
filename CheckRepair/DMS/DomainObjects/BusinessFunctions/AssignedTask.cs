@@ -135,7 +135,7 @@ namespace DMS.DomainObjects.BusinessFunctions
                 assignedTaskList.Add(AssignedTask);
             }
 
-            assignedTaskList.Sort();
+            //assignedTaskList.Sort();
 
             return assignedTaskList;
         }

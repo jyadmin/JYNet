@@ -72,6 +72,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CapitionLogo = null;
             this.CaptionFont = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClientSize = new System.Drawing.Size(374, 172);
             this.ControlBox = false;
@@ -81,7 +82,6 @@
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "TXWaitingBox";
             this.ResizeEnable = false;
-            this.Text = "天下酒店网-请稍后...";
             this.txPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.loadImage)).EndInit();
             this.ResumeLayout(false);
