@@ -28,23 +28,140 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.txPaneltOP = new TX.Framework.WindowUI.Controls.TXPanel();
+            this.txPanelRight = new TX.Framework.WindowUI.Controls.TXPanel();
+            this.txPanelLeft = new TX.Framework.WindowUI.Controls.TXPanel();
+            this.txPanelBottom = new TX.Framework.WindowUI.Controls.TXPanel();
+            this.txPanelMain = new TX.Framework.WindowUI.Controls.TXPanel();
+            this.txPanelCenter = new TX.Framework.WindowUI.Controls.TXPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txPanelLeft.SuspendLayout();
+            this.txPanelMain.SuspendLayout();
+            this.txPanelCenter.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // txPaneltOP
+            // 
+            this.txPaneltOP.BackColor = System.Drawing.Color.Transparent;
+            this.txPaneltOP.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(168)))), ((int)(((byte)(192)))));
+            this.txPaneltOP.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txPaneltOP.Location = new System.Drawing.Point(0, 0);
+            this.txPaneltOP.Margin = new System.Windows.Forms.Padding(4);
+            this.txPaneltOP.Name = "txPaneltOP";
+            this.txPaneltOP.Size = new System.Drawing.Size(1377, 53);
+            this.txPaneltOP.TabIndex = 0;
+            // 
+            // txPanelRight
+            // 
+            this.txPanelRight.BackColor = System.Drawing.Color.Transparent;
+            this.txPanelRight.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(168)))), ((int)(((byte)(192)))));
+            this.txPanelRight.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txPanelRight.Location = new System.Drawing.Point(204, 0);
+            this.txPanelRight.Margin = new System.Windows.Forms.Padding(4);
+            this.txPanelRight.Name = "txPanelRight";
+            this.txPanelRight.Size = new System.Drawing.Size(1173, 522);
+            this.txPanelRight.TabIndex = 1;
+            // 
+            // txPanelLeft
+            // 
+            this.txPanelLeft.BackColor = System.Drawing.Color.Transparent;
+            this.txPanelLeft.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(168)))), ((int)(((byte)(192)))));
+            this.txPanelLeft.Controls.Add(this.label2);
+            this.txPanelLeft.Controls.Add(this.label1);
+            this.txPanelLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.txPanelLeft.Location = new System.Drawing.Point(0, 0);
+            this.txPanelLeft.Margin = new System.Windows.Forms.Padding(4);
+            this.txPanelLeft.Name = "txPanelLeft";
+            this.txPanelLeft.Size = new System.Drawing.Size(204, 522);
+            this.txPanelLeft.TabIndex = 0;
+            // 
+            // txPanelBottom
+            // 
+            this.txPanelBottom.BackColor = System.Drawing.Color.Transparent;
+            this.txPanelBottom.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(168)))), ((int)(((byte)(192)))));
+            this.txPanelBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.txPanelBottom.Location = new System.Drawing.Point(0, 575);
+            this.txPanelBottom.Margin = new System.Windows.Forms.Padding(4);
+            this.txPanelBottom.Name = "txPanelBottom";
+            this.txPanelBottom.Size = new System.Drawing.Size(1377, 60);
+            this.txPanelBottom.TabIndex = 0;
+            // 
+            // txPanelMain
+            // 
+            this.txPanelMain.BackColor = System.Drawing.Color.Transparent;
+            this.txPanelMain.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(168)))), ((int)(((byte)(192)))));
+            this.txPanelMain.Controls.Add(this.txPanelCenter);
+            this.txPanelMain.Controls.Add(this.txPaneltOP);
+            this.txPanelMain.Controls.Add(this.txPanelBottom);
+            this.txPanelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txPanelMain.Location = new System.Drawing.Point(3, 27);
+            this.txPanelMain.Margin = new System.Windows.Forms.Padding(4);
+            this.txPanelMain.Name = "txPanelMain";
+            this.txPanelMain.Size = new System.Drawing.Size(1377, 635);
+            this.txPanelMain.TabIndex = 2;
+            // 
+            // txPanelCenter
+            // 
+            this.txPanelCenter.BackColor = System.Drawing.Color.Transparent;
+            this.txPanelCenter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(168)))), ((int)(((byte)(192)))));
+            this.txPanelCenter.Controls.Add(this.txPanelRight);
+            this.txPanelCenter.Controls.Add(this.txPanelLeft);
+            this.txPanelCenter.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txPanelCenter.Location = new System.Drawing.Point(0, 53);
+            this.txPanelCenter.Margin = new System.Windows.Forms.Padding(4);
+            this.txPanelCenter.Name = "txPanelCenter";
+            this.txPanelCenter.Size = new System.Drawing.Size(1377, 522);
+            this.txPanelCenter.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(28, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(156, 35);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "冷却塔通风机";
+            // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(28, 75);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(128, 35);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "-风机试验";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CapitionLogo = null;
-            this.ClientSize = new System.Drawing.Size(1064, 522);
-            this.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.CaptionFont = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ClientSize = new System.Drawing.Size(1383, 665);
+            this.Controls.Add(this.txPanelMain);
+            this.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Location = new System.Drawing.Point(0, 0);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.ResizeEnable = false;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.txPanelLeft.ResumeLayout(false);
+            this.txPanelMain.ResumeLayout(false);
+            this.txPanelCenter.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private TX.Framework.WindowUI.Controls.TXPanel txPaneltOP;
+        private TX.Framework.WindowUI.Controls.TXPanel txPanelRight;
+        private TX.Framework.WindowUI.Controls.TXPanel txPanelBottom;
+        private TX.Framework.WindowUI.Controls.TXPanel txPanelMain;
+        private TX.Framework.WindowUI.Controls.TXPanel txPanelLeft;
+        private TX.Framework.WindowUI.Controls.TXPanel txPanelCenter;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
 
     }
 }

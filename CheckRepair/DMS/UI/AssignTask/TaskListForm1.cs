@@ -587,17 +587,6 @@ namespace DMS.UI.AssignTask
                 tmplt.Update();
             }
             devReceive.Update();
-            //TaskAssign();
-            //MessageBox.Show(treeListView1.Name);
-            //treeListView1.Name = "AAA";
-            //MessageBox.Show(treeListView1.Name);
-            
-            //MessageBox.Show(treeListView1.Items[1].Items[0].SubItems[2].Text);
-            ////treeListView1.Items[1].Items[0].SubItems[1].Text = "BBB";
-
-            //MessageBox.Show(treeListView1.Items[1].Items[0].SubItems[4].Name);
-            ////treeListView1.Items[1].Items[0].SubItems[4].Name = "CCC";
-            //MessageBox.Show(treeListView1.ItemsCount.ToString());
             
         }
 

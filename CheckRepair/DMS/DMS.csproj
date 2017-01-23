@@ -138,6 +138,7 @@
     <Compile Include="DomainObjects\BusinessFunctions\FlowTemplateMain.cs" />
     <Compile Include="DomainObjects\BusinessFunctions\AssignedTask.cs" />
     <Compile Include="DomainObjects\BusinessFunctions\UserTask.cs" />
+    <Compile Include="DomainObjects\BusinessFunctions\FlowTemplateDetail.cs" />
     <Compile Include="DomainObjects\CurrentUser.cs" />
     <Compile Include="DomainObjects\DomainObject.cs" />
     <Compile Include="ORMappers\BasicInfo\DictionaryDA.cs" />
@@ -154,9 +155,10 @@
       <DependentUpon>frmList.cs</DependentUpon>
     </Compile>
     <Compile Include="ORMappers\BusinessFunctions\DeviceReceiveDA.cs" />
-    <Compile Include="ORMappers\BusinessFunctions\FlowTemplateMainDA.cs" />
+    <Compile Include="ORMappers\BusinessFunctions\FlowTemplateDetailDA.cs" />
     <Compile Include="ORMappers\BusinessFunctions\AssignedTaskDA.cs" />
     <Compile Include="ORMappers\BusinessFunctions\UserTaskDA.cs" />
+    <Compile Include="ORMappers\BusinessFunctions\FlowTemplateMainDA.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -690,6 +692,7 @@
     <None Include="Resources\new_28.gif" />
     <None Include="Resources\new_29.gif" />
     <None Include="Resources\new_30.gif" />
+    <Content Include="Resources\right.gif" />
     <Content Include="Resources\taskFormOne.bmp" />
     <Content Include="Resources\template.gif" />
     <Content Include="Resources\ToolButton_ExportExcel.bmp" />
