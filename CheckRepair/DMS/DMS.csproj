@@ -137,7 +137,6 @@
     <Compile Include="DomainObjects\BusinessFunctions\DeviceReceive.cs" />
     <Compile Include="DomainObjects\BusinessFunctions\FlowTemplateMain.cs" />
     <Compile Include="DomainObjects\BusinessFunctions\AssignedTask.cs" />
-    <Compile Include="DomainObjects\BusinessFunctions\UserTask.cs" />
     <Compile Include="DomainObjects\BusinessFunctions\FlowTemplateDetail.cs" />
     <Compile Include="DomainObjects\CurrentUser.cs" />
     <Compile Include="DomainObjects\DomainObject.cs" />
