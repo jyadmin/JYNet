@@ -1,6 +1,6 @@
 ﻿namespace Login
 {
-    partial class Form1
+    partial class LoginForm
     {
         /// <summary>
         /// 必需的设计器变量。

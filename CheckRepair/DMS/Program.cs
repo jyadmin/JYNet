@@ -16,7 +16,7 @@ namespace WindowsTest
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login.Form1());
+            Application.Run(new Login.LoginForm());
         }
     }
 }

@@ -138,6 +138,7 @@
     <Compile Include="DomainObjects\BusinessFunctions\FlowTemplateMain.cs" />
     <Compile Include="DomainObjects\BusinessFunctions\AssignedTask.cs" />
     <Compile Include="DomainObjects\BusinessFunctions\FlowTemplateDetail.cs" />
+    <Compile Include="DomainObjects\BusinessFunctions\UserTaskDetail.cs" />
     <Compile Include="DomainObjects\CurrentUser.cs" />
     <Compile Include="DomainObjects\DomainObject.cs" />
     <Compile Include="ORMappers\BasicInfo\DictionaryDA.cs" />
@@ -156,8 +157,8 @@
     <Compile Include="ORMappers\BusinessFunctions\DeviceReceiveDA.cs" />
     <Compile Include="ORMappers\BusinessFunctions\FlowTemplateDetailDA.cs" />
     <Compile Include="ORMappers\BusinessFunctions\AssignedTaskDA.cs" />
-    <Compile Include="ORMappers\BusinessFunctions\UserTaskDA.cs" />
     <Compile Include="ORMappers\BusinessFunctions\FlowTemplateMainDA.cs" />
+    <Compile Include="ORMappers\BusinessFunctions\UserTaskDetailDA.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -263,11 +264,17 @@
     <Compile Include="UI\Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Login\Form1.cs">
+    <Compile Include="UI\TaskDetail\TaskDetailForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Login\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="UI\TaskDetail\TaskDetailForm.Designer.cs">
+      <DependentUpon>TaskDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Login\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Login\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Login\MainPage.cs">
       <SubType>Form</SubType>
@@ -506,14 +513,17 @@
     <EmbeddedResource Include="UI\Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\TaskDetail\TaskDetailForm.resx">
+      <DependentUpon>TaskDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\ReceiveDevice\ReceiveDeviceForm.resx">
       <DependentUpon>ReceiveDeviceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\SystemManage\DictionaryManage\DictionaryMainForm.resx">
       <DependentUpon>DictionaryMainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Login\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Login\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Login\MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>

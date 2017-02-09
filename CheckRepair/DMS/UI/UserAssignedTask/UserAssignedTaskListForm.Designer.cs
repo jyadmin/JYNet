@@ -261,6 +261,7 @@
             this.txDateTimePicker2.Size = new System.Drawing.Size(140, 26);
             this.txDateTimePicker2.TabIndex = 1;
             this.txDateTimePicker2.Value = null;
+            this.txDateTimePicker2.ValueChanged += new System.EventHandler(this.txDateTimePicker_ValueChanged);
             // 
             // txDateTimePicker1
             // 
@@ -275,6 +276,7 @@
             this.txDateTimePicker1.Size = new System.Drawing.Size(140, 26);
             this.txDateTimePicker1.TabIndex = 1;
             this.txDateTimePicker1.Value = null;
+            this.txDateTimePicker1.ValueChanged += new System.EventHandler(this.txDateTimePicker_ValueChanged);
             // 
             // txCbbStatus
             // 
@@ -288,6 +290,7 @@
             this.txCbbStatus.Size = new System.Drawing.Size(123, 24);
             this.txCbbStatus.TabIndex = 0;
             this.txCbbStatus.Text = "未分配";
+            this.txCbbStatus.SelectedIndexChanged += new System.EventHandler(this.txCbbStatus_SelectedIndexChanged);
             // 
             // txPanel3
             // 
@@ -316,7 +319,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UserAssignedTaskListForm";
             this.ResizeEnable = false;
-            this.Text = "待执行派工单";
+            this.Text = "派工单列表";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.txPanelCenter.ResumeLayout(false);
             this.txPanelBottom.ResumeLayout(false);

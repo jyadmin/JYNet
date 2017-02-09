@@ -16,10 +16,10 @@ using DMS.DomainObjects;
 
 namespace Login
 {
-    public partial class Form1 : MainForm
+    public partial class LoginForm : MainForm
     {
        
-        public Form1()
+        public LoginForm()
         {
                      
             InitializeComponent();

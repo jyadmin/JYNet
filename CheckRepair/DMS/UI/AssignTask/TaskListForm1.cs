@@ -520,7 +520,7 @@ namespace DMS.UI.AssignTask
                     startTime = 0;
                 }
             }
-            //将设备接收数据状态置为1
+            //将设备接收数据状态置为1：已分配
             int DeviceReceiveID = int.Parse(tvEngineCode.SelectedNode.Name.Split(',').GetValue(4).ToString());
             
             devReceive.Retrieve(DeviceReceiveID);
@@ -578,14 +578,30 @@ namespace DMS.UI.AssignTask
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
-            
+            //新增已分配任务
             foreach(AssignedTask at in assignedTaskList){
+                
                 at.Add();
+                string where = "where LinkId = " + at.TemplateID + " Order by ID";
+                List<FlowTemplateDetail> list = FlowTemplateDetail.GetList(where);
+                foreach (var ftd in list)
+                {
+                    UserTaskDetail utd = new UserTaskDetail();
+                    utd.TemplateMainId = ftd.LinkId;
+                    utd.TemplateDetailId = ftd.ID;
+                    utd.UserIds = at.CheckerIDs;
+                    utd.Status = "0";
+                    utd.DeviceReceiveID = at.LinkIdToDeviceReceive;
+                    utd.Add();
+                }
             }
+            //修改模板中上次分配人员
             foreach (FlowTemplateMain tmplt in templateList)
             {
                 tmplt.Update();
             }
+            //新增任务执行人员与任务具体步骤的关联，初始状态为0：具体步骤未执行；执行完毕为1
+
             devReceive.Update();
             
         }

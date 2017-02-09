@@ -22,7 +22,6 @@ namespace DMS.UI.UserAssignedTask
     {
         protected int ItemIndex;
         protected string status = "0";
-
         public UserAssignedTaskListForm()
         {
             InitializeComponent();
@@ -36,7 +35,42 @@ namespace DMS.UI.UserAssignedTask
         private void loadUserAssignedTask()
         {
             //查询登录人员未执行的派工
-            string where = "where CheckerIDs like \'%" + CurrentUser.Instance.User.ID + "%\' and ( Status = \'0\' or Status = \'1\') order by ArrangedStartTime ASC";
+            string where = "";
+            //处理查询时间区间
+            DateTime dtS = DateTime.Today;
+            DateTime dtE = DateTime.Today;
+            long dtStart = 0;
+            long dtEnd = 0;
+            if (txDateTimePicker1.Value.ToString() != "" && txDateTimePicker1.Value.ToString() != null)
+            {
+                dtS = (DateTime)txDateTimePicker1.Value;
+                dtStart = DateTimeHelper.ConvertDataTimeToLong(dtS.Date);
+            }
+            else
+            {
+                dtStart = DateTimeHelper.ConvertDataTimeToLong(dtS.Date);
+            }
+            if (txDateTimePicker2.Value.ToString() != "" && txDateTimePicker2.Value.ToString() != null)
+            {
+                dtE = (DateTime)txDateTimePicker2.Value;
+                dtEnd = DateTimeHelper.ConvertDataTimeToLong(dtE.Date) + 24 * 60 * 60 * 1000 - 1;
+            }
+            else
+            {
+                dtEnd = DateTimeHelper.ConvertDataTimeToLong(dtE.Date) + 24 * 60 * 60 * 1000 - 1;
+            }
+            if (status == "0")
+            {
+                where = "where CheckerIDs like \'%" + CurrentUser.Instance.User.ID + "%\' and ( Status = \'0\' or Status = \'1\' ) and ArrangedStartTime > " + dtStart + " and ArrangedStartTime < " + dtEnd + " order by ArrangedStartTime ASC";
+            }
+            else if (status == "1")
+            {
+                where = "where CheckerIDs like \'%" + CurrentUser.Instance.User.ID + "%\' and Status = \'2\' and ArrangedStartTime > " + dtStart + " and ArrangedStartTime < " + dtEnd + " order by ArrangedStartTime ASC";
+            }
+            else
+            {
+                where = "where CheckerIDs like \'%" + CurrentUser.Instance.User.ID + "%\' and ArrangedStartTime > " + dtStart + " and ArrangedStartTime < " + dtEnd + " order by ArrangedStartTime ASC";
+            }
             List<AssignedTask> UserAssignedTaskList = AssignedTask.GetList(where);
             treeListView1.Items.Clear();
             //根据AssignedTask的Id获取AssignedTask
@@ -59,6 +93,7 @@ namespace DMS.UI.UserAssignedTask
                 subItem1.Text = DateTimeHelper.ConvertLongToDateTime(dr.ReceiveTime).ToString();
                 itemA.SubItems.Add(subItem1);
                 TreeListViewItem.ListViewSubItem subItem2 = new TreeListViewItem.ListViewSubItem();
+                subItem2.Name = userTask.ID.ToString();
                 subItem2.Text = tmplt.Component;
                 itemA.SubItems.Add(subItem2);
                 TreeListViewItem.ListViewSubItem subItem3 = new TreeListViewItem.ListViewSubItem();
@@ -113,10 +148,24 @@ namespace DMS.UI.UserAssignedTask
             //MessageBox.Show(ItemIndex.ToString());
             
             //MessageBox.Show(tlv.SelectedItems[0].SubItems[4].Name);
+            int assignedTaskID = int.Parse(tlv.SelectedItems[0].SubItems[2].Name); ;
             int templateID = int.Parse(tlv.SelectedItems[0].SubItems[4].Name);
             int deviceReceiveID = int.Parse(tlv.SelectedItems[0].Name);
             string formName = tlv.SelectedItems[0].SubItems[2].Text + " - " + tlv.SelectedItems[0].SubItems[4].Text;
-            new DMS.UI.Forms.Form1(templateID, deviceReceiveID, formName).ShowDialog();
+            new DMS.UI.TaskDetail.TaskDetailForm(assignedTaskID, templateID, deviceReceiveID, formName).ShowDialog();
+            loadUserAssignedTask();
+        }
+
+        private void txCbbStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TXComboBox txCbbStatus = sender as TXComboBox;
+            status = txCbbStatus.SelectedIndex.ToString();
+            loadUserAssignedTask();
+        }
+
+        private void txDateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            loadUserAssignedTask();
         }
     }
 }
