@@ -41,7 +41,6 @@ namespace DMS.UI.TaskDetail
         void label_DoubleClick(object sender, EventArgs e)
         {
             Label label = sender as Label;
-            
             UserTaskDetail utd = new UserTaskDetail();
             utd.Retrieve(int.Parse(label.Name));
             new Form1(utd.Status).ShowDialog();
@@ -171,6 +170,11 @@ namespace DMS.UI.TaskDetail
                     this.Info("提示", "有未完成的步骤，请完成后再提交");
                     return;
                 }
+            }
+            DialogResult r = this.Info("确定提交？");
+            if (r == System.Windows.Forms.DialogResult.Cancel)
+            {
+                return;
             }
             AssignedTask at = new AssignedTask();
             at.Retrieve(AssignedTaskID);

@@ -94,7 +94,7 @@ namespace DMS.UI.DeviceReceives
             dr.BatchCode = Guid.NewGuid().ToString("N");
             if (dr.Add())
             {
-                MsgHelper.ShowInformationMsgBox("添加设备接收信息成功！");
+                this.Info("添加设备接收信息成功！");
                 this.DialogResult = DialogResult.OK;
             }
             else
