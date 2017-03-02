@@ -11,29 +11,17 @@ using DMS.DomainObjects.BusinessFunctions;
 
 namespace DMS.UI.Forms
 {
-    /// <summary>
-    /// 详细步骤检查信息输入Form表单1
-    /// </summary>
-    public partial class Form1 : TX.Framework.WindowUI.Forms.BaseForm
+    public partial class Form3 : TX.Framework.WindowUI.Forms.BaseForm
     {
-        //本详细步骤完成状态
         private string Status = "0";
-        //设备接收单
         private DeviceReceive dr;
-        //任务详情
         private UserTaskDetail utd;
-        //检查结果
         private CheckResultContent crc;
         //private int StepCode = 0;
         //private int SubStepCode = 0;
 
-        /// <summary>
-        /// 构造函数
-        /// </summary>
-        /// <param name="deviceReceiveID">设备接收ID</param>
-        /// <param name="UserTaskDetailID">详细步骤与人员关联</param>
-        /// <param name="status">详细步骤完成状态</param>
-        public Form1(int deviceReceiveID, int UserTaskDetailID, string status)
+
+        public Form3(int deviceReceiveID, int UserTaskDetailID, string status)
         {
             InitializeComponent();
             Status = status;
@@ -46,11 +34,8 @@ namespace DMS.UI.Forms
             ftm.Retrieve(utd.TemplateMainId);
             FlowTemplateDetail ftd = new FlowTemplateDetail();
             ftd.Retrieve(utd.TemplateDetailId);
-            //检修项点
             labelA.Text = ftm.ProcedureName;
-            //作业内容和标准
             labelB.Text = ftd.OperateContentAndStandard;
-            //判断质量特性标识
             if (ftd.QualityCharacteristic == 1)
             {
                 labelC.Text = "○";
@@ -63,57 +48,77 @@ namespace DMS.UI.Forms
             {
                 labelC.Text = "☆";
             }
-            //在TextBox的Name属性中放置Word标签名称
-            tbD1.Name = "a" + utd.TemplateMainId + "_" + utd.TemplateDetailId + "_" + 1;
+            labelName.Text = ftd.LabelNames;
+            labelUnit.Text = ftd.Units;
             //如果是已经填写并提交的信息，只可查看，不可修改
             string where = "where UserTaskDetailID = " + UserTaskDetailID;
             List<CheckResultContent> list = CheckResultContent.GetList(where);
-            if (status == "2")//详细步骤为已完成
+            if (status == "2")
             {
                 txButtonComplete.Enabled = false;//提交按钮不可用
-                tbD1.Enabled = false;//不可编辑
-                if (list.Count > 0)
+                if (list.Count == 2)
                 {
-                    crc = list[0];
-                    if (crc.CheckValue == null || crc.CheckValue == "")
+                    tbA.Enabled = false;//不可编辑
+                    rb1.Enabled = false;//不可编辑
+                    rb2.Enabled = false;//不可编辑
+                    
+                    tbA.Text = list[0].CheckValue;
+                    if (list[1].CheckValue == "1")
                     {
-                        tbD1.Text = "";
+                        rb1.Checked = true;
+                        rb2.Checked = false;
                     }
                     else
                     {
-                        tbD1.Text = crc.CheckValue;
+                        rb1.Checked = false;
+                        rb2.Checked = true;
                     }
                 }
             }
-            
         }
 
-        /// <summary>
-        /// 完成按钮点击事件
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void txButton1_Click(object sender, EventArgs e)
         {
-            if (!String.IsNullOrEmpty(tbD1.Text))//文本框有输入值，即有不良情况
+            if (tbA.Text == "" || tbA.Text == null)
             {
-                string val = tbD1.Text;
-                CheckResultContent crc1 = new CheckResultContent();
-                crc1.DeviceReceiveID = dr.ID;
-                crc1.DeviceType = dr.DeviceType;
-                crc1.BatchCode = dr.BatchCode;
-                crc1.CheckValue = tbD1.Text;
-                //word书签命名必须以字母开头，不能以数字开头
-                crc1.CheckKeys = tbD1.Name;
-                crc1.UserTaskDetailID = utd.ID;
-                crc1.XC = dr.XC;
-                crc1.Add();
-                //父form表单的statusColor属性置1，对应方框背景色为红色。置0表示正常，绿色
-                DMS.UI.TaskDetail.TaskDetailForm.statusColor = 1;
+                this.Info("提示", "未输入检测值");
+                return;
             }
-            //父form表单的isFinished属性置1，标识输入完毕已提交
-            DMS.UI.TaskDetail.TaskDetailForm.isFinished = 1;
-            this.Close();
+            else
+            {
+                CheckResultContent crc1 = new CheckResultContent();
+                CheckResultContent crc2 = new CheckResultContent();
+                crc1.DeviceReceiveID = dr.ID;
+                crc2.DeviceReceiveID = dr.ID;
+                crc1.DeviceType = dr.DeviceType;
+                crc2.DeviceType = dr.DeviceType;
+                crc1.BatchCode = dr.BatchCode;
+                crc2.BatchCode = dr.BatchCode;
+                crc1.UserTaskDetailID = utd.ID;
+                crc2.UserTaskDetailID = utd.ID;
+                crc1.XC = dr.XC;
+                crc2.XC = dr.XC;
+                //word书签命名必须以字母开头，不能以数字开头
+                crc1.CheckKeys = "a" + utd.TemplateMainId + "_" + utd.TemplateDetailId + "_" + 1;
+                crc2.CheckKeys = "a" + utd.TemplateMainId + "_" + utd.TemplateDetailId + "_" + 2 + "b";//以'b'结尾表示checkBox
+
+                crc1.CheckValue = tbA.Text;
+                if (rb1.Checked == true)//合格
+                {
+                    crc2.CheckValue = "1";
+                    DMS.UI.TaskDetail.TaskDetailForm.statusColor = 0;
+                }
+                else//不合格
+                {
+                    crc2.CheckValue = "2";
+                    DMS.UI.TaskDetail.TaskDetailForm.statusColor = 1;
+                }
+                crc1.Add();
+                crc2.Add();
+                DMS.UI.TaskDetail.TaskDetailForm.isFinished = 1;
+                this.Close();
+            }
         }
+
     }
 }

@@ -43,6 +43,36 @@ namespace DMS.ORMappers.BusinessFunctions
         }
 
         /// <summary>
+        /// 部件
+        /// </summary>
+        [Column(IsChangeable = true)]
+        public string Component
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// 检验类型
+        /// </summary>
+        [Column(IsChangeable = true)]
+        public Int16 Quality
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// 检验人员ID
+        /// </summary>
+        [Column(IsChangeable = true)]
+        public int InspectorID
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// 任务分配人员ID拼接字符串
         /// </summary>
         [Column(IsChangeable = true)]
@@ -53,7 +83,7 @@ namespace DMS.ORMappers.BusinessFunctions
         }
 
         /// <summary>
-        /// 派工单状态
+        /// 派工单状态,0未执行，1待执行，2待检验，3检验合格，4检验不合格
         /// </summary>
         [Column(IsChangeable = true)]
         public string Status

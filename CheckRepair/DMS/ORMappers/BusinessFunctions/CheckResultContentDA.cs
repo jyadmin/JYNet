@@ -7,10 +7,10 @@ using DMS.BaseORMappers.Mapping;
 namespace DMS.ORMappers.BusinessFunctions
 {
     /// <summary>
-    /// 设备接收表
+    /// 任务分配人员与具体步骤关联表
     /// </summary>
-    [Table("C_DMS_FlowTemplateDetail")]
-    public class FlowTemplateDetailDA : BaseEntity<FlowTemplateDetailDA>
+    [Table("C_DMS_CheckResultContent")]
+    public class CheckResultContentDA : BaseEntity<CheckResultContentDA>
     {
         /// <summary>
         /// 主键
@@ -23,80 +23,90 @@ namespace DMS.ORMappers.BusinessFunctions
         }
 
         /// <summary>
-        /// 关联ID
+        /// 标识
         /// </summary>
         [Column(IsChangeable = true)]
-        public int LinkId
+        public string CheckKeys
         {
             get;
             set;
         }
 
         /// <summary>
-        /// 操作顺序
+        /// 检查值
         /// </summary>
         [Column(IsChangeable = true)]
-        public int OperateOrder
+        public string CheckValue
         {
             get;
             set;
         }
 
         /// <summary>
-        /// 作业项点
+        /// 设备类型
         /// </summary>
         [Column(IsChangeable = true)]
-        public string OperateItem
+        public string DeviceType
         {
             get;
             set;
         }
 
         /// <summary>
-        /// 作业内容与技术标准
+        /// 批次号
         /// </summary>
         [Column(IsChangeable = true)]
-        public string OperateContentAndStandard
+        public int DeviceReceiveID
         {
             get;
             set;
         }
 
         /// <summary>
-        /// form表单分类
+        /// 批次号
         /// </summary>
         [Column(IsChangeable = true)]
-        public int FormType
+        public string BatchCode
         {
             get;
             set;
         }
 
         /// <summary>
-        /// 质量特性标识
+        /// 修程
         /// </summary>
         [Column(IsChangeable = true)]
-        public int QualityCharacteristic
+        public string XC
         {
             get;
             set;
         }
 
         /// <summary>
-        /// 测量值单位拼接字符串
+        /// 步骤编号
         /// </summary>
         [Column(IsChangeable = true)]
-        public string Units
+        public int StepCode
         {
             get;
             set;
         }
 
         /// <summary>
-        /// 测量标签拼接字符串
+        /// 小步骤编号
         /// </summary>
         [Column(IsChangeable = true)]
-        public string LabelNames
+        public int SubStepCode
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// 关联UserTaskDetailID
+        /// </summary>
+        [Column(IsChangeable = true)]
+        public int UserTaskDetailID
         {
             get;
             set;

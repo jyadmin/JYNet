@@ -56,6 +56,33 @@ namespace DMS.DomainObjects.BusinessFunctions
         }
 
         /// <summary>
+        /// 部件
+        /// </summary>
+        public string Component
+        {
+            get { return m_AssignedTaskDA.Component; }
+            set { m_AssignedTaskDA.Component = value; }
+        }
+
+        /// <summary>
+        /// 检验类型
+        /// </summary>
+        public Int16 Quality
+        {
+            get { return m_AssignedTaskDA.Quality; }
+            set { m_AssignedTaskDA.Quality = value; }
+        }
+
+        /// <summary>
+        /// 检验人员ID
+        /// </summary>
+        public int InspectorID
+        {
+            get { return m_AssignedTaskDA.InspectorID; }
+            set { m_AssignedTaskDA.InspectorID = value; }
+        }
+
+        /// <summary>
         /// 任务分配人员ID拼接字符串
         /// </summary>
         public string CheckerIDs
@@ -65,7 +92,7 @@ namespace DMS.DomainObjects.BusinessFunctions
         }
 
         /// <summary>
-        /// 派工单状态
+        /// 派工单状态,0未执行，1待执行，2待检验，3检验合格，4检验不合格
         /// </summary>
         public string Status
         {
@@ -199,6 +226,11 @@ namespace DMS.DomainObjects.BusinessFunctions
                 Loger.Instance.WriteErrorLog(exception.Message);
                 return false;
             }
+        }
+
+        public int GetInsertID()
+        {
+            return m_AssignedTaskDA.GetInsertID();
         }
 
         #endregion

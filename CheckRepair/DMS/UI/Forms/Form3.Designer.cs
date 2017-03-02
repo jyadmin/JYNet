@@ -1,6 +1,6 @@
 ﻿namespace DMS.UI.Forms
 {
-    partial class Form1
+    partial class Form3
     {
         /// <summary>
         /// Required designer variable.
@@ -37,8 +37,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.labelB = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.labelD1 = new System.Windows.Forms.Label();
-            this.tbD1 = new System.Windows.Forms.TextBox();
+            this.labelUnit = new System.Windows.Forms.Label();
+            this.labelName = new System.Windows.Forms.Label();
+            this.tbA = new System.Windows.Forms.TextBox();
+            this.rb2 = new System.Windows.Forms.RadioButton();
+            this.rb1 = new System.Windows.Forms.RadioButton();
             this.label7 = new System.Windows.Forms.Label();
             this.labelC = new System.Windows.Forms.Label();
             this.txPanel1.SuspendLayout();
@@ -79,7 +82,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 350F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 420F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 427F));
             this.tableLayoutPanel1.Controls.Add(this.label8, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.labelA, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 0);
@@ -100,7 +103,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(975, 217);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(982, 217);
             this.tableLayoutPanel1.TabIndex = 9;
             // 
             // label8
@@ -160,35 +163,79 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.labelD1);
-            this.panel1.Controls.Add(this.tbD1);
+            this.panel1.Controls.Add(this.labelUnit);
+            this.panel1.Controls.Add(this.labelName);
+            this.panel1.Controls.Add(this.tbA);
+            this.panel1.Controls.Add(this.rb2);
+            this.panel1.Controls.Add(this.rb1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(557, 25);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(414, 188);
+            this.panel1.Size = new System.Drawing.Size(421, 188);
             this.panel1.TabIndex = 9;
             // 
-            // labelD1
+            // labelUnit
             // 
-            this.labelD1.AccessibleRole = System.Windows.Forms.AccessibleRole.Pane;
-            this.labelD1.AutoSize = true;
-            this.labelD1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelD1.Location = new System.Drawing.Point(2, 74);
-            this.labelD1.Name = "labelD1";
-            this.labelD1.Size = new System.Drawing.Size(88, 16);
-            this.labelD1.TabIndex = 9;
-            this.labelD1.Text = "不良情况：";
-            // 
-            // tbD1
-            // 
-            this.tbD1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.labelUnit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbD1.Location = new System.Drawing.Point(100, 3);
-            this.tbD1.Multiline = true;
-            this.tbD1.Name = "tbD1";
-            this.tbD1.Size = new System.Drawing.Size(303, 182);
-            this.tbD1.TabIndex = 3;
+            this.labelUnit.AutoSize = true;
+            this.labelUnit.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelUnit.Location = new System.Drawing.Point(237, 32);
+            this.labelUnit.Name = "labelUnit";
+            this.labelUnit.Size = new System.Drawing.Size(80, 16);
+            this.labelUnit.TabIndex = 10;
+            this.labelUnit.Text = "labelUnit";
+            this.labelUnit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelName
+            // 
+            this.labelName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelName.AutoSize = true;
+            this.labelName.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelName.Location = new System.Drawing.Point(64, 34);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(80, 16);
+            this.labelName.TabIndex = 9;
+            this.labelName.Text = "labelName";
+            this.labelName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // tbA
+            // 
+            this.tbA.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbA.Location = new System.Drawing.Point(141, 29);
+            this.tbA.Name = "tbA";
+            this.tbA.Size = new System.Drawing.Size(95, 26);
+            this.tbA.TabIndex = 8;
+            // 
+            // rb2
+            // 
+            this.rb2.AutoSize = true;
+            this.rb2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.rb2.Location = new System.Drawing.Point(198, 84);
+            this.rb2.Name = "rb2";
+            this.rb2.Size = new System.Drawing.Size(74, 20);
+            this.rb2.TabIndex = 2;
+            this.rb2.TabStop = true;
+            this.rb2.Text = "不合格";
+            this.rb2.UseVisualStyleBackColor = true;
+            // 
+            // rb1
+            // 
+            this.rb1.AutoSize = true;
+            this.rb1.Checked = true;
+            this.rb1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.rb1.Location = new System.Drawing.Point(66, 84);
+            this.rb1.Name = "rb1";
+            this.rb1.Size = new System.Drawing.Size(58, 20);
+            this.rb1.TabIndex = 1;
+            this.rb1.TabStop = true;
+            this.rb1.Text = "合格";
+            this.rb1.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
@@ -211,7 +258,7 @@
             this.labelC.Text = "labelC";
             this.labelC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Form1
+            // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -220,8 +267,8 @@
             this.Controls.Add(this.txPanel1);
             this.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Location = new System.Drawing.Point(0, 0);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "Form3";
+            this.Text = "Form3";
             this.txPanel1.ResumeLayout(false);
             this.txPanel1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -241,11 +288,14 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label labelB;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label labelD1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label labelC;
-        private System.Windows.Forms.TextBox tbD1;
         private TX.Framework.WindowUI.Controls.TXButton txButtonComplete;
+        private System.Windows.Forms.RadioButton rb2;
+        private System.Windows.Forms.RadioButton rb1;
+        private System.Windows.Forms.Label labelUnit;
+        private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.TextBox tbA;
 
     }
 }

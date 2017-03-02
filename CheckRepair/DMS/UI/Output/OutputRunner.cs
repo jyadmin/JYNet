@@ -13,13 +13,13 @@ using System.Text;
 using DMS.UI.Common;
 using DMS.UI.DeviceReceives;
 
-namespace DMS.UI.AssignTask
+namespace DMS.UI.Output
 {
-    public class AssignTaskRunner : IModule
+    public class OutputRunner : IModule
     {
         public void Run()
         {
-            new TaskListForm1().ShowDialog();
+            new OutputForm().ShowDialog();
         }
     }
 }

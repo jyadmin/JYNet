@@ -1,6 +1,6 @@
-﻿namespace DMS.UI.AssignTask
+﻿namespace DMS.UI.Output
 {
-    partial class TaskListForm1
+    partial class OutputForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,16 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            TX.Framework.WindowUI.Controls.TreeListViewItemCollection.TreeListViewItemCollectionComparer treeListViewItemCollectionComparer2 = new TX.Framework.WindowUI.Controls.TreeListViewItemCollection.TreeListViewItemCollectionComparer();
             this.btnHXD1DC5 = new System.Windows.Forms.Button();
             this.txPanelCenter = new TX.Framework.WindowUI.Controls.TXPanel();
-            this.txPanelTreeListView = new TX.Framework.WindowUI.Controls.TXPanel();
-            this.treeListView1 = new TX.Framework.WindowUI.Controls.TreeListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.txPanelWebBrowser = new TX.Framework.WindowUI.Controls.TXPanel();
             this.txPanelUser = new TX.Framework.WindowUI.Controls.TXPanel();
             this.txGroupBox1 = new TX.Framework.WindowUI.Controls.TXGroupBox();
             this.txPanelLeft = new TX.Framework.WindowUI.Controls.TXPanel();
@@ -59,9 +52,7 @@
             this.txCbbStatus = new TX.Framework.WindowUI.Controls.TXComboBox();
             this.txPanelBtn = new TX.Framework.WindowUI.Controls.TXPanel();
             this.txPanel3 = new TX.Framework.WindowUI.Controls.TXPanel();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.txPanelCenter.SuspendLayout();
-            this.txPanelTreeListView.SuspendLayout();
             this.txPanelUser.SuspendLayout();
             this.txPanelLeft.SuspendLayout();
             this.txPanelBottom.SuspendLayout();
@@ -86,7 +77,7 @@
             // 
             this.txPanelCenter.BackColor = System.Drawing.Color.Transparent;
             this.txPanelCenter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(168)))), ((int)(((byte)(192)))));
-            this.txPanelCenter.Controls.Add(this.txPanelTreeListView);
+            this.txPanelCenter.Controls.Add(this.txPanelWebBrowser);
             this.txPanelCenter.Controls.Add(this.txPanelUser);
             this.txPanelCenter.Controls.Add(this.txPanelLeft);
             this.txPanelCenter.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -96,74 +87,15 @@
             this.txPanelCenter.Size = new System.Drawing.Size(1378, 451);
             this.txPanelCenter.TabIndex = 6;
             // 
-            // txPanelTreeListView
+            // txPanelWebBrowser
             // 
-            this.txPanelTreeListView.BackColor = System.Drawing.Color.Transparent;
-            this.txPanelTreeListView.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(168)))), ((int)(((byte)(192)))));
-            this.txPanelTreeListView.Controls.Add(this.treeListView1);
-            this.txPanelTreeListView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txPanelTreeListView.Location = new System.Drawing.Point(261, 0);
-            this.txPanelTreeListView.Name = "txPanelTreeListView";
-            this.txPanelTreeListView.Size = new System.Drawing.Size(680, 451);
-            this.txPanelTreeListView.TabIndex = 8;
-            // 
-            // treeListView1
-            // 
-            this.treeListView1.BackColor = System.Drawing.Color.White;
-            this.treeListView1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(168)))), ((int)(((byte)(192)))));
-            this.treeListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5});
-            treeListViewItemCollectionComparer2.Column = 0;
-            treeListViewItemCollectionComparer2.SortOrder = System.Windows.Forms.SortOrder.None;
-            this.treeListView1.Comparer = treeListViewItemCollectionComparer2;
-            this.treeListView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeListView1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.treeListView1.HeaderBeginColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
-            this.treeListView1.HeaderEndColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.treeListView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.treeListView1.Location = new System.Drawing.Point(0, 0);
-            this.treeListView1.Margin = new System.Windows.Forms.Padding(4);
-            this.treeListView1.MultiSelect = false;
-            this.treeListView1.Name = "treeListView1";
-            this.treeListView1.OwnerDraw = true;
-            this.treeListView1.RowBackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
-            this.treeListView1.RowBackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.treeListView1.SelectedBeginColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.treeListView1.SelectedEndColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(225)))), ((int)(((byte)(253)))));
-            this.treeListView1.Size = new System.Drawing.Size(680, 451);
-            this.treeListView1.Sorting = System.Windows.Forms.SortOrder.None;
-            this.treeListView1.TabIndex = 0;
-            this.treeListView1.UseCompatibleStateImageBehavior = false;
-            this.treeListView1.Click += new System.EventHandler(this.treeListView1_SelectedIndexChanged);
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "部件";
-            this.columnHeader1.Width = 162;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "排序";
-            this.columnHeader2.Width = 75;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "工位（工序）";
-            this.columnHeader3.Width = 231;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "时间";
-            this.columnHeader4.Width = 78;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "分配人员";
-            this.columnHeader5.Width = 353;
+            this.txPanelWebBrowser.BackColor = System.Drawing.Color.Transparent;
+            this.txPanelWebBrowser.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(168)))), ((int)(((byte)(192)))));
+            this.txPanelWebBrowser.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txPanelWebBrowser.Location = new System.Drawing.Point(261, 0);
+            this.txPanelWebBrowser.Name = "txPanelWebBrowser";
+            this.txPanelWebBrowser.Size = new System.Drawing.Size(927, 451);
+            this.txPanelWebBrowser.TabIndex = 8;
             // 
             // txPanelUser
             // 
@@ -171,9 +103,9 @@
             this.txPanelUser.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(168)))), ((int)(((byte)(192)))));
             this.txPanelUser.Controls.Add(this.txGroupBox1);
             this.txPanelUser.Dock = System.Windows.Forms.DockStyle.Right;
-            this.txPanelUser.Location = new System.Drawing.Point(941, 0);
+            this.txPanelUser.Location = new System.Drawing.Point(1188, 0);
             this.txPanelUser.Name = "txPanelUser";
-            this.txPanelUser.Size = new System.Drawing.Size(437, 451);
+            this.txPanelUser.Size = new System.Drawing.Size(190, 451);
             this.txPanelUser.TabIndex = 7;
             // 
             // txGroupBox1
@@ -185,7 +117,7 @@
             this.txGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txGroupBox1.Location = new System.Drawing.Point(0, 0);
             this.txGroupBox1.Name = "txGroupBox1";
-            this.txGroupBox1.Size = new System.Drawing.Size(437, 451);
+            this.txGroupBox1.Size = new System.Drawing.Size(190, 451);
             this.txGroupBox1.TabIndex = 0;
             this.txGroupBox1.TabStop = false;
             this.txGroupBox1.Text = "人员：";
@@ -213,7 +145,6 @@
             this.tvEngineCode.Name = "tvEngineCode";
             this.tvEngineCode.Size = new System.Drawing.Size(261, 451);
             this.tvEngineCode.TabIndex = 0;
-            this.tvEngineCode.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvEngineCode_AfterSelect);
             // 
             // btnHXD1BC5
             // 
@@ -295,7 +226,6 @@
             this.btnAssign.TabIndex = 7;
             this.btnAssign.Text = "分  配";
             this.btnAssign.UseVisualStyleBackColor = false;
-            this.btnAssign.Click += new System.EventHandler(this.btnAssign_Click);
             // 
             // txPanelTop
             // 
@@ -423,12 +353,7 @@
             this.txPanel3.Size = new System.Drawing.Size(1378, 615);
             this.txPanel3.TabIndex = 5;
             // 
-            // backgroundWorker1
-            // 
-            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
-            this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
-            // 
-            // UserAssignedTaskListForm
+            // OutputForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -438,12 +363,11 @@
             this.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Location = new System.Drawing.Point(0, 0);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "UserAssignedTaskListForm";
+            this.Name = "OutputForm";
             this.ResizeEnable = false;
             this.Text = "工长派工";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.txPanelCenter.ResumeLayout(false);
-            this.txPanelTreeListView.ResumeLayout(false);
             this.txPanelUser.ResumeLayout(false);
             this.txPanelLeft.ResumeLayout(false);
             this.txPanelBottom.ResumeLayout(false);
@@ -470,24 +394,18 @@
         private TX.Framework.WindowUI.Controls.TXPanel txPanelLeft;
         private TX.Framework.WindowUI.Controls.TXPanel txPanelTop;
         private TX.Framework.WindowUI.Controls.TXPanel txPanel3;
-        private TX.Framework.WindowUI.Controls.TreeListView treeListView1;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
         private TX.Framework.WindowUI.Controls.TXPanel txPanelUser;
         private TX.Framework.WindowUI.Controls.TXGroupBox txGroupBox1;
         private System.Windows.Forms.Button btnAssign;
-        private TX.Framework.WindowUI.Controls.TXPanel txPanelTreeListView;
+        private TX.Framework.WindowUI.Controls.TXPanel txPanelWebBrowser;
         private TX.Framework.WindowUI.Controls.TXPanel txPanel1;
         private TX.Framework.WindowUI.Controls.TXPanel txPanelBtn;
         private TX.Framework.WindowUI.Controls.TXComboBox txCbbStatus;
         private TX.Framework.WindowUI.Controls.TXDateTimePicker txDateTimePicker1;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private TX.Framework.WindowUI.Controls.TXDateTimePicker txDateTimePicker2;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.WebBrowser webBrowser1;
     }
 }

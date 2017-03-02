@@ -205,7 +205,7 @@ namespace DMS.DomainObjects.BusinessFunctions
             get { return m_FlowTemplateMainDA.IsEvaluate; }
             set { m_FlowTemplateMainDA.IsEvaluate = value; }
         }
-
+        /*
         /// <summary>
         /// 临时存放TaskAssign的ID，关闭分配界面时置零
         /// </summary>
@@ -214,7 +214,7 @@ namespace DMS.DomainObjects.BusinessFunctions
             get { return m_FlowTemplateMainDA.TaskAssignID; }
             set { m_FlowTemplateMainDA.TaskAssignID = value; }
         }
-
+        */
         /// <summary>
         /// 上次检查人编号
         /// </summary>

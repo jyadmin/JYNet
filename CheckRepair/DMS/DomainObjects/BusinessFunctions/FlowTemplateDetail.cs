@@ -79,6 +79,42 @@ namespace DMS.DomainObjects.BusinessFunctions
             get { return m_FlowTemplateDetailDA.OperateContentAndStandard; }
             set { m_FlowTemplateDetailDA.OperateContentAndStandard = value; }
         }
+
+        /// <summary>
+        /// from表单分类
+        /// </summary>
+        public int FormType
+        {
+            get { return m_FlowTemplateDetailDA.FormType; }
+            set { m_FlowTemplateDetailDA.FormType = value; }
+        }
+
+        /// <summary>
+        /// 质量特性标识
+        /// </summary>
+        public int QualityCharacteristic
+        {
+            get { return m_FlowTemplateDetailDA.QualityCharacteristic; }
+            set { m_FlowTemplateDetailDA.QualityCharacteristic = value; }
+        }
+
+        /// <summary>
+        /// 测量值单位拼接字符串
+        /// </summary>
+        public string Units
+        {
+            get { return m_FlowTemplateDetailDA.Units; }
+            set { m_FlowTemplateDetailDA.Units = value; }
+        }
+
+        /// <summary>
+        /// 测量标签拼接字符串
+        /// </summary>
+        public string LabelNames
+        {
+            get { return m_FlowTemplateDetailDA.LabelNames; }
+            set { m_FlowTemplateDetailDA.LabelNames = value; }
+        }
         #endregion
 
         #region CURD

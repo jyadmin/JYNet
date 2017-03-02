@@ -26,20 +26,18 @@ namespace MainPage
         public List<Module> Modules = new List<Module>();
         public List<Button> Buttons = new List<Button>();
         private int TaskCounts = 0;
-        //public Dictionary<string, >
 
         public MainPage(string userName, SqlConnection conn)
         {
             InitializeComponent();
             this.userName = userName;
             label1.Text = "欢迎你，" + CurrentUser.Instance.User.LoginName;
-            string where = "where CheckerIDs like \'%" + CurrentUser.Instance.User.ID + "%\' and ( Status = \'0\' or Status = \'1\')";
-            List<AssignedTask> UserAssignedTaskList = AssignedTask.GetList(where);
-            TaskCounts = UserAssignedTaskList.Count;
             load_Menu();
         }
 
-        //从数据库中读取等级为1的菜单，加载到主页面上
+        /// <summary>
+        /// 从数据库中读取等级为1的菜单，加载到主页面上
+        /// </summary>
         private void load_Menu(){
             //设置FlowLayoutPanel大小
             flowLayoutPanel1.Width = 490;
@@ -264,17 +262,42 @@ namespace MainPage
                         bt.Name = Modules[i].ID.ToString();
                         bt.Padding = new System.Windows.Forms.Padding(5);
                         bt.TabIndex = 0;
+                        string where = "where CheckerIDs like \'%" + CurrentUser.Instance.User.ID + "%\' and ( Status = \'0\' or Status = \'1\')";
+                        List<AssignedTask> UserAssignedTaskList = AssignedTask.GetList(where);
+                        TaskCounts = UserAssignedTaskList.Count;
                         bt.Text = Modules[i].Name + " " + TaskCounts + " 项";
                         bt.UseVisualStyleBackColor = false;
                         bt.Click += new System.EventHandler(this.button_Click);
                         flowLayoutPanel1.Controls.Add(bt);
                         break;
+                    case "导出打印":
+                        //设置颜色
+                        bt.BackColor = System.Drawing.SystemColors.HotTrack;
+                        //设置Dock
+                        bt.Dock = System.Windows.Forms.DockStyle.Top;
+                        bt.FlatAppearance.BorderSize = 0;
+                        bt.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+                        bt.ForeColor = System.Drawing.Color.White;
+                        //设置大小和位置
+                        setLocation(bt, Modules[i].Size);
+                        bt.Margin = new System.Windows.Forms.Padding(5);
+                        bt.Name = Modules[i].ID.ToString();
+                        bt.Padding = new System.Windows.Forms.Padding(5);
+                        bt.TabIndex = 0;
+                        bt.Text = Modules[i].Name;
+                        bt.UseVisualStyleBackColor = false;
+                        bt.Click += new System.EventHandler(this.button_Click);
+                        flowLayoutPanel1.Controls.Add(bt);
+                        break;
                 }
-
             }
-
         }
 
+        /// <summary>
+        /// 设置菜单按钮位置和大小
+        /// </summary>
+        /// <param name="bt">按钮</param> 
+        /// <param name="moduleSize">按钮大小，1表示占一个小方块，2表示占两个小方块</param>
         public void setLocation(Button bt, int moduleSize){
             if (moduleSize == 2)
             {
@@ -301,6 +324,11 @@ namespace MainPage
             }
         }
 
+        /// <summary>
+        /// 菜单点击事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button_Click(object sender, EventArgs e)
         {
             //判断按钮编号
@@ -314,7 +342,13 @@ namespace MainPage
                     if (runner != null)
                     {
                         IModule r = (IModule)runner;
+                        //进入功能模块
                         r.Run();
+                        //退出功能模块后重新加载菜单页面
+                        flowLayoutPanel1.Controls.Clear();//清楚所有模块
+                        Modules.Clear();//清除模块数组
+                        load_Menu();//加载菜单界面
+                        break;
                     }
                 }
             }

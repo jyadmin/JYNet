@@ -18,22 +18,14 @@ using System.Threading;
 using MSWord = Microsoft.Office.Interop.Word;
 using System.IO;
 
-namespace DMS.UI.UserAssignedTask
+namespace DMS.UI.Inspect
 {
     /// <summary>
-    /// 个人分配到的任务列表
+    ///待检验的任务列表
     /// </summary>
-    public partial class UserAssignedTaskListForm :  TX.Framework.WindowUI.Forms.BaseForm
+    public partial class InspectForm :  TX.Framework.WindowUI.Forms.BaseForm
     {
-        /*******用于Word模板输出*********/
-        private MSWord.Application wordApp;  //Word应用程序变量
-        private MSWord.Document wordDoc;     //Word文档变量
-        private Object Nothing = System.Reflection.Missing.Value;
-        /*******************************/
-        //protected int ItemIndex;
-        //状态下拉框的选中项
-        protected string status = "0";
-        public UserAssignedTaskListForm()
+        public InspectForm()
         {
             InitializeComponent();
 
@@ -44,7 +36,7 @@ namespace DMS.UI.UserAssignedTask
         }
 
         /// <summary>
-        /// 加载登录人员的
+        /// 加载登录人员
         /// </summary>
         private void loadUserAssignedTask()
         {
@@ -74,24 +66,25 @@ namespace DMS.UI.UserAssignedTask
                 dtEnd = DateTimeHelper.ConvertDataTimeToLong(dtE.Date) + 24 * 60 * 60 * 1000 - 1;
             }
             //拼接查询条件字符串
-            where = "where CheckerIDs like \'%" + CurrentUser.Instance.User.ID + "%\' and Status = \'1\' and ArrangedStartTime > " + dtStart + " and ArrangedStartTime < " + dtEnd + " order by ArrangedStartTime ASC";
-            /*
-            if (status == "0")//未完成
+            if (CurrentUser.Instance.Role.ID == 3)//段质检员
             {
-                where = "where CheckerIDs like \'%" + CurrentUser.Instance.User.ID + "%\' and Status = \'1\' and ArrangedStartTime > " + dtStart + " and ArrangedStartTime < " + dtEnd + " order by ArrangedStartTime ASC";
+                where = "where Status = \'2\' and Quality = 3 and ArrangedStartTime > " + dtStart + " and ArrangedStartTime < " + dtEnd + " order by ArrangedStartTime ASC";
             }
-            else if (status == "1")//已完成
+            else if (CurrentUser.Instance.Role.ID == 4)//车间质检员
             {
-                where = "where CheckerIDs like \'%" + CurrentUser.Instance.User.ID + "%\' and Status = \'2\' and ArrangedStartTime > " + dtStart + " and ArrangedStartTime < " + dtEnd + " order by ArrangedStartTime ASC";
+                where = "where Status = \'2\' and Quality = 2 and ArrangedStartTime > " + dtStart + " and ArrangedStartTime < " + dtEnd + " order by ArrangedStartTime ASC";
             }
-            else//全部
+            else if (CurrentUser.Instance.Role.ID == 5)//班组长
             {
-                where = "where CheckerIDs like \'%" + CurrentUser.Instance.User.ID + "%\' and ArrangedStartTime > " + dtStart + " and ArrangedStartTime < " + dtEnd + " order by ArrangedStartTime ASC";
+                where = "where Status = \'2\' and Quality = 1 and ArrangedStartTime > " + dtStart + " and ArrangedStartTime < " + dtEnd + " order by ArrangedStartTime ASC";
             }
-            */
+            else if (CurrentUser.Instance.Role.ID == 6)//普通员工
+            {
+                where = "where Status = \'2\' and Quality = 0 and CheckerIDs like '%" + CurrentUser.Instance.User.ID + "%' and ArrangedStartTime > " + dtStart + " and ArrangedStartTime < " + dtEnd + " order by ArrangedStartTime ASC";
+            }
             //查询任务分配单
             List<AssignedTask> UserAssignedTaskList = AssignedTask.GetList(where);
-            treeListView1.Items.Clear();
+            treeListView.Items.Clear();
             //根据AssignedTask的Id获取AssignedTask
             foreach (AssignedTask userTask in UserAssignedTaskList)
             {
@@ -166,7 +159,7 @@ namespace DMS.UI.UserAssignedTask
                     subItem9.Text = DateTimeHelper.ConvertLongToDateTime(userTask.ActualEndTime).ToString();
                 }
                 itemA.SubItems.Add(subItem9);
-                treeListView1.Items.Add(itemA);
+                treeListView.Items.Add(itemA);
             }
             //treeListView1.Click += treeListView1_SelectedIndexChanged;
         }
@@ -189,24 +182,10 @@ namespace DMS.UI.UserAssignedTask
                 int deviceReceiveID = int.Parse(tlv.SelectedItems[0].Name);
                 //拼接要打开的form表单标题
                 string formName = tlv.SelectedItems[0].SubItems[2].Text + " - " + tlv.SelectedItems[0].SubItems[4].Text;
-                new DMS.UI.TaskDetail.TaskDetailForm(assignedTaskID, templateID, deviceReceiveID, formName, 1).ShowDialog();
+                new DMS.UI.TaskDetail.TaskDetailForm(assignedTaskID, templateID, deviceReceiveID, formName, 2).ShowDialog();
                 //刷新数据
                 loadUserAssignedTask();
             }
-        }
-
-        /// <summary>
-        /// 状态下拉框选项变动事件
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void txCbbStatus_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //获取下拉框选项
-            TXComboBox txCbbStatus = sender as TXComboBox;
-            status = txCbbStatus.SelectedIndex.ToString();
-            //重新加载
-            loadUserAssignedTask();
         }
 
         /// <summary>
@@ -220,102 +199,5 @@ namespace DMS.UI.UserAssignedTask
             loadUserAssignedTask();
         }
 
-        /// <summary>
-        /// 向模板写入数据
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void txButtonOutput_Click(object sender, EventArgs e)
-        {
-            string strPath = "D:\\21牵引风机检修纪录-6份.docx";
-            //复制文件
-            string strPath1 = "";
-            if (File.Exists(strPath))
-            {
-                string[] str = strPath.Split('.');
-                strPath1 = str[0] + "-副本." + str[1];
-                File.Copy(strPath, strPath1, true);
-            }
-            //向复制的模板写入数据
-            ExcelWriteData(treeListView1, strPath1);
-        }
-
-        /// <summary>
-        /// 将指定字符串写入指定单元格中
-        /// </summary>
-        /// <param name="modelPath">工作表名称（全路径+EXCEL表名称）</param>
-        public void ExcelWriteData(TreeListView treeListView, string modelPath)
-        {
-
-            //初始化
-            object FileName = modelPath;
-            object readOnly = false;
-            object isVisible = false;
-            wordApp = new MSWord.Application();
-            wordApp.Visible = false;
-            wordDoc = wordApp.Documents.Add(ref Nothing, ref Nothing, ref Nothing, ref Nothing);
-
-            // 打开Word
-            wordDoc = wordApp.Documents.Open(ref FileName, ref Nothing, ref readOnly,
-            ref Nothing, ref Nothing, ref Nothing, ref Nothing, ref Nothing,
-            ref Nothing, ref Nothing, ref Nothing, ref isVisible, ref Nothing,
-            ref Nothing, ref Nothing, ref Nothing);
-
-            for (int i = 0; i < treeListView.Items.Count; i++)
-            {
-                int assignedTaskId = int.Parse(treeListView1.Items[i].SubItems[2].Name);
-                string where = "where AssignedTaskId = " + assignedTaskId;
-                List<UserTaskDetail> utdList = UserTaskDetail.GetList(where);
-                foreach (var utd in utdList)
-                {
-                    string where1 = "where UserTaskDetailID = " + utd.ID;
-                    List<CheckResultContent> crcList = CheckResultContent.GetList(where1);
-                    foreach (var crc in crcList)
-                    {
-                        object bookMarks = crc.CheckKeys;
-                        if (wordDoc.Bookmarks.Exists(crc.CheckKeys))
-                        {
-                            if (crc.CheckKeys.EndsWith("b"))
-                            {
-                                if (crc.CheckValue == "1")
-                                {
-                                    wordDoc.Bookmarks.get_Item(ref bookMarks).Range.Text = "☑"; // 插入文本
-                                }
-                                else
-                                {
-                                    string str1 = crc.CheckKeys.Substring(0, crc.CheckKeys.Length - 2);
-                                    string str2 = crc.CheckKeys.Substring(crc.CheckKeys.Length - 2, 1);
-                                    int.Parse(str2);
-                                    string str = str1 + (int.Parse(str2) + 1) + "b";
-                                    bookMarks = str;
-                                    wordDoc.Bookmarks.get_Item(ref bookMarks).Range.Text = "☑"; // 插入文本
-                                }
-                            }
-                            else
-                            {
-                                wordDoc.Bookmarks.get_Item(ref bookMarks).Range.Text = crc.CheckValue; // 插入文本
-                            }
-                        }                            
-                    }
-
-                }
-
-            }
-
-            //避免弹出normal.dotm被使用的对话框，自动保存模板
-            wordApp.NormalTemplate.Saved = true;
-            wordApp.Visible = false;
-
-            //先关闭打开的文档
-            Object saveChanges = MSWord.WdSaveOptions.wdSaveChanges;
-            Object originalFormat = Type.Missing;
-            Object remoteDocument = Type.Missing;
-            wordDoc.Close(ref saveChanges, ref originalFormat, ref remoteDocument);
-            if (wordApp.Documents.Count == 0)
-            {
-                wordApp.Quit(Type.Missing, Type.Missing, Type.Missing);
-            }
-
-        }
     }
 }

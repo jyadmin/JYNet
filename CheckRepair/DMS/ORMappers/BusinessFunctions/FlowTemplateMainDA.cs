@@ -202,7 +202,7 @@ namespace DMS.ORMappers.BusinessFunctions
             get;
             set;
         }
-
+        /*
         /// <summary>
         /// 临时存放TaskAssign的ID，关闭分配界面时置零
         /// </summary>
@@ -212,7 +212,7 @@ namespace DMS.ORMappers.BusinessFunctions
             get;
             set;
         }
-
+        */
         /// <summary>
         /// 上次检查人编号
         /// </summary>

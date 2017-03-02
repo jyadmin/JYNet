@@ -32,9 +32,11 @@
             this.txPanelRight = new TX.Framework.WindowUI.Controls.TXPanel();
             this.txPanelLeft = new TX.Framework.WindowUI.Controls.TXPanel();
             this.txPanelBottom = new TX.Framework.WindowUI.Controls.TXPanel();
+            this.txButtonFinished = new TX.Framework.WindowUI.Controls.TXButton();
             this.txPanelMain = new TX.Framework.WindowUI.Controls.TXPanel();
             this.txPanelCenter = new TX.Framework.WindowUI.Controls.TXPanel();
-            this.txButtonFinished = new TX.Framework.WindowUI.Controls.TXButton();
+            this.txButtonInspect1 = new TX.Framework.WindowUI.Controls.TXButton();
+            this.txButtonInspect2 = new TX.Framework.WindowUI.Controls.TXButton();
             this.txPanelBottom.SuspendLayout();
             this.txPanelMain.SuspendLayout();
             this.txPanelCenter.SuspendLayout();
@@ -77,6 +79,8 @@
             // 
             this.txPanelBottom.BackColor = System.Drawing.Color.Transparent;
             this.txPanelBottom.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(168)))), ((int)(((byte)(192)))));
+            this.txPanelBottom.Controls.Add(this.txButtonInspect2);
+            this.txPanelBottom.Controls.Add(this.txButtonInspect1);
             this.txPanelBottom.Controls.Add(this.txButtonFinished);
             this.txPanelBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.txPanelBottom.Location = new System.Drawing.Point(0, 575);
@@ -84,6 +88,18 @@
             this.txPanelBottom.Name = "txPanelBottom";
             this.txPanelBottom.Size = new System.Drawing.Size(1518, 60);
             this.txPanelBottom.TabIndex = 0;
+            // 
+            // txButtonFinished
+            // 
+            this.txButtonFinished.Enabled = false;
+            this.txButtonFinished.Image = null;
+            this.txButtonFinished.Location = new System.Drawing.Point(12, 7);
+            this.txButtonFinished.Name = "txButtonFinished";
+            this.txButtonFinished.Size = new System.Drawing.Size(113, 40);
+            this.txButtonFinished.TabIndex = 0;
+            this.txButtonFinished.Text = "确 认 完 成";
+            this.txButtonFinished.UseVisualStyleBackColor = true;
+            this.txButtonFinished.Click += new System.EventHandler(this.txButtonFinished_Click);
             // 
             // txPanelMain
             // 
@@ -112,17 +128,27 @@
             this.txPanelCenter.Size = new System.Drawing.Size(1518, 522);
             this.txPanelCenter.TabIndex = 2;
             // 
-            // txButtonFinished
+            // txButtonInspect1
             // 
-            this.txButtonFinished.Enabled = false;
-            this.txButtonFinished.Image = null;
-            this.txButtonFinished.Location = new System.Drawing.Point(12, 7);
-            this.txButtonFinished.Name = "txButtonFinished";
-            this.txButtonFinished.Size = new System.Drawing.Size(113, 40);
-            this.txButtonFinished.TabIndex = 0;
-            this.txButtonFinished.Text = "确 认 完 成";
-            this.txButtonFinished.UseVisualStyleBackColor = true;
-            this.txButtonFinished.Click += new System.EventHandler(this.txButtonFinished_Click);
+            this.txButtonInspect1.Image = null;
+            this.txButtonInspect1.Location = new System.Drawing.Point(12, 7);
+            this.txButtonInspect1.Name = "txButtonInspect1";
+            this.txButtonInspect1.Size = new System.Drawing.Size(113, 40);
+            this.txButtonInspect1.TabIndex = 0;
+            this.txButtonInspect1.Text = "合  格";
+            this.txButtonInspect1.UseVisualStyleBackColor = true;
+            this.txButtonInspect1.Click += new System.EventHandler(this.txButtonInspect1_Click);
+            // 
+            // txButtonInspect2
+            // 
+            this.txButtonInspect2.Image = null;
+            this.txButtonInspect2.Location = new System.Drawing.Point(176, 7);
+            this.txButtonInspect2.Name = "txButtonInspect2";
+            this.txButtonInspect2.Size = new System.Drawing.Size(113, 40);
+            this.txButtonInspect2.TabIndex = 0;
+            this.txButtonInspect2.Text = "不 合 格";
+            this.txButtonInspect2.UseVisualStyleBackColor = true;
+            this.txButtonInspect2.Click += new System.EventHandler(this.txButtonInspect2_Click);
             // 
             // TaskDetailForm
             // 
@@ -155,6 +181,8 @@
         private TX.Framework.WindowUI.Controls.TXPanel txPanelLeft;
         private TX.Framework.WindowUI.Controls.TXPanel txPanelCenter;
         private TX.Framework.WindowUI.Controls.TXButton txButtonFinished;
+        private TX.Framework.WindowUI.Controls.TXButton txButtonInspect2;
+        private TX.Framework.WindowUI.Controls.TXButton txButtonInspect1;
 
     }
 }

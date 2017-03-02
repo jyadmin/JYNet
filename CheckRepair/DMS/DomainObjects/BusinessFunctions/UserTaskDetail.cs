@@ -65,7 +65,7 @@ namespace DMS.DomainObjects.BusinessFunctions
         }
 
         /// <summary>
-        /// 具体步骤状态，1表示已执行，0表示未执行
+        /// 具体步骤状态，2表示已执行，0表示未执行
         /// </summary>
         public string Status
         {
@@ -92,12 +92,30 @@ namespace DMS.DomainObjects.BusinessFunctions
         }
 
         /// <summary>
-        /// 批次号
+        /// 设备接收ID
         /// </summary>
         public int DeviceReceiveID
         {
             get { return m_UserTaskDetailTaskDA.DeviceReceiveID; }
             set { m_UserTaskDetailTaskDA.DeviceReceiveID = value; }
+        }
+
+        /// <summary>
+        /// 任务分配ID
+        /// </summary>
+        public int AssignedTaskID
+        {
+            get { return m_UserTaskDetailTaskDA.AssignedTaskID; }
+            set { m_UserTaskDetailTaskDA.AssignedTaskID = value; }
+        }
+
+        /// <summary>
+        /// 具体步骤方框的背景色状态，0标识默认的灰色，1绿色符合标准，2红色不符合标准
+        /// </summary>
+        public int statusColor
+        {
+            get { return m_UserTaskDetailTaskDA.statusColor; }
+            set { m_UserTaskDetailTaskDA.statusColor = value; }
         }
         #endregion
 

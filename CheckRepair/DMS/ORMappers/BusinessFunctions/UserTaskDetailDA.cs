@@ -53,7 +53,7 @@ namespace DMS.ORMappers.BusinessFunctions
         }
 
         /// <summary>
-        /// 具体步骤状态，1表示已执行，0表示未执行
+        /// 具体步骤状态，2表示已执行，0表示未执行
         /// </summary>
         [Column(IsChangeable = true)]
         public string Status
@@ -87,6 +87,25 @@ namespace DMS.ORMappers.BusinessFunctions
         /// </summary>
         [Column(IsChangeable = true)]
         public int DeviceReceiveID
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// 任务分配ID
+        /// </summary>
+        public int AssignedTaskID
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// 具体步骤方框的背景色状态，1标识有颜色，红色或绿色，0标识默认的灰色
+        /// </summary>
+        [Column(IsChangeable = true)]
+        public int statusColor
         {
             get;
             set;

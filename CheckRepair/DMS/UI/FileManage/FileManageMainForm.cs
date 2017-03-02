@@ -88,27 +88,54 @@ namespace DMS.UI.FileManage
         private void dgvAffairsOpen_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridView dgv = (DataGridView)sender;
-            //查看按钮或双击数据
+            //查看按钮
             if (e.RowIndex != -1 && (e.ColumnIndex == 2))
             {
                 try
                 {
-                    object fileName = url + @"\" + dir + @"\" + dgv.Rows[dgv.CurrentCell.RowIndex].Cells[0].Value;
+                    //object fileName = url + @"\" + dir + @"\" + dgv.Rows[dgv.CurrentCell.RowIndex].Cells[0].Value;
                     object missing = System.Reflection.Missing.Value;
                     object readOnly = true;
                     object isVisable = true;
+                    object AddToRecentFiles = false;
+                    if (!Directory.Exists(@"\CheckRepair\" + dir))
+                    {
+                        Directory.CreateDirectory(@"\CheckRepair\" + dir);
+                    }
+                    //下载到本地
+                    string srcFilePath = url + @"\" + dir + @"\" + dgv.Rows[dgv.CurrentCell.RowIndex].Cells[0].Value;
+                    string localFilePath = @"E:\CheckRepair\" + dir + @"\" + dgv.Rows[dgv.CurrentCell.RowIndex].Cells[0].Value;
+                    object fileName = @"E:\CheckRepair\" + dir + @"\" + dgv.Rows[dgv.CurrentCell.RowIndex].Cells[0].Value;
+                    
+                    try
+                    {
+                        File.Copy(srcFilePath, localFilePath, true);
+                    }
+                    catch
+                    {
+                        this.Info("提示", "请勿重复打开该文件");
+                    }
                     //打开word文档
                     if (fileName.ToString().EndsWith(".doc") || fileName.ToString().EndsWith(".docx"))
                     {
                         // 打开WORD
                         Microsoft.Office.Interop.Word.Application app = new Microsoft.Office.Interop.Word.Application();
-                        // 禁止Word界面启动
-                        app.Visible = false;
+                        //for (int i = 0; i < app.Documents.Count; i ++ )
+                        //{
+                        //    string str = app.Documents[i].FullName.ToString();
+                        //    if(str == fileName.ToString()){
+                        //        this.Info("提示", "请勿重复打开该文件");
+                        //        return;
+                        //    }
+                        //}
+
                         // 打开文档
-                        Microsoft.Office.Interop.Word.Document doc = app.Documents.Open(ref fileName, ref missing, ref missing,
-                                               ref missing, ref missing, ref missing, ref missing, ref missing,
-                                               ref missing, ref missing, ref missing, ref missing, ref missing,
+                        Microsoft.Office.Interop.Word.Document doc = app.Documents.Open(ref fileName, ref missing, ref readOnly,
+                                               ref AddToRecentFiles, ref missing, ref missing, ref missing, ref missing,
+                                               ref missing, ref missing, ref missing, ref isVisable, ref missing,
                                                ref missing, ref missing, ref missing);
+                        // 禁止Word界面启动
+                        app.Visible = true;
                     }
                     //打开excel文件
                     else if (fileName.ToString().EndsWith(".xls") || fileName.ToString().EndsWith(".xlsx"))
